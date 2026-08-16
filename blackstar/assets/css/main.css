@@ -21087,3 +21087,245 @@ body.tw-magic-cursor #magic-cursor {
         line-height: 1.5 !important;
     }
 }
+
+/* =========================================================
+   BLACKSTAR HERO TEXT CLEANUP
+   Removes black decorative artefacts under SERVICE
+========================================================= */
+
+.hero-section.hero-new .jump-anim,
+.hero-section.hero-new .studio-text {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+.hero-section.hero-new .jump-anim::before,
+.hero-section.hero-new .jump-anim::after,
+.hero-section.hero-new .studio-text::before,
+.hero-section.hero-new .studio-text::after {
+    content: none !important;
+    display: none !important;
+}
+
+.hero-section.hero-new .jump-anim .char,
+.hero-section.hero-new .studio-text .char {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+.hero-section.hero-new .jump-anim .char::before,
+.hero-section.hero-new .jump-anim .char::after,
+.hero-section.hero-new .studio-text .char::before,
+.hero-section.hero-new .studio-text .char::after {
+    content: none !important;
+    display: none !important;
+}
+
+
+/* =========================================================
+   MOBILE HERO
+   SECURITY + SERVICE ON THE SAME LINE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .hero-section.hero-new {
+        position: relative !important;
+        min-height: 100svh !important;
+        height: auto !important;
+        overflow: hidden !important;
+        background: #0B0D0F !important;
+    }
+
+    .hero-section.hero-new .ripple-image {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 0 !important;
+    }
+
+    .hero-section.hero-new .ripple-image img {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: 58% center !important;
+    }
+
+    /* Darkens bottom slightly so copy remains readable */
+    .hero-section.hero-new::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(
+            180deg,
+            rgba(11, 13, 15, 0.05) 0%,
+            rgba(11, 13, 15, 0.08) 35%,
+            rgba(11, 13, 15, 0.45) 70%,
+            rgba(11, 13, 15, 0.82) 100%
+        );
+    }
+
+    .hero-section.hero-new .container {
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .hero-section.hero-new .row {
+        margin: 0 !important;
+    }
+
+    .hero-section.hero-new .col-xl-12 {
+        padding: 0 !important;
+    }
+
+    /*
+       hero-bottom becomes transparent to the grid.
+       This allows SECURITY, SERVICE and the paragraph
+       to be positioned as if they were siblings.
+    */
+    .hero-section.hero-new .hero-bottom {
+        display: contents !important;
+    }
+
+    .hero-section.hero-new .hero-content {
+        position: relative !important;
+        width: 100% !important;
+        min-height: 100svh !important;
+
+        display: grid !important;
+        grid-template-columns: max-content max-content !important;
+        grid-template-areas:
+            "security service"
+            "copy copy" !important;
+
+        justify-content: start !important;
+        align-content: end !important;
+
+        column-gap: 12px !important;
+        row-gap: 34px !important;
+
+        padding: 150px 0 75px !important;
+    }
+
+    /* SECURITY */
+
+    .hero-section.hero-new .hero-content > .jump-anim {
+        grid-area: security !important;
+
+        position: relative !important;
+        inset: auto !important;
+
+        width: auto !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: clamp(36px, 10.5vw, 52px) !important;
+        line-height: 0.88 !important;
+        letter-spacing: -0.055em !important;
+
+        white-space: nowrap !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+
+        color: #F7F8F8 !important;
+    }
+
+    /* SERVICE */
+
+    .hero-section.hero-new .studio-text {
+        grid-area: service !important;
+
+        position: relative !important;
+        inset: auto !important;
+
+        width: auto !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: clamp(36px, 10.5vw, 52px) !important;
+        line-height: 0.88 !important;
+        letter-spacing: -0.055em !important;
+
+        white-space: nowrap !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+
+        color: #F7F8F8 !important;
+
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /* BODY COPY */
+
+    .hero-section.hero-new .hero-bottom p {
+        grid-area: copy !important;
+
+        position: relative !important;
+        inset: auto !important;
+
+        width: 100% !important;
+        max-width: 650px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+        letter-spacing: 0 !important;
+
+        color: #D7D9DC !important;
+        text-align: left !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p span {
+        display: inline !important;
+        color: #F7F8F8 !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .hero-section.hero-new .container {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .hero-section.hero-new .hero-content {
+        column-gap: 8px !important;
+        row-gap: 28px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .hero-section.hero-new .hero-content > .jump-anim,
+    .hero-section.hero-new .studio-text {
+        font-size: 9.8vw !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+    }
+}
