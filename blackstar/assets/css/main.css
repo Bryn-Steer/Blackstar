@@ -20539,9 +20539,21 @@ body.tw-magic-cursor #magic-cursor {
   background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */
 
-/* =========================================
-   CLEAN HERO
-========================================= */
+/* =========================================================
+   BLACKSTAR SHARED CUSTOM CSS
+========================================================= */
+
+:root {
+    --blackstar-black: #0B0D0F;
+    --blackstar-graphite: #24282D;
+    --blackstar-steel: #A7AFB7;
+    --blackstar-white: #F7F8F8;
+    --blackstar-gold: #D6A84B;
+}
+
+/* =========================================================
+   CLEAN BANNER HERO
+========================================================= */
 
 .banner-area {
     min-height: 100vh;
@@ -20574,30 +20586,26 @@ body.tw-magic-cursor #magic-cursor {
     min-width: 0;
 }
 
-.hero-title {
+.banner-area .hero-title {
     margin: 0 0 40px;
-    color: #fff;
+    color: #FFFFFF !important;
     font-size: clamp(70px, 7vw, 120px);
     line-height: 0.9;
     letter-spacing: -0.045em;
     font-weight: 600;
-
-    /* IMPORTANT */
     white-space: normal;
     word-break: normal;
     overflow-wrap: normal;
 }
 
-.hero-text {
+.banner-area .hero-text {
     max-width: 470px;
     margin-bottom: 35px;
-    color: #fff;
+    color: #FFFFFF !important;
     font-size: 18px;
     line-height: 1.7;
 }
 
-
-/* remove original template elements */
 .banner-circle,
 .banner-circle-wrap,
 .banner-arrow-shape,
@@ -20608,13 +20616,11 @@ body.tw-magic-cursor #magic-cursor {
     display: none !important;
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
+/* =========================================================
+   BANNER HERO - TABLET
+========================================================= */
 
 @media (max-width: 1199px) {
-
     .banner-area {
         min-height: auto;
         padding: 130px 0 70px;
@@ -20625,19 +20631,18 @@ body.tw-magic-cursor #magic-cursor {
         gap: 45px;
     }
 
-    .hero-title {
+    .banner-area .hero-title {
         font-size: clamp(56px, 7vw, 84px);
     }
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
+/* =========================================================
+   BANNER HERO - MOBILE
+========================================================= */
 
 @media (max-width: 767px) {
-
     .banner-area {
+        min-height: auto;
         padding: 110px 20px 60px;
     }
 
@@ -20656,21 +20661,19 @@ body.tw-magic-cursor #magic-cursor {
         max-width: 100%;
     }
 
-    .hero-title {
+    .banner-area .hero-title {
         font-size: clamp(52px, 14vw, 76px);
         line-height: 0.92;
         margin-bottom: 25px;
-
-        /* prevents vertical letter stacking */
         white-space: normal;
         word-break: keep-all;
         overflow-wrap: normal;
     }
 
-    .hero-text {
+    .banner-area .hero-text {
+        max-width: 100%;
         font-size: 16px;
         line-height: 1.6;
-        max-width: 100%;
     }
 
     .hero-image {
@@ -20679,96 +20682,101 @@ body.tw-magic-cursor #magic-cursor {
     }
 }
 
-/* =========================================
-   BLACKSTAR NAVIGATION FIX
-========================================= */
+/* =========================================================
+   BLACKSTAR DESKTOP NAVIGATION
+========================================================= */
 
-/* Main navigation */
-.header-menu ul li > a,
-.nav-menu ul li > a,
-.navbar-nav .nav-link {
-  color: #F7F8F8;
-  transition: color 0.25s ease;
+.header-menu .nav-menu > .nav-menu__item > .nav-menu__link {
+    color: var(--blackstar-white) !important;
+    transition: color 0.25s ease;
 }
 
-.header-menu ul li > a:hover,
-.nav-menu ul li > a:hover,
-.navbar-nav .nav-link:hover,
-.header-menu ul li.active > a {
-  color: #D6A84B;
+.header-menu .nav-menu > .nav-menu__item > .nav-menu__link:hover,
+.header-menu .nav-menu > .nav-menu__item.active > .nav-menu__link,
+.header-menu .nav-menu > .nav-menu__item.activePage > .nav-menu__link {
+    color: var(--blackstar-gold) !important;
 }
 
+/* =========================================================
+   DESKTOP DROPDOWNS
+========================================================= */
 
-/* =========================================
-   DROPDOWN MENU
-========================================= */
-
-.header-menu ul li ul,
-.nav-menu ul li ul,
-.navbar-nav .dropdown-menu,
-.sub-menu {
-  background: #16191C !important;
-  border: 1px solid #24282D !important;
-  border-radius: 10px;
-  padding: 10px 0;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+.header-menu .nav-submenu {
+    background: #16191C !important;
+    border: 1px solid var(--blackstar-graphite) !important;
+    border-radius: 10px !important;
+    padding: 10px 0 !important;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35) !important;
 }
 
-
-/* Dropdown links */
-.header-menu ul li ul li a,
-.nav-menu ul li ul li a,
-.dropdown-menu .dropdown-item,
-.sub-menu li a {
-  color: #F7F8F8 !important;
-  background: transparent !important;
-  padding: 12px 20px;
-  transition: all 0.25s ease;
+.header-menu .nav-submenu .nav-submenu__item {
+    background: transparent !important;
 }
 
-
-/* Dropdown hover */
-.header-menu ul li ul li a:hover,
-.nav-menu ul li ul li a:hover,
-.dropdown-menu .dropdown-item:hover,
-.sub-menu li a:hover {
-  color: #D6A84B !important;
-  background: #24282D !important;
+.header-menu .nav-submenu .nav-submenu__item > a,
+.header-menu .nav-submenu .nav-submenu__link,
+.header-menu .nav-submenu a.text-heading {
+    color: var(--blackstar-white) !important;
+    background: transparent !important;
+    background-image: none !important;
+    transition: color 0.25s ease, background-color 0.25s ease !important;
 }
 
+.header-menu .nav-submenu .nav-submenu__item > a:hover,
+.header-menu .nav-submenu .nav-submenu__item:hover > a,
+.header-menu .nav-submenu .nav-submenu__link:hover {
+    color: var(--blackstar-gold) !important;
+    background: var(--blackstar-graphite) !important;
+}
 
-/* Remove Bootstrap white dropdown defaults */
+/* =========================================================
+   BOOTSTRAP DROPDOWN OVERRIDES
+========================================================= */
+
 .dropdown-menu {
-  --bs-dropdown-bg: #16191C;
-  --bs-dropdown-color: #F7F8F8;
-  --bs-dropdown-link-color: #F7F8F8;
-  --bs-dropdown-link-hover-color: #D6A84B;
-  --bs-dropdown-link-hover-bg: #24282D;
-  --bs-dropdown-border-color: #24282D;
+    --bs-dropdown-bg: #16191C;
+    --bs-dropdown-color: #F7F8F8;
+    --bs-dropdown-link-color: #F7F8F8;
+    --bs-dropdown-link-hover-color: #D6A84B;
+    --bs-dropdown-link-hover-bg: #24282D;
+    --bs-dropdown-border-color: #24282D;
 }
 
-.cta-two-thumb {
-    position: relative;
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-menu {
+    background: var(--blackstar-black) !important;
 }
 
-.cta-two-thumb img {
-    display: block;
+.mobile-menu .nav-menu__link {
+    color: var(--blackstar-white) !important;
 }
 
-.cta-two-overlay {
-    background: linear-gradient(
-        180deg,
-        rgba(11, 13, 15, 0.10) 0%,
-        rgba(11, 13, 15, 0.35) 45%,
-        rgba(11, 13, 15, 0.88) 100%
-    );
-    z-index: 1;
-    pointer-events: none;
+.mobile-menu .nav-menu__link:hover {
+    color: var(--blackstar-gold) !important;
 }
 
-.cta-two-content {
-    z-index: 2;
+.mobile-menu .nav-submenu {
+    background: #16191C !important;
+    border: 1px solid var(--blackstar-graphite) !important;
 }
+
+.mobile-menu .nav-submenu__item > a,
+.mobile-menu .nav-submenu__link {
+    color: var(--blackstar-white) !important;
+    background: transparent !important;
+}
+
+.mobile-menu .nav-submenu__item > a:hover,
+.mobile-menu .nav-submenu__link:hover {
+    color: var(--blackstar-gold) !important;
+}
+
+/* =========================================================
+   CTA TWO
+========================================================= */
 
 .cta-two-thumb {
     position: relative;
@@ -20792,21 +20800,21 @@ body.tw-magic-cursor #magic-cursor {
 }
 
 .cta-two-content {
+    position: relative;
     z-index: 2;
 }
 
-/* =========================================
-   CTA TWO - MOBILE IMAGE FIX
-========================================= */
+/* =========================================================
+   CTA TWO - MOBILE
+========================================================= */
 
 @media (max-width: 767px) {
-
     .cta-two-thumb {
         height: auto !important;
         min-height: 0 !important;
         display: flex;
         flex-direction: column;
-        background: #0B0D0F;
+        background: var(--blackstar-black);
         border-radius: 18px;
         overflow: hidden;
     }
@@ -20816,12 +20824,10 @@ body.tw-magic-cursor #magic-cursor {
         width: 100% !important;
         height: auto !important;
         max-height: none !important;
-
         object-fit: contain !important;
         object-position: center top !important;
-
         border-radius: 18px 18px 0 0 !important;
-        display: block;
+        display: block !important;
     }
 
     .cta-two-overlay {
@@ -20834,26 +20840,26 @@ body.tw-magic-cursor #magic-cursor {
         width: 100% !important;
         margin: 0 !important;
         padding: 24px 20px 30px !important;
-        background: #0B0D0F;
+        background: var(--blackstar-black);
         z-index: 2;
     }
 
     .cta-two-title {
-        color: #F7F8F8 !important;
+        color: var(--blackstar-white) !important;
         font-size: 32px !important;
         line-height: 1.08 !important;
         margin-bottom: 14px !important;
     }
 
     .cta-two-sm-title {
-        color: #F7F8F8 !important;
+        color: var(--blackstar-white) !important;
         font-size: 28px !important;
         line-height: 1.1 !important;
         margin-bottom: 14px !important;
     }
 
     .cta-two-content p {
-        color: #A7AFB7 !important;
+        color: var(--blackstar-steel) !important;
         font-size: 15px !important;
         line-height: 1.6 !important;
     }
@@ -20863,234 +20869,9 @@ body.tw-magic-cursor #magic-cursor {
     }
 }
 
-.banner-area .hero-title,
-.banner-area .hero-text {
-    color: #ffffff !important;
-}
-
 /* =========================================================
-   BLACKSTAR HERO - MOBILE FIX
-========================================================= */
-
-@media (max-width: 767px) {
-
-    .hero-section.hero-new {
-        position: relative !important;
-        min-height: 100svh !important;
-        height: auto !important;
-        overflow: hidden !important;
-        display: flex !important;
-        align-items: flex-end !important;
-        padding: 0 !important;
-        background: #0B0D0F !important;
-    }
-
-    .hero-section.hero-new .ripple-image {
-        position: absolute !important;
-        inset: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        z-index: 0 !important;
-        overflow: hidden !important;
-    }
-
-    .hero-section.hero-new .ripple-image img {
-        position: absolute !important;
-        inset: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: 58% center !important;
-        display: block !important;
-    }
-
-    .hero-section.hero-new::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        pointer-events: none;
-        background:
-            linear-gradient(
-                180deg,
-                rgba(11, 13, 15, 0.10) 0%,
-                rgba(11, 13, 15, 0.18) 35%,
-                rgba(11, 13, 15, 0.72) 75%,
-                rgba(11, 13, 15, 0.95) 100%
-            );
-    }
-
-    .hero-section.hero-new .container {
-        position: relative !important;
-        z-index: 2 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        margin: 0 auto !important;
-    }
-
-    .hero-section.hero-new .row {
-        margin: 0 !important;
-    }
-
-    .hero-section.hero-new .col-xl-12 {
-        padding: 0 !important;
-    }
-
-    .hero-section.hero-new .hero-content {
-        position: relative !important;
-        width: 100% !important;
-        height: auto !important;
-        min-height: 100svh !important;
-        padding: 150px 0 55px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-    }
-
-    .hero-section.hero-new .hero-content > h1.jump-anim {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-
-        font-size: clamp(72px, 20vw, 94px) !important;
-        line-height: 0.84 !important;
-        letter-spacing: -0.055em !important;
-
-        white-space: nowrap !important;
-        word-break: normal !important;
-        overflow-wrap: normal !important;
-
-        color: #F7F8F8 !important;
-        text-align: left !important;
-    }
-
-    .hero-section.hero-new .hero-bottom {
-        position: relative !important;
-        inset: auto !important;
-        width: 100% !important;
-        height: auto !important;
-        margin: 0 !important;
-        padding: 0 !important;
-
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 34px !important;
-    }
-
-    .hero-section.hero-new .hero-bottom p {
-        position: relative !important;
-        inset: auto !important;
-
-        width: 100% !important;
-        max-width: 355px !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        font-size: 16px !important;
-        line-height: 1.55 !important;
-        letter-spacing: 0 !important;
-
-        color: #D5D8DA !important;
-        text-align: left !important;
-    }
-
-    .hero-section.hero-new .hero-bottom p span {
-        display: inline !important;
-        color: #F7F8F8 !important;
-    }
-
-    .hero-section.hero-new .studio-text {
-        position: relative !important;
-        inset: auto !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        font-size: clamp(70px, 20vw, 94px) !important;
-        line-height: 0.84 !important;
-        letter-spacing: -0.055em !important;
-
-        white-space: nowrap !important;
-        word-break: normal !important;
-        overflow-wrap: normal !important;
-
-        color: #F7F8F8 !important;
-        text-align: left !important;
-    }
-}
-
-
-/* =========================================================
-   EXTRA SMALL PHONES
-========================================================= */
-
-@media (max-width: 390px) {
-
-    .hero-section.hero-new .container {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-    }
-
-    .hero-section.hero-new .hero-content {
-        padding-top: 135px !important;
-        padding-bottom: 45px !important;
-    }
-
-    .hero-section.hero-new .hero-content > h1.jump-anim,
-    .hero-section.hero-new .studio-text {
-        font-size: clamp(62px, 19vw, 76px) !important;
-    }
-
-    .hero-section.hero-new .hero-bottom p {
-        font-size: 15px !important;
-        line-height: 1.5 !important;
-    }
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (min-width: 768px) and (max-width: 991px) {
-
-    .hero-section.hero-new {
-        min-height: 900px !important;
-        overflow: hidden !important;
-    }
-
-    .hero-section.hero-new .hero-content {
-        min-height: 900px !important;
-        padding-top: 180px !important;
-        padding-bottom: 70px !important;
-    }
-
-    .hero-section.hero-new .hero-content > h1.jump-anim,
-    .hero-section.hero-new .studio-text {
-        font-size: clamp(110px, 18vw, 150px) !important;
-        line-height: 0.85 !important;
-        letter-spacing: -0.05em !important;
-        white-space: nowrap !important;
-    }
-
-    .hero-section.hero-new .hero-bottom p {
-        max-width: 520px !important;
-        font-size: 18px !important;
-        line-height: 1.5 !important;
-    }
-}
-
-/* =========================================================
-   BLACKSTAR HERO TEXT CLEANUP
-   Removes black decorative artefacts under SERVICE
+   HERO NEW - DESKTOP CLEANUP ONLY
+   DO NOT CHANGE DESKTOP LAYOUT
 ========================================================= */
 
 .hero-section.hero-new .jump-anim,
@@ -21098,53 +20879,46 @@ body.tw-magic-cursor #magic-cursor {
     background: transparent !important;
     box-shadow: none !important;
     text-shadow: none !important;
-    filter: none !important;
 }
 
-.hero-section.hero-new .jump-anim::before,
-.hero-section.hero-new .jump-anim::after,
+/* Remove the black decorative pieces beneath SERVICE */
 .hero-section.hero-new .studio-text::before,
-.hero-section.hero-new .studio-text::after {
-    content: none !important;
-    display: none !important;
-}
-
-.hero-section.hero-new .jump-anim .char,
-.hero-section.hero-new .studio-text .char {
-    background: transparent !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-}
-
-.hero-section.hero-new .jump-anim .char::before,
-.hero-section.hero-new .jump-anim .char::after,
+.hero-section.hero-new .studio-text::after,
 .hero-section.hero-new .studio-text .char::before,
-.hero-section.hero-new .studio-text .char::after {
+.hero-section.hero-new .studio-text .char::after,
+.hero-section.hero-new .studio-text span::before,
+.hero-section.hero-new .studio-text span::after {
     content: none !important;
     display: none !important;
 }
-
 
 /* =========================================================
-   MOBILE HERO
-   SECURITY + SERVICE ON THE SAME LINE
+   HERO NEW - MOBILE ONLY
+   Desktop remains controlled by the original template
 ========================================================= */
 
 @media (max-width: 767px) {
-
     .hero-section.hero-new {
         position: relative !important;
+        width: 100% !important;
         min-height: 100svh !important;
         height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
         overflow: hidden !important;
-        background: #0B0D0F !important;
+        background: var(--blackstar-black) !important;
     }
+
+    /* =====================================================
+       MOBILE BACKGROUND IMAGE
+    ===================================================== */
 
     .hero-section.hero-new .ripple-image {
         position: absolute !important;
         inset: 0 !important;
         width: 100% !important;
         height: 100% !important;
+        overflow: hidden !important;
         z-index: 0 !important;
     }
 
@@ -21153,11 +20927,17 @@ body.tw-magic-cursor #magic-cursor {
         inset: 0 !important;
         width: 100% !important;
         height: 100% !important;
+        max-width: none !important;
         object-fit: cover !important;
-        object-position: 58% center !important;
+        object-position: 78% 42% !important;
+        transform: none !important;
+        display: block !important;
     }
 
-    /* Darkens bottom slightly so copy remains readable */
+    /* =====================================================
+       MOBILE IMAGE OVERLAY
+    ===================================================== */
+
     .hero-section.hero-new::after {
         content: "";
         position: absolute;
@@ -21166,374 +20946,134 @@ body.tw-magic-cursor #magic-cursor {
         pointer-events: none;
         background: linear-gradient(
             180deg,
-            rgba(11, 13, 15, 0.05) 0%,
-            rgba(11, 13, 15, 0.08) 35%,
-            rgba(11, 13, 15, 0.45) 70%,
-            rgba(11, 13, 15, 0.82) 100%
-        );
+            rgba(11, 13, 15, 0.00) 0%,
+            rgba(11, 13, 15, 0.02) 42%,
+            rgba(11, 13, 15, 0.18) 62%,
+            rgba(11, 13, 15, 0.72) 82%,
+            rgba(11, 13, 15, 0.94) 100%
+        ) !important;
     }
+
+    /* =====================================================
+       MOBILE CONTAINER
+    ===================================================== */
 
     .hero-section.hero-new .container {
         position: relative !important;
-        z-index: 2 !important;
+        z-index: 5 !important;
         width: 100% !important;
         max-width: 100% !important;
+        min-height: 100svh !important;
+        margin: 0 auto !important;
         padding-left: 24px !important;
         padding-right: 24px !important;
     }
 
     .hero-section.hero-new .row {
+        width: 100% !important;
+        min-height: 100svh !important;
         margin: 0 !important;
     }
 
     .hero-section.hero-new .col-xl-12 {
+        width: 100% !important;
+        min-height: 100svh !important;
         padding: 0 !important;
     }
 
+    /* =====================================================
+       MOBILE HERO GRID
+    ===================================================== */
+
+    .hero-section.hero-new .hero-content {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 100svh !important;
+        margin: 0 !important;
+        padding: 120px 0 48px !important;
+        display: grid !important;
+        grid-template-columns: max-content max-content !important;
+        grid-template-rows: minmax(0, 1fr) auto auto !important;
+        grid-template-areas:
+            ". ."
+            "security service"
+            "copy copy" !important;
+        column-gap: clamp(6px, 2vw, 12px) !important;
+        row-gap: 28px !important;
+        justify-content: start !important;
+        align-content: stretch !important;
+        overflow: visible !important;
+    }
+
     /*
-       hero-bottom becomes transparent to the grid.
-       This allows SECURITY, SERVICE and the paragraph
-       to be positioned as if they were siblings.
+       Flatten hero-bottom so its paragraph and SERVICE
+       heading participate in the hero grid.
     */
     .hero-section.hero-new .hero-bottom {
         display: contents !important;
     }
 
-    .hero-section.hero-new .hero-content {
-        position: relative !important;
-        width: 100% !important;
-        min-height: 100svh !important;
+    /* =====================================================
+       MOBILE SECURITY TITLE
+    ===================================================== */
 
-        display: grid !important;
-        grid-template-columns: max-content max-content !important;
-        grid-template-areas:
-            "security service"
-            "copy copy" !important;
-
-        justify-content: start !important;
-        align-content: end !important;
-
-        column-gap: 12px !important;
-        row-gap: 34px !important;
-
-        padding: 150px 0 75px !important;
-    }
-
-    /* SECURITY */
-
-    .hero-section.hero-new .hero-content > .jump-anim {
+    .hero-section.hero-new .hero-content > h1.jump-anim {
         grid-area: security !important;
-
         position: relative !important;
         inset: auto !important;
-
+        display: block !important;
         width: auto !important;
         max-width: none !important;
-
         margin: 0 !important;
         padding: 0 !important;
-
-        font-size: clamp(36px, 10.5vw, 52px) !important;
-        line-height: 0.88 !important;
+        color: var(--blackstar-white) !important;
+        font-size: clamp(34px, 9vw, 44px) !important;
+        line-height: 0.9 !important;
         letter-spacing: -0.055em !important;
-
         white-space: nowrap !important;
         word-break: normal !important;
         overflow-wrap: normal !important;
-
-        color: #F7F8F8 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        translate: none !important;
+        z-index: 10 !important;
     }
 
-    /* SERVICE */
+    /* =====================================================
+       MOBILE SERVICE TITLE
+    ===================================================== */
 
     .hero-section.hero-new .studio-text {
         grid-area: service !important;
-
         position: relative !important;
         inset: auto !important;
-
+        display: block !important;
         width: auto !important;
         max-width: none !important;
-
         margin: 0 !important;
         padding: 0 !important;
-
-        font-size: clamp(36px, 10.5vw, 52px) !important;
-        line-height: 0.88 !important;
+        color: var(--blackstar-white) !important;
+        font-size: clamp(34px, 9vw, 44px) !important;
+        line-height: 0.9 !important;
         letter-spacing: -0.055em !important;
-
         white-space: nowrap !important;
         word-break: normal !important;
         overflow-wrap: normal !important;
-
-        color: #F7F8F8 !important;
-
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        translate: none !important;
         background: transparent !important;
         box-shadow: none !important;
         text-shadow: none !important;
-    }
-
-    /* BODY COPY */
-
-    .hero-section.hero-new .hero-bottom p {
-        grid-area: copy !important;
-
-        position: relative !important;
-        inset: auto !important;
-
-        width: 100% !important;
-        max-width: 650px !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        font-size: 16px !important;
-        line-height: 1.55 !important;
-        letter-spacing: 0 !important;
-
-        color: #D7D9DC !important;
-        text-align: left !important;
-    }
-
-    .hero-section.hero-new .hero-bottom p span {
-        display: inline !important;
-        color: #F7F8F8 !important;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
-
-@media (max-width: 390px) {
-
-    .hero-section.hero-new .container {
-        padding-left: 18px !important;
-        padding-right: 18px !important;
-    }
-
-    .hero-section.hero-new .hero-content {
-        column-gap: 8px !important;
-        row-gap: 28px !important;
-        padding-bottom: 60px !important;
-    }
-
-    .hero-section.hero-new .hero-content > .jump-anim,
-    .hero-section.hero-new .studio-text {
-        font-size: 9.8vw !important;
-    }
-
-    .hero-section.hero-new .hero-bottom p {
-        font-size: 15px !important;
-        line-height: 1.5 !important;
-    }
-}
-
-/* =========================================================
-   BLACKSTAR HERO - CLEAN MOBILE VERSION
-========================================================= */
-
-@media (max-width: 767px) {
-
-    .hero-section.hero-new {
-        position: relative !important;
-        width: 100% !important;
-        min-height: 100svh !important;
-        height: 100svh !important;
-        overflow: hidden !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        background: #0B0D0F !important;
-    }
-
-    /* =========================
-       BACKGROUND IMAGE
-    ========================= */
-
-    .hero-section.hero-new .ripple-image {
-        position: absolute !important;
-        inset: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        overflow: hidden !important;
-        z-index: 0 !important;
-    }
-
-    .hero-section.hero-new .ripple-image img {
-        position: absolute !important;
-        inset: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        max-width: none !important;
-        object-fit: cover !important;
-
-        /* Keeps the main Blackstar officer prominent */
-        object-position: 78% 42% !important;
-
-        transform: none !important;
-        display: block !important;
-    }
-
-    /* =========================
-       IMAGE OVERLAY
-    ========================= */
-
-    .hero-section.hero-new::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        pointer-events: none;
-
-        background:
-            linear-gradient(
-                180deg,
-                rgba(11, 13, 15, 0.02) 0%,
-                rgba(11, 13, 15, 0.04) 42%,
-                rgba(11, 13, 15, 0.22) 66%,
-                rgba(11, 13, 15, 0.88) 100%
-            ) !important;
-    }
-
-    /* =========================
-       CONTAINER
-    ========================= */
-
-    .hero-section.hero-new .container {
-        position: relative !important;
-        z-index: 5 !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-        height: 100% !important;
-
-        padding-left: 24px !important;
-        padding-right: 24px !important;
-
-        margin: 0 !important;
-    }
-
-    .hero-section.hero-new .row {
-        width: 100% !important;
-        height: 100% !important;
-        margin: 0 !important;
-    }
-
-    .hero-section.hero-new .col-xl-12 {
-        width: 100% !important;
-        height: 100% !important;
-        padding: 0 !important;
-    }
-
-    /* =========================
-       HERO CONTENT
-    ========================= */
-
-    .hero-section.hero-new .hero-content {
-        position: relative !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-        height: 100svh !important;
-        min-height: 100svh !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        display: block !important;
-
-        overflow: visible !important;
-    }
-
-    /* Remove desktop positioning */
-    .hero-section.hero-new .hero-bottom {
-        position: static !important;
-        inset: auto !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        display: block !important;
-    }
-
-    /* =========================================================
-       SECURITY + SERVICE
-       Both positioned on the same line
-    ========================================================= */
-
-    .hero-section.hero-new .hero-content > h1.jump-anim {
-        position: absolute !important;
-
-        top: 42% !important;
-        left: 0 !important;
-
-        width: auto !important;
-        max-width: none !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        font-size: clamp(38px, 10.5vw, 50px) !important;
-        line-height: 0.9 !important;
-        letter-spacing: -0.06em !important;
-
-        color: #F7F8F8 !important;
-
-        white-space: nowrap !important;
-        word-break: normal !important;
-        overflow-wrap: normal !important;
-
-        opacity: 1 !important;
-        visibility: visible !important;
-
-        transform: none !important;
-        translate: none !important;
-
         z-index: 10 !important;
     }
 
-    .hero-section.hero-new .studio-text {
-        position: absolute !important;
-
-        top: 42% !important;
-        left: 49% !important;
-
-        width: auto !important;
-        max-width: none !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        font-size: clamp(38px, 10.5vw, 50px) !important;
-        line-height: 0.9 !important;
-        letter-spacing: -0.06em !important;
-
-        color: #F7F8F8 !important;
-
-        white-space: nowrap !important;
-        word-break: normal !important;
-        overflow-wrap: normal !important;
-
-        opacity: 1 !important;
-        visibility: visible !important;
-
-        transform: none !important;
-        translate: none !important;
-
-        background: transparent !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-
-        z-index: 10 !important;
-    }
-
-    /* =========================================================
-       FORCE GSAP SPLIT CHARACTERS VISIBLE
-    ========================================================= */
+    /* =====================================================
+       GSAP / SPLIT TEXT RESET ON MOBILE
+    ===================================================== */
 
     .hero-section.hero-new .jump-anim *,
     .hero-section.hero-new .studio-text * {
@@ -21542,211 +21082,81 @@ body.tw-magic-cursor #magic-cursor {
         transform: none !important;
         translate: none !important;
         color: inherit !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
 
-    .hero-section.hero-new .jump-anim::before,
-    .hero-section.hero-new .jump-anim::after,
-    .hero-section.hero-new .studio-text::before,
-    .hero-section.hero-new .studio-text::after {
-        display: none !important;
-        content: none !important;
-    }
-
-    /* =========================================================
-       PARAGRAPH
-    ========================================================= */
+    /* =====================================================
+       MOBILE BODY COPY
+    ===================================================== */
 
     .hero-section.hero-new .hero-bottom p {
-        position: absolute !important;
-
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 70px !important;
-
+        grid-area: copy !important;
+        position: relative !important;
+        inset: auto !important;
+        display: block !important;
         width: 100% !important;
         max-width: 100% !important;
-
         margin: 0 !important;
         padding: 0 !important;
-
-        font-size: 15px !important;
-        line-height: 1.55 !important;
-        letter-spacing: 0 !important;
-
-        text-align: left !important;
-
         color: #D5D8DA !important;
-
-        /* Critical fix for text leaving viewport */
+        font-size: 15px !important;
+        font-weight: 400 !important;
+        line-height: 1.5 !important;
+        letter-spacing: 0 !important;
+        text-align: left !important;
         white-space: normal !important;
         word-break: normal !important;
         overflow-wrap: break-word !important;
-
-        overflow: visible !important;
-
         opacity: 1 !important;
         visibility: visible !important;
         transform: none !important;
-
         z-index: 10 !important;
     }
 
     .hero-section.hero-new .hero-bottom p span {
         display: inline !important;
-
         width: auto !important;
         max-width: none !important;
-
-        color: #F7F8F8 !important;
-
+        color: var(--blackstar-white) !important;
         white-space: normal !important;
         word-break: normal !important;
         overflow-wrap: break-word !important;
-
         opacity: 1 !important;
         visibility: visible !important;
         transform: none !important;
     }
 }
 
-
 /* =========================================================
-   SMALL IPHONES
+   HERO NEW - SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 390px) {
-
     .hero-section.hero-new .container {
         padding-left: 18px !important;
         padding-right: 18px !important;
     }
 
-    .hero-section.hero-new .hero-content > h1.jump-anim,
-    .hero-section.hero-new .studio-text {
-        font-size: 9.5vw !important;
+    .hero-section.hero-new .hero-content {
+        padding-top: 110px !important;
+        padding-bottom: 42px !important;
+        column-gap: 6px !important;
+        row-gap: 24px !important;
     }
 
+    .hero-section.hero-new .hero-content > h1.jump-anim,
     .hero-section.hero-new .studio-text {
-        left: 50% !important;
+        font-size: 8.7vw !important;
     }
 
     .hero-section.hero-new .hero-bottom p {
-        bottom: 55px !important;
         font-size: 14px !important;
-        line-height: 1.5 !important;
+        line-height: 1.48 !important;
     }
 
     .hero-section.hero-new .ripple-image img {
         object-position: 80% 42% !important;
-    }
-}
-
-/* =========================================================
-   BLACKSTAR MOBILE HERO TITLE - FINAL FIX
-   Bypasses GSAP / jump animation completely
-========================================================= */
-
-@media (max-width: 767px) {
-
-    /* Hide the two template headings on mobile */
-    .hero-section.hero-new .jump-anim,
-    .hero-section.hero-new .studio-text {
-        display: none !important;
-    }
-
-    /* Make hero content the positioning parent */
-    .hero-section.hero-new .hero-content {
-        position: relative !important;
-        width: 100% !important;
-        height: 100svh !important;
-        min-height: 100svh !important;
-        overflow: visible !important;
-    }
-
-    /* Create one reliable mobile title */
-    .hero-section.hero-new .hero-content::before {
-        content: "SECURITY SERVICE";
-
-        position: absolute !important;
-        left: 0 !important;
-        top: 58% !important;
-
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        color: #F7F8F8 !important;
-
-        font-family: inherit !important;
-        font-size: clamp(37px, 10vw, 52px) !important;
-        font-weight: 700 !important;
-        line-height: 0.9 !important;
-        letter-spacing: -0.055em !important;
-
-        white-space: nowrap !important;
-        word-break: normal !important;
-
-        opacity: 1 !important;
-        visibility: visible !important;
-
-        transform: none !important;
-        filter: none !important;
-
-        z-index: 20 !important;
-        pointer-events: none !important;
-    }
-
-    /* Paragraph stays safely inside viewport */
-    .hero-section.hero-new .hero-bottom p {
-        position: absolute !important;
-
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 60px !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        color: #D5D8DA !important;
-
-        font-size: 15px !important;
-        line-height: 1.5 !important;
-        letter-spacing: 0 !important;
-
-        white-space: normal !important;
-        overflow-wrap: break-word !important;
-        word-break: normal !important;
-
-        opacity: 1 !important;
-        visibility: visible !important;
-
-        z-index: 20 !important;
-    }
-
-    .hero-section.hero-new .hero-bottom p span {
-        display: inline !important;
-        color: #F7F8F8 !important;
-        white-space: normal !important;
-    }
-}
-
-
-/* Smaller phones */
-@media (max-width: 390px) {
-
-    .hero-section.hero-new .hero-content::before {
-        top: 59% !important;
-        font-size: 9.5vw !important;
-    }
-
-    .hero-section.hero-new .hero-bottom p {
-        bottom: 48px !important;
-        font-size: 14px !important;
     }
 }
