@@ -20867,3 +20867,223 @@ body.tw-magic-cursor #magic-cursor {
 .banner-area .hero-text {
     color: #ffffff !important;
 }
+
+/* =========================================================
+   BLACKSTAR HERO - MOBILE FIX
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .hero-section.hero-new {
+        position: relative !important;
+        min-height: 100svh !important;
+        height: auto !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: flex-end !important;
+        padding: 0 !important;
+        background: #0B0D0F !important;
+    }
+
+    .hero-section.hero-new .ripple-image {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .hero-section.hero-new .ripple-image img {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: 58% center !important;
+        display: block !important;
+    }
+
+    .hero-section.hero-new::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background:
+            linear-gradient(
+                180deg,
+                rgba(11, 13, 15, 0.10) 0%,
+                rgba(11, 13, 15, 0.18) 35%,
+                rgba(11, 13, 15, 0.72) 75%,
+                rgba(11, 13, 15, 0.95) 100%
+            );
+    }
+
+    .hero-section.hero-new .container {
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin: 0 auto !important;
+    }
+
+    .hero-section.hero-new .row {
+        margin: 0 !important;
+    }
+
+    .hero-section.hero-new .col-xl-12 {
+        padding: 0 !important;
+    }
+
+    .hero-section.hero-new .hero-content {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100svh !important;
+        padding: 150px 0 55px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+
+    .hero-section.hero-new .hero-content > h1.jump-anim {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: clamp(72px, 20vw, 94px) !important;
+        line-height: 0.84 !important;
+        letter-spacing: -0.055em !important;
+
+        white-space: nowrap !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+
+        color: #F7F8F8 !important;
+        text-align: left !important;
+    }
+
+    .hero-section.hero-new .hero-bottom {
+        position: relative !important;
+        inset: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 34px !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p {
+        position: relative !important;
+        inset: auto !important;
+
+        width: 100% !important;
+        max-width: 355px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+        letter-spacing: 0 !important;
+
+        color: #D5D8DA !important;
+        text-align: left !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p span {
+        display: inline !important;
+        color: #F7F8F8 !important;
+    }
+
+    .hero-section.hero-new .studio-text {
+        position: relative !important;
+        inset: auto !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: clamp(70px, 20vw, 94px) !important;
+        line-height: 0.84 !important;
+        letter-spacing: -0.055em !important;
+
+        white-space: nowrap !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+
+        color: #F7F8F8 !important;
+        text-align: left !important;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .hero-section.hero-new .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .hero-section.hero-new .hero-content {
+        padding-top: 135px !important;
+        padding-bottom: 45px !important;
+    }
+
+    .hero-section.hero-new .hero-content > h1.jump-anim,
+    .hero-section.hero-new .studio-text {
+        font-size: clamp(62px, 19vw, 76px) !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .hero-section.hero-new {
+        min-height: 900px !important;
+        overflow: hidden !important;
+    }
+
+    .hero-section.hero-new .hero-content {
+        min-height: 900px !important;
+        padding-top: 180px !important;
+        padding-bottom: 70px !important;
+    }
+
+    .hero-section.hero-new .hero-content > h1.jump-anim,
+    .hero-section.hero-new .studio-text {
+        font-size: clamp(110px, 18vw, 150px) !important;
+        line-height: 0.85 !important;
+        letter-spacing: -0.05em !important;
+        white-space: nowrap !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p {
+        max-width: 520px !important;
+        font-size: 18px !important;
+        line-height: 1.5 !important;
+    }
+}
