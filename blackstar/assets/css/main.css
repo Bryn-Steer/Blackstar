@@ -21328,4 +21328,247 @@ body.tw-magic-cursor #magic-cursor {
 }
 
 
-    
+/* =========================================================
+   BLACKSTAR HERO - PHONE ONLY
+   Desktop + tablet remain completely untouched
+========================================================= */
+
+@media (max-width: 575px) {
+
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+    .hero-section.hero-new {
+        position: relative !important;
+        width: 100% !important;
+        height: 100svh !important;
+        min-height: 100svh !important;
+        overflow: hidden !important;
+    }
+
+    /* -----------------------------------------------------
+       IMAGE - SHOW MORE OF THE ORIGINAL PHOTO
+    ----------------------------------------------------- */
+
+    .hero-section.hero-new .ripple-image {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+
+        background-image: url("../images/new-img/hero-bg.jpg") !important;
+        background-size: cover !important;
+        background-position: 78% center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .hero-section.hero-new .ripple-image img {
+        position: absolute !important;
+        top: 0 !important;
+        left: 50% !important;
+
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+
+        object-fit: cover !important;
+        object-position: 78% center !important;
+
+        /* Less zoomed than current version */
+        transform: translateX(-50%) scale(0.84) !important;
+        transform-origin: center center !important;
+    }
+
+    /* -----------------------------------------------------
+       SUBTLE BOTTOM GRADIENT
+    ----------------------------------------------------- */
+
+    .hero-section.hero-new::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+
+        background: linear-gradient(
+            180deg,
+            rgba(11, 13, 15, 0) 0%,
+            rgba(11, 13, 15, 0.03) 48%,
+            rgba(11, 13, 15, 0.32) 72%,
+            rgba(11, 13, 15, 0.92) 100%
+        ) !important;
+    }
+
+    /* -----------------------------------------------------
+       CONTAINER
+    ----------------------------------------------------- */
+
+    .hero-section.hero-new .container {
+        position: relative !important;
+        z-index: 5 !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+    }
+
+    .hero-section.hero-new .row,
+    .hero-section.hero-new .col-xl-12,
+    .hero-section.hero-new .hero-content {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 100svh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hero-section.hero-new .hero-content {
+        position: relative !important;
+    }
+
+    /* -----------------------------------------------------
+       REMOVE THE BROKEN ANIMATED MOBILE TITLES
+       Only on phones
+    ----------------------------------------------------- */
+
+    .hero-section.hero-new .hero-content > h1.jump-anim,
+    .hero-section.hero-new .hero-bottom > h1.studio-text {
+        display: none !important;
+    }
+
+    /* -----------------------------------------------------
+       CLEAN PHONE TITLE
+    ----------------------------------------------------- */
+
+    .hero-section.hero-new .hero-content::before {
+        content: "BLACKSTAR SECURITY" !important;
+
+        position: absolute !important;
+        left: 0 !important;
+        bottom: 190px !important;
+
+        display: block !important;
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: #F7F8F8 !important;
+
+        font-family: inherit !important;
+        font-size: clamp(24px, 6.4vw, 30px) !important;
+        font-weight: 700 !important;
+
+        line-height: 0.95 !important;
+        letter-spacing: -0.045em !important;
+
+        white-space: nowrap !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        z-index: 10 !important;
+        pointer-events: none !important;
+    }
+
+    /* -----------------------------------------------------
+       RESET HERO BOTTOM
+    ----------------------------------------------------- */
+
+    .hero-section.hero-new .hero-bottom {
+        position: static !important;
+        inset: auto !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* -----------------------------------------------------
+       PARAGRAPH
+    ----------------------------------------------------- */
+
+    .hero-section.hero-new .hero-bottom p {
+        position: absolute !important;
+
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 38px !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: #D5D8DA !important;
+
+        font-size: 13px !important;
+        font-weight: 400 !important;
+        line-height: 1.5 !important;
+        letter-spacing: 0 !important;
+
+        text-align: left !important;
+
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        transform: none !important;
+
+        z-index: 10 !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p span {
+        display: inline !important;
+
+        color: #F7F8F8 !important;
+
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .hero-section.hero-new .container {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .hero-section.hero-new .ripple-image {
+        background-position: 80% center !important;
+    }
+
+    .hero-section.hero-new .ripple-image img {
+        object-position: 80% center !important;
+        transform: translateX(-50%) scale(0.82) !important;
+    }
+
+    .hero-section.hero-new .hero-content::before {
+        bottom: 180px !important;
+        font-size: 6.2vw !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p {
+        bottom: 34px !important;
+        font-size: 12.5px !important;
+        line-height: 1.48 !important;
+    }
+}
