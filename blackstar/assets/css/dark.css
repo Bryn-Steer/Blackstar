@@ -1,0 +1,524 @@
+:root {
+    --blackstar-black: #0B0D0F;
+    --blackstar-graphite: #24282D;
+    --blackstar-steel: #A7AFB7;
+    --blackstar-white: #F7F8F8;
+    --blackstar-gold: #D6A84B;
+    --blackstar-gold-soft: rgba(214, 168, 75, 0.12);
+    --blackstar-white-soft: rgba(247, 248, 248, 0.10);
+    --blackstar-border: rgba(247, 248, 248, 0.12);
+}
+
+/* =========================================================
+   GLOBAL DARK THEME
+========================================================= */
+
+body {
+    background-color: var(--blackstar-black) !important;
+    color: var(--blackstar-steel);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: var(--blackstar-white) !important;
+}
+
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+.h4 a,
+h5 a,
+.h5 a,
+h6 a,
+.h6 a {
+    color: inherit !important;
+}
+
+p {
+    color: var(--blackstar-steel) !important;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: var(--blackstar-gold);
+}
+
+.mona-sans-main {
+    color: var(--blackstar-white) !important;
+}
+
+/* =========================================================
+   TEXT UTILITIES
+========================================================= */
+
+.text-heading {
+    color: var(--blackstar-white) !important;
+}
+
+.text-body {
+    color: var(--blackstar-steel) !important;
+}
+
+.text-white,
+.text--white {
+    color: var(--blackstar-white) !important;
+}
+
+.text-black {
+    color: var(--blackstar-black) !important;
+}
+
+.text-main-600,
+.text-main-two-600,
+.text-main-three-600,
+.text-main-four-600,
+.text-main-five-600,
+.text-main-six-600 {
+    color: var(--blackstar-gold) !important;
+}
+
+.hover-text-main-600:hover,
+.hover-text-main-two-600:hover,
+.hover-text-main-three-600:hover,
+.hover-text-main-four-600:hover,
+.hover-text-main-five-600:hover,
+.hover-text-main-six-600:hover {
+    color: var(--blackstar-gold) !important;
+}
+
+/* =========================================================
+   BACKGROUND UTILITIES
+========================================================= */
+
+.bg-black {
+    background-color: var(--blackstar-black) !important;
+}
+
+.bg-white {
+    background-color: var(--blackstar-white) !important;
+}
+
+.bg-main-600,
+.bg-main-two-600,
+.bg-main-three-600,
+.bg-main-four-600,
+.bg-main-five-600,
+.bg-main-six-600 {
+    background-color: var(--blackstar-gold) !important;
+}
+
+/* =========================================================
+   BORDER UTILITIES
+========================================================= */
+
+.border-main-600,
+.border-main-two-600,
+.border-main-three-600,
+.border-main-four-600,
+.border-main-five-600,
+.border-main-six-600 {
+    border-color: var(--blackstar-gold) !important;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.theme-btn.bg-main-600,
+.theme-btn.bg-main-two-600,
+.theme-btn.bg-main-three-600,
+.theme-btn.bg-main-four-600,
+.theme-btn.bg-main-five-600,
+.theme-btn.bg-main-six-600 {
+    color: var(--blackstar-black) !important;
+    background-color: var(--blackstar-gold) !important;
+}
+
+.theme-btn.border-main-600 {
+    color: var(--blackstar-gold) !important;
+    background-color: transparent !important;
+    border-color: var(--blackstar-gold) !important;
+}
+
+.theme-btn-main .theme-btn-arrow-left.bg-main-600,
+.theme-btn-main .theme-btn-arrow-right.bg-main-600 {
+    color: var(--blackstar-black) !important;
+    background-color: var(--blackstar-gold) !important;
+}
+
+.theme-btn-main .theme-btn-arrow-left.border-main-600,
+.theme-btn-main .theme-btn-arrow-right.border-main-600 {
+    color: var(--blackstar-gold) !important;
+    background-color: transparent !important;
+    border-color: var(--blackstar-gold) !important;
+}
+
+.theme-btn-main:hover .theme-btn.border-main-600 {
+    background-color: var(--blackstar-gold) !important;
+    color: var(--blackstar-black) !important;
+}
+
+.theme-btn-main:hover .theme-btn-arrow-left.border-main-600,
+.theme-btn-main:hover .theme-btn-arrow-right.border-main-600 {
+    background-color: var(--blackstar-gold) !important;
+    color: var(--blackstar-black) !important;
+}
+
+.project-bg-thumb-wrapper .project-bg-bottom .project-btn:hover {
+    color: var(--blackstar-black) !important;
+    background-color: var(--blackstar-gold) !important;
+    border-color: var(--blackstar-gold) !important;
+    z-index: 999;
+}
+
+/* =========================================================
+   SUB TITLES
+========================================================= */
+
+.team-section .sub-title,
+.service-section-new-1 .sub-title,
+.sub-title {
+    color: var(--blackstar-white) !important;
+}
+
+/* =========================================================
+   TESTIMONIAL CARDS
+   These use light card surfaces, so their content stays dark
+========================================================= */
+
+.testimonial-card-style p,
+.testimonial-card-style h3,
+.testimonial-card-style span {
+    color: var(--blackstar-black) !important;
+}
+
+.testimonial-three-paragraph,
+.testimonial-three-title,
+.testimonial-three-sm-paragraph {
+    color: var(--blackstar-black) !important;
+}
+
+/* =========================================================
+   SERVICE SECTIONS
+========================================================= */
+
+.service-box-style-4 p,
+.service-box-style-4 h3 {
+    color: var(--blackstar-black) !important;
+}
+
+.service-main-card-items-2 {
+    border-bottom: 1px solid var(--blackstar-white-soft);
+}
+
+.service-main-card-items-2 .left-item .left-content {
+    background: var(--blackstar-black) !important;
+}
+
+.service-main-card-items-2 .left-item .left-content .service-list li {
+    color: var(--blackstar-white) !important;
+}
+
+.service-main-card-items-2 .left-item span {
+    color: var(--blackstar-white) !important;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section-new-2 .top-itemss-2 span {
+    color: var(--blackstar-white) !important;
+}
+
+/* =========================================================
+   FEATURE SECTIONS
+========================================================= */
+
+.feature-top-wrapper .feature-left-cont span {
+    color: var(--blackstar-white) !important;
+}
+
+.feature-three-area,
+.skill-three-area {
+    background-color: var(--blackstar-graphite) !important;
+}
+
+.feature-three-wrap a {
+    background-image: none !important;
+}
+
+/* =========================================================
+   WORKING PROCESS
+========================================================= */
+
+.working-process-wrapper .working-process-content span {
+    color: rgba(247, 248, 248, 0.16);
+}
+
+.working-process-wrapper .working-process-content span:hover {
+    color: var(--blackstar-gold) !important;
+}
+
+.working-process-section .top-image-item-2 img {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* =========================================================
+   IMAGE FILTERS
+========================================================= */
+
+.filters-none img {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* =========================================================
+   BRAND SECTION
+========================================================= */
+
+.brand-two-area {
+    background-color: var(--blackstar-black) !important;
+}
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
+
+.portfolio-three-wrapper a {
+    background-image: none !important;
+}
+
+/* =========================================================
+   SKILLS / RESUME
+========================================================= */
+
+.skill-three-wrapper {
+    background-color: var(--blackstar-black) !important;
+}
+
+.resume-three-wrapper {
+    background-color: var(--blackstar-graphite) !important;
+}
+
+/* =========================================================
+   BLOG
+========================================================= */
+
+.blog-three-wrapper {
+    background-color: var(--blackstar-graphite) !important;
+}
+
+.blog-wrapper a {
+    background-image: none !important;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-three-area {
+    background-color: var(--blackstar-graphite) !important;
+}
+
+.accordion-button {
+    color: var(--blackstar-white) !important;
+}
+
+.faq-three-accordion-button:not(.collapsed) {
+    background: transparent !important;
+    color: var(--blackstar-gold) !important;
+}
+
+/* =========================================================
+   MEGA MENU BUTTONS
+========================================================= */
+
+.mega-menu-item .theme-btn {
+    color: var(--blackstar-black) !important;
+}
+
+/* =========================================================
+   HEADER EIGHT
+========================================================= */
+
+.header-eight {
+    z-index: 999 !important;
+}
+
+.header-eight .nav-menu__link {
+    color: var(--blackstar-white) !important;
+}
+
+.header-eight .nav-menu__link:hover {
+    color: var(--blackstar-gold) !important;
+}
+
+/* =========================================================
+   HEADER EIGHT DROPDOWN
+========================================================= */
+
+.header-eight .nav-submenu {
+    background-color: #16191C !important;
+    border: 1px solid rgba(214, 168, 75, 0.14) !important;
+}
+
+.header-eight .nav-submenu__item {
+    background-color: transparent !important;
+}
+
+.header-eight .nav-submenu__item a,
+.header-eight .nav-submenu__item .nav-submenu__link,
+.header-eight .nav-submenu__item a.text-heading {
+    color: var(--blackstar-white) !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+.header-eight .nav-submenu__item a:hover,
+.header-eight .nav-submenu__item:hover > a,
+.header-eight .nav-submenu__item .nav-submenu__link:hover {
+    color: var(--blackstar-gold) !important;
+}
+
+/* =========================================================
+   HEADER EIGHT MEGA MENU
+========================================================= */
+
+.header-eight .mega-menu {
+    background-color: #16191C !important;
+    border: 1px solid rgba(214, 168, 75, 0.14) !important;
+}
+
+.header-eight .mega-menu .mega-menu-item {
+    color: var(--blackstar-white) !important;
+}
+
+.header-eight .mega-menu .mega-menu-item a {
+    color: var(--blackstar-white) !important;
+}
+
+.header-eight .mega-menu .mega-menu-item a:hover {
+    color: var(--blackstar-gold) !important;
+}
+
+.header-eight .mega-menu .mega-menu-item .theme-btn {
+    color: var(--blackstar-black) !important;
+}
+
+.header-eight .mega-menu .mega-menu-item .theme-btn:hover {
+    color: var(--blackstar-black) !important;
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+    background-color: var(--blackstar-black) !important;
+}
+
+.mobile-menu .nav-menu__link {
+    color: var(--blackstar-white) !important;
+}
+
+.mobile-menu .nav-menu__link:hover {
+    color: var(--blackstar-gold) !important;
+}
+
+.mobile-menu .nav-submenu {
+    background-color: #16191C !important;
+}
+
+.mobile-menu .nav-submenu__item a,
+.mobile-menu .nav-submenu__link {
+    color: var(--blackstar-white) !important;
+}
+
+.mobile-menu .nav-submenu__item a:hover,
+.mobile-menu .nav-submenu__link:hover {
+    color: var(--blackstar-gold) !important;
+}
+
+/* =========================================================
+   BANNER THREE
+   This banner uses a light surface
+========================================================= */
+
+.banner-three-wrapper h2 {
+    color: var(--blackstar-black) !important;
+}
+
+.banner-three-wrapper .banner-three-right p,
+.banner-three-wrapper .banner-three-right p span {
+    color: var(--blackstar-black) !important;
+}
+
+/* =========================================================
+   HEADER THREE
+========================================================= */
+
+.header-three .header-two-call a {
+    color: var(--blackstar-black) !important;
+}
+
+.header-three .header-three-toggole img {
+    filter: brightness(0) invert(1);
+}
+
+/* =========================================================
+   FINAL HEADER SAFEGUARD
+   Prevents main.css / white.css from changing dropdown text
+========================================================= */
+
+html body .header.header-eight
+.header-menu
+.nav-menu
+.nav-submenu
+.nav-submenu__item
+a.nav-submenu__link {
+    color: var(--blackstar-white) !important;
+}
+
+html body .header.header-eight
+.header-menu
+.nav-menu
+.nav-submenu
+.nav-submenu__item
+a.nav-submenu__link:hover {
+    color: var(--blackstar-gold) !important;
+}
+
+html body .header.header-eight
+.header-menu
+.nav-menu
+.nav-submenu
+.nav-submenu__item
+a.text-heading {
+    color: var(--blackstar-white) !important;
+}
+
+html body .header.header-eight
+.header-menu
+.nav-menu
+.nav-submenu
+.nav-submenu__item
+a.text-heading:hover {
+    color: var(--blackstar-gold) !important;
+}
