@@ -21330,61 +21330,313 @@ body.tw-magic-cursor #magic-cursor {
     }
 }
 
+/* =========================================================
+   BLACKSTAR HERO - CLEAN MOBILE VERSION
+========================================================= */
+
 @media (max-width: 767px) {
+
+    .hero-section.hero-new {
+        position: relative !important;
+        width: 100% !important;
+        min-height: 100svh !important;
+        height: 100svh !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #0B0D0F !important;
+    }
+
+    /* =========================
+       BACKGROUND IMAGE
+    ========================= */
+
     .hero-section.hero-new .ripple-image {
         position: absolute !important;
         inset: 0 !important;
         width: 100% !important;
         height: 100% !important;
         overflow: hidden !important;
+        z-index: 0 !important;
     }
 
     .hero-section.hero-new .ripple-image img {
         position: absolute !important;
+        inset: 0 !important;
         width: 100% !important;
         height: 100% !important;
         max-width: none !important;
         object-fit: cover !important;
-        object-position: 76% 42% !important;
+
+        /* Keeps the main Blackstar officer prominent */
+        object-position: 78% 42% !important;
+
+        transform: none !important;
+        display: block !important;
+    }
+
+    /* =========================
+       IMAGE OVERLAY
+    ========================= */
+
+    .hero-section.hero-new::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(11, 13, 15, 0.02) 0%,
+                rgba(11, 13, 15, 0.04) 42%,
+                rgba(11, 13, 15, 0.22) 66%,
+                rgba(11, 13, 15, 0.88) 100%
+            ) !important;
+    }
+
+    /* =========================
+       CONTAINER
+    ========================= */
+
+    .hero-section.hero-new .container {
+        position: relative !important;
+        z-index: 5 !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+
+        margin: 0 !important;
+    }
+
+    .hero-section.hero-new .row {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+    }
+
+    .hero-section.hero-new .col-xl-12 {
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* =========================
+       HERO CONTENT
+    ========================= */
+
+    .hero-section.hero-new .hero-content {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100svh !important;
+        min-height: 100svh !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+
+        overflow: visible !important;
+    }
+
+    /* Remove desktop positioning */
+    .hero-section.hero-new .hero-bottom {
+        position: static !important;
+        inset: auto !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+    }
+
+    /* =========================================================
+       SECURITY + SERVICE
+       Both positioned on the same line
+    ========================================================= */
+
+    .hero-section.hero-new .hero-content > h1.jump-anim {
+        position: absolute !important;
+
+        top: 42% !important;
+        left: 0 !important;
+
+        width: auto !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: clamp(38px, 10.5vw, 50px) !important;
+        line-height: 0.9 !important;
+        letter-spacing: -0.06em !important;
+
+        color: #F7F8F8 !important;
+
+        white-space: nowrap !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        transform: none !important;
+        translate: none !important;
+
+        z-index: 10 !important;
+    }
+
+    .hero-section.hero-new .studio-text {
+        position: absolute !important;
+
+        top: 42% !important;
+        left: 49% !important;
+
+        width: auto !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: clamp(38px, 10.5vw, 50px) !important;
+        line-height: 0.9 !important;
+        letter-spacing: -0.06em !important;
+
+        color: #F7F8F8 !important;
+
+        white-space: nowrap !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        transform: none !important;
+        translate: none !important;
+
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+
+        z-index: 10 !important;
+    }
+
+    /* =========================================================
+       FORCE GSAP SPLIT CHARACTERS VISIBLE
+    ========================================================= */
+
+    .hero-section.hero-new .jump-anim *,
+    .hero-section.hero-new .studio-text * {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        translate: none !important;
+        color: inherit !important;
+    }
+
+    .hero-section.hero-new .jump-anim::before,
+    .hero-section.hero-new .jump-anim::after,
+    .hero-section.hero-new .studio-text::before,
+    .hero-section.hero-new .studio-text::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    /* =========================================================
+       PARAGRAPH
+    ========================================================= */
+
+    .hero-section.hero-new .hero-bottom p {
+        position: absolute !important;
+
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 70px !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+        letter-spacing: 0 !important;
+
+        text-align: left !important;
+
+        color: #D5D8DA !important;
+
+        /* Critical fix for text leaving viewport */
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+
+        overflow: visible !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+
+        z-index: 10 !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p span {
+        display: inline !important;
+
+        width: auto !important;
+        max-width: none !important;
+
+        color: #F7F8F8 !important;
+
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
         transform: none !important;
     }
 }
 
-@media (max-width: 430px) {
+
+/* =========================================================
+   SMALL IPHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .hero-section.hero-new .container {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .hero-section.hero-new .hero-content > h1.jump-anim,
+    .hero-section.hero-new .studio-text {
+        font-size: 9.5vw !important;
+    }
+
+    .hero-section.hero-new .studio-text {
+        left: 50% !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p {
+        bottom: 55px !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+
     .hero-section.hero-new .ripple-image img {
         object-position: 80% 42% !important;
-    }
-}
-
-@media (max-width: 767px) {
-    .hero-section.hero-new .hero-content {
-        position: relative !important;
-        z-index: 3 !important;
-    }
-
-    .hero-section.hero-new .hero-content > .jump-anim {
-        position: relative !important;
-        z-index: 3 !important;
-    }
-
-    .hero-section.hero-new .hero-bottom {
-        position: relative !important;
-        z-index: 3 !important;
-    }
-
-    .hero-section.hero-new::after {
-        background:
-            linear-gradient(
-                90deg,
-                rgba(11, 13, 15, 0.50) 0%,
-                rgba(11, 13, 15, 0.18) 52%,
-                rgba(11, 13, 15, 0.02) 100%
-            ),
-            linear-gradient(
-                180deg,
-                rgba(11, 13, 15, 0.04) 0%,
-                rgba(11, 13, 15, 0.10) 55%,
-                rgba(11, 13, 15, 0.75) 100%
-            ) !important;
     }
 }
