@@ -2,30 +2,434 @@
 <html lang="en">
 
 <head>
+
+    <!-- =========================================================
+         BASIC DOCUMENT SETTINGS
+    ========================================================== -->
     <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Agenci Creative AGENCI, and Portfolio HTML Template. Fully responsive, creative design, and easy to customize. Ideal for Agenci agencies and startups.">
-    <meta name="keywords" content="Agenci Creative Agency & Portfolio HTML TEMPLATE, Creative AGENCI, Portfolio Template, Digital AGENCI, Creative AGENCI, Bootstrap, Responsive">
-    <meta name="robots" content="INDEX,FOLLOW">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>Agenci Creative Agency & Portfolio HTML TEMPLATE</title>
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- swiper bundle -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-    <!-- odometer conter -->
-    <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
-    <!-- magnific popup -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <!-- aos -->
-    <link rel="stylesheet" href="assets/css/aos.css">
-    <!-- Main css -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    
-    <link rel="stylesheet" href="assets/css/service-details.css">
+
+
+    <!-- =========================================================
+         PRIMARY SEO
+    ========================================================== -->
+    <title>Residential Security Manchester | Blackstar Security</title>
+
+    <meta
+        name="description"
+        content="Professional residential security and concierge services in Manchester and across the UK. Blackstar supports apartment buildings, managed developments and residential communities with front-of-house presence, access support and security."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    >
+
+    <meta
+        name="googlebot"
+        content="index, follow"
+    >
+
+    <meta
+        name="author"
+        content="Blackstar Group Solutions Ltd"
+    >
+
+
+    <!-- =========================================================
+         CANONICAL
+    ========================================================== -->
+    <link
+        rel="canonical"
+        href="https://www.blackstarsecurity.co.uk/residential-security.html"
+    >
+
+
+    <!-- =========================================================
+         BROWSER / BRAND INFORMATION
+    ========================================================== -->
+    <meta
+        name="theme-color"
+        content="#0B0D0F"
+    >
+
+    <meta
+        name="color-scheme"
+        content="dark"
+    >
+
+    <meta
+        name="format-detection"
+        content="telephone=yes"
+    >
+
+    <meta
+        name="referrer"
+        content="strict-origin-when-cross-origin"
+    >
+
+
+    <!-- =========================================================
+         OPEN GRAPH
+         Facebook / LinkedIn / WhatsApp
+    ========================================================== -->
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Blackstar Security"
+    >
+
+    <meta
+        property="og:title"
+        content="Residential Security Manchester | Blackstar Security"
+    >
+
+    <meta
+        property="og:description"
+        content="Professional residential security and concierge support for apartment buildings, managed developments and residential communities."
+    >
+
+    <meta
+        property="og:url"
+        content="https://www.blackstarsecurity.co.uk/residential-security.html"
+    >
+
+    <meta
+        property="og:image"
+        content="https://www.blackstarsecurity.co.uk/assets/images/thumbs/breadcrumb-bg.jpg"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="Blackstar residential security and concierge services"
+    >
+
+    <meta
+        property="og:locale"
+        content="en_GB"
+    >
+
+
+    <!-- =========================================================
+         X / TWITTER
+    ========================================================== -->
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Residential Security Manchester | Blackstar Security"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Residential security and concierge support for apartment buildings, managed developments and residential communities in Manchester and across the UK."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://www.blackstarsecurity.co.uk/assets/images/thumbs/breadcrumb-bg.jpg"
+    >
+
+
+    <!-- =========================================================
+         FAVICON
+    ========================================================== -->
+    <link
+        rel="icon"
+        href="assets/images/logo/favicon.png"
+        type="image/png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="assets/images/logo/favicon.png"
+    >
+
+
+    <!-- =========================================================
+         PERFORMANCE
+         Primary above-the-fold hero image.
+    ========================================================== -->
+    <link
+        rel="preload"
+        href="assets/images/thumbs/breadcrumb-bg.jpg"
+        as="image"
+        fetchpriority="high"
+    >
+
+
+    <!-- =========================================================
+         BOOTSTRAP
+    ========================================================== -->
+    <link
+        rel="stylesheet"
+        href="assets/css/bootstrap.min.css"
+    >
+
+
+    <!-- =========================================================
+         SWIPER
+    ========================================================== -->
+    <link
+        rel="stylesheet"
+        href="assets/css/swiper-bundle.css"
+    >
+
+
+    <!-- =========================================================
+         ODOMETER
+    ========================================================== -->
+    <link
+        rel="stylesheet"
+        href="assets/css/odometer-theme-default.css"
+    >
+
+
+    <!-- =========================================================
+         MAGNIFIC POPUP
+    ========================================================== -->
+    <link
+        rel="stylesheet"
+        href="assets/css/magnific-popup.css"
+    >
+
+
+    <!-- =========================================================
+         AOS
+    ========================================================== -->
+    <link
+        rel="stylesheet"
+        href="assets/css/aos.css"
+    >
+
+
+    <!-- =========================================================
+         MAIN BLACKSTAR CSS
+    ========================================================== -->
+    <link
+        rel="stylesheet"
+        href="assets/css/main.css"
+    >
+
+
+    <!-- =========================================================
+         SERVICE PAGE CSS
+         Keep after main.css so service-specific rules win.
+    ========================================================== -->
+    <link
+        rel="stylesheet"
+        href="assets/css/service-details.css"
+    >
+
+
+    <!-- =========================================================
+         STRUCTURED DATA
+         RESIDENTIAL SECURITY SERVICE
+    ========================================================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://www.blackstarsecurity.co.uk/residential-security.html#service",
+        "name": "Residential Security and Concierge",
+        "serviceType": "Residential Security and Concierge Services",
+        "url": "https://www.blackstarsecurity.co.uk/residential-security.html",
+        "description": "Professional residential security and concierge support for apartment buildings, managed developments and residential communities, including front-of-house presence, access support, visitor procedures, resident assistance and defined security responsibilities.",
+        "provider": {
+            "@type": "Organization",
+            "@id": "https://www.blackstarsecurity.co.uk/#organization",
+            "name": "Blackstar Group Solutions Ltd",
+            "url": "https://www.blackstarsecurity.co.uk/",
+            "telephone": "+441618186787",
+            "email": "info@blackstarsecurity.co.uk"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Manchester"
+            },
+            {
+                "@type": "Country",
+                "name": "United Kingdom"
+            }
+        ]
+    }
+    </script>
+
+
+    <!-- =========================================================
+         STRUCTURED DATA
+         BREADCRUMB
+    ========================================================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.blackstarsecurity.co.uk/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Concierge & Residential Security",
+                "item": "https://www.blackstarsecurity.co.uk/residential-security.html"
+            }
+        ]
+    }
+    </script>
+
+
+    <!-- =========================================================
+         STRUCTURED DATA
+         FAQ
+    ========================================================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What does a residential concierge actually do?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The role depends on the development. Responsibilities can include front-of-house presence, resident assistance, visitor direction, supporting access procedures and communicating building issues to the appropriate management team."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between concierge and residential security?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Concierge duties are generally front-of-house and service-focused. Residential security involves defined security responsibilities. Where contracted personnel carry out licensable private security activity, the appropriate SIA licence is required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does a residential concierge need an SIA licence?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The title alone does not determine whether a licence is required. The actual duties matter. If contracted personnel carry out licensable security activity, the appropriate SIA licence is required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can personnel manage visitors and contractors?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Visitor and contractor procedures can form part of the role where agreed with management. Personnel should be briefed on how different visitors are expected to enter and move through the development."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can residential personnel work overnight?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Overnight and extended-hour requirements can be discussed. The role, required duties, shift structure and personnel availability need to be established before cover is agreed."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does residential concierge or security cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cost depends on operating hours, personnel numbers, location, responsibilities, shift pattern and whether the role contains licensable security duties. The requirement should be defined before the appropriate cover is quoted."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can personnel support deliveries?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Delivery procedures can be included within the assignment where agreed with management. The exact responsibility should be defined as part of the building brief."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can personnel monitor communal areas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Awareness of agreed communal areas can form part of a residential assignment. Any security, patrol or CCTV responsibilities should be properly defined so the correct personnel and licensing are used."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can Blackstar work with our managing agent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Residential personnel can work alongside managing agents, property managers, facilities teams and other on-site personnel where responsibilities and communication routes are clearly defined."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens when an incident occurs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Incident responsibilities should be established before deployment. Personnel can follow the agreed procedure and escalate to management, supervisors, emergency services or other appropriate parties where required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can Blackstar provide temporary residential cover?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Temporary cover can be considered alongside longer-term residential assignments, subject to the required responsibilities and personnel availability."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can Blackstar provide cover at short notice?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Short-notice residential requirements can be considered subject to suitable personnel availability and enough information being available to define and brief the assignment properly."
+                }
+            }
+        ]
+    }
+    </script>
+
+
+    <!-- =========================================================
+         ACCESSIBILITY
+    ========================================================== -->
+    <style>
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto !important;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body class="home-one-bg tw-magic-cursor">
