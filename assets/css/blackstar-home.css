@@ -1,0 +1,832 @@
+/* =========================================================
+   BLACKSTAR HOME
+   Header + Hero + Counter
+========================================================= */
+
+:root {
+    --bs-black: #090b0d;
+    --bs-black-soft: #101315;
+    --bs-white: #f7f8f8;
+    --bs-grey: #a9afb5;
+    --bs-grey-light: #d9dcde;
+    --bs-gold: #d6a84b;
+    --bs-border: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+body {
+    background: var(--bs-black);
+    color: var(--bs-white);
+}
+
+#smooth-wrapper,
+#smooth-content {
+    background: var(--bs-black);
+}
+
+.hero-section,
+.counter-section {
+    position: relative;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header.header-six {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+    background: transparent !important;
+}
+
+.header.header-six .container-1719 {
+    width: min(calc(100% - 64px), 1719px);
+    max-width: 1719px;
+    margin-inline: auto;
+}
+
+.header.header-six nav {
+    min-height: 66px;
+}
+
+.header.header-six .logo img {
+    width: auto;
+    max-width: 160px !important;
+    height: auto;
+    display: block;
+}
+
+.header-six-menu .nav-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.header-six-menu .nav-menu__link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.header-six-menu .nav-menu__link:hover {
+    color: #ffffff !important;
+}
+
+.header-six-menu .nav-menu__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 0;
+    height: 1px;
+    background: var(--bs-gold);
+    transition: width 0.25s ease;
+}
+
+.header-six-menu .nav-menu__link:hover::after {
+    width: 100%;
+}
+
+.header-right .tw-menu-bar,
+.toggle-mobileMenu {
+    border: 0;
+    background: transparent;
+}
+
+.header-right .tw-menu-bar img,
+.toggle-mobileMenu img {
+    width: 34px;
+    height: auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section.hero-new {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 0 !important;
+    background: var(--bs-black);
+}
+
+/* Background image */
+.hero-new .ripple-image {
+    position: absolute !important;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-new .ripple-image img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    object-fit: cover;
+    object-position: center 38%;
+    filter: grayscale(100%);
+}
+
+/* Premium dark overlay */
+.hero-new::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4, 5, 6, 0.18) 0%,
+            rgba(4, 5, 6, 0.05) 34%,
+            rgba(4, 5, 6, 0.28) 65%,
+            rgba(4, 5, 6, 0.88) 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(4, 5, 6, 0.22) 0%,
+            rgba(4, 5, 6, 0.02) 55%,
+            rgba(4, 5, 6, 0.18) 100%
+        );
+}
+
+.hero-new .container {
+    position: relative;
+    z-index: 2;
+    width: min(calc(100% - 64px), 1719px);
+    max-width: 1719px;
+    margin-inline: auto;
+}
+
+.hero-new .hero-content {
+    width: 100%;
+    padding-top: 190px;
+    padding-bottom: 74px;
+}
+
+/* Main BLACKSTAR SECURITY title */
+.hero-new .hero-content > h1 {
+    width: 100%;
+    max-width: none !important;
+    margin: 0 !important;
+    color: rgba(247, 248, 248, 0.88) !important;
+    font-family: "Mona Sans", sans-serif;
+    font-size: clamp(82px, 11vw, 190px) !important;
+    font-weight: 600 !important;
+    line-height: 0.82 !important;
+    letter-spacing: -0.065em !important;
+    text-transform: uppercase;
+    text-wrap: balance;
+    text-shadow: 0 15px 50px rgba(0, 0, 0, 0.20);
+}
+
+/* Bottom hero copy */
+.hero-new .hero-bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 44px;
+}
+
+.hero-new .hero-bottom p {
+    width: min(100%, 650px);
+    margin: 0;
+    color: rgba(247, 248, 248, 0.72);
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(16px, 1.25vw, 20px);
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+.hero-new .hero-bottom p span {
+    color: var(--bs-white);
+    font-weight: 600;
+}
+
+/* =========================================================
+   COUNTER SECTION
+========================================================= */
+
+.counter-section {
+    padding: 140px 0 !important;
+    overflow: hidden;
+    background: var(--bs-black);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.counter-section .container {
+    width: min(calc(100% - 64px), 1500px);
+    max-width: 1500px;
+    margin-inline: auto;
+}
+
+/* Section statement */
+.counter-section > .container > .title {
+    max-width: 1150px;
+    margin: 0 0 90px !important;
+    color: var(--bs-white);
+    font-family: "Mona Sans", sans-serif;
+    font-size: clamp(46px, 5.5vw, 84px) !important;
+    font-weight: 500 !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.05em !important;
+}
+
+/* Grid */
+.counter-section .row {
+    row-gap: 0;
+}
+
+/* Cards */
+.counter-section .counter-box-items {
+    height: 100%;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    padding: 34px 30px 28px;
+    border-top: 1px solid var(--bs-border);
+    border-right: 1px solid var(--bs-border);
+    background: transparent;
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.counter-section .row > div:first-child .counter-box-items {
+    border-left: 1px solid var(--bs-border);
+}
+
+.counter-section .counter-box-items:hover {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+/* Large figures */
+.counter-box-items .counter-title {
+    margin: 0 0 auto !important;
+    color: var(--bs-gold) !important;
+    font-family: "Mona Sans", sans-serif;
+    font-size: clamp(52px, 5vw, 78px) !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.05em !important;
+}
+
+.counter-box-items .counter-title .odometer {
+    color: inherit !important;
+    font: inherit !important;
+}
+
+/* Counter headings */
+.counter-box-items .title-2 {
+    margin: 70px 0 12px !important;
+    color: var(--bs-white) !important;
+    font-family: "Mona Sans", sans-serif;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.03em !important;
+}
+
+/* Counter descriptions */
+.counter-box-items p {
+    max-width: 300px;
+    margin: 0 !important;
+    color: var(--bs-grey) !important;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+    .hero-new .hero-content > h1 {
+        max-width: 1450px !important;
+    }
+
+    .counter-section .row > div {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1199px) {
+    .header.header-six .container-1719,
+    .hero-new .container,
+    .counter-section .container {
+        width: calc(100% - 48px);
+    }
+
+    .hero-new .hero-content {
+        padding-top: 170px;
+        padding-bottom: 60px;
+    }
+
+    .hero-new .hero-content > h1 {
+        font-size: clamp(74px, 12vw, 130px) !important;
+    }
+
+    .hero-new .hero-bottom {
+        justify-content: flex-start;
+    }
+
+    .counter-section {
+        padding: 110px 0 !important;
+    }
+
+    .counter-section > .container > .title {
+        margin-bottom: 65px !important;
+    }
+
+    .counter-section .counter-box-items {
+        border-left: 1px solid var(--bs-border);
+        border-bottom: 1px solid var(--bs-border);
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+    .header.header-six {
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+    }
+
+    .header.header-six .container-1719,
+    .hero-new .container,
+    .counter-section .container {
+        width: calc(100% - 32px);
+    }
+
+    .header.header-six .logo img {
+        max-width: 125px !important;
+    }
+
+    .hero-section.hero-new {
+        min-height: 100svh;
+    }
+
+    .hero-new .ripple-image img {
+        object-position: 78% center;
+    }
+
+    .hero-new::before {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(4, 5, 6, 0.05) 0%,
+                rgba(4, 5, 6, 0.08) 32%,
+                rgba(4, 5, 6, 0.48) 62%,
+                rgba(4, 5, 6, 0.96) 100%
+            );
+    }
+
+    .hero-new .hero-content {
+        padding-top: 145px;
+        padding-bottom: 38px;
+    }
+
+    .hero-new .hero-content > h1 {
+        max-width: 100% !important;
+        font-size: clamp(52px, 17vw, 82px) !important;
+        line-height: 0.88 !important;
+        letter-spacing: -0.055em !important;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    .hero-new .hero-bottom {
+        margin-top: 28px;
+    }
+
+    .hero-new .hero-bottom p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .counter-section {
+        padding: 85px 0 !important;
+    }
+
+    .counter-section > .container > .title {
+        margin-bottom: 50px !important;
+        font-size: clamp(39px, 11vw, 55px) !important;
+    }
+
+    .counter-section .counter-box-items {
+        min-height: 255px;
+        padding: 27px 24px;
+    }
+
+    .counter-box-items .counter-title {
+        font-size: 54px !important;
+    }
+
+    .counter-box-items .title-2 {
+        margin-top: 55px !important;
+        font-size: 22px !important;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+    .header.header-six .container-1719,
+    .hero-new .container,
+    .counter-section .container {
+        width: calc(100% - 24px);
+    }
+
+    .hero-new .ripple-image img {
+        object-position: 82% center;
+    }
+
+    .hero-new .hero-content > h1 {
+        font-size: 15vw !important;
+    }
+
+    .hero-new .hero-bottom p {
+        font-size: 14px;
+    }
+
+    .counter-section {
+        padding: 70px 0 !important;
+    }
+
+    .counter-section .counter-box-items {
+        min-height: 230px;
+    }
+}
+
+.hero-section.hero-new {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #090b0d;
+}
+
+.hero-bg-media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-bg-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+/* =========================================================
+   BLACKSTAR HOME - MOBILE OPTIMISATION
+   Keep this at the VERY BOTTOM of blackstar-home.css
+========================================================= */
+
+@media (max-width: 767px) {
+
+    /* =====================================================
+       HEADER
+    ====================================================== */
+
+    .header.header-six {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 14px 0 !important;
+        background: transparent !important;
+        z-index: 999;
+    }
+
+    .header.header-six .container-1719 {
+        width: calc(100% - 28px) !important;
+        max-width: none !important;
+    }
+
+    .header.header-six nav {
+        min-height: 54px;
+    }
+
+    .header.header-six .logo img {
+        width: auto !important;
+        max-width: 120px !important;
+        height: auto !important;
+    }
+
+    .toggle-mobileMenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 0;
+        background: transparent;
+    }
+
+    .toggle-mobileMenu img {
+        width: 30px !important;
+        height: auto;
+    }
+
+    /* =====================================================
+       HERO
+    ====================================================== */
+
+    .hero-section.hero-new {
+        position: relative;
+        width: 100%;
+        min-height: 100svh;
+        height: auto !important;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        padding: 0 !important;
+        background: #090b0d;
+    }
+
+    /* Full-screen background */
+    .hero-section.hero-new .hero-bg-media {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden;
+        z-index: 0 !important;
+    }
+
+    .hero-section.hero-new .hero-bg-media img {
+        position: absolute;
+        inset: 0;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        display: block;
+        object-fit: cover !important;
+
+        /* Keeps the main guard visible on mobile */
+        object-position: 70% center !important;
+
+        filter: grayscale(100%);
+    }
+
+    /* Stronger mobile readability gradient */
+    .hero-section.hero-new::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5, 6, 7, 0.10) 0%,
+                rgba(5, 6, 7, 0.05) 28%,
+                rgba(5, 6, 7, 0.30) 52%,
+                rgba(5, 6, 7, 0.78) 76%,
+                rgba(5, 6, 7, 0.97) 100%
+            ),
+            linear-gradient(
+                90deg,
+                rgba(5, 6, 7, 0.30) 0%,
+                rgba(5, 6, 7, 0.06) 75%
+            );
+    }
+
+    /* Hero layout */
+    .hero-section.hero-new .container {
+        position: relative;
+        z-index: 2;
+        width: calc(100% - 28px) !important;
+        max-width: none !important;
+        height: 100%;
+        margin-inline: auto;
+    }
+
+    .hero-section.hero-new .row,
+    .hero-section.hero-new .col-xl-12 {
+        height: 100%;
+    }
+
+    .hero-section.hero-new .hero-content {
+        width: 100%;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 135px 0 38px !important;
+    }
+
+    /* BLACKSTAR SECURITY */
+    .hero-section.hero-new .hero-content > h1 {
+        width: 100%;
+        max-width: 100% !important;
+        margin: 0 !important;
+
+        font-size: clamp(52px, 15.5vw, 74px) !important;
+        line-height: 0.88 !important;
+        letter-spacing: -0.065em !important;
+        font-weight: 600 !important;
+
+        color: rgba(247, 248, 248, 0.93) !important;
+        text-transform: uppercase;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    /* Supporting copy */
+    .hero-section.hero-new .hero-bottom {
+        width: 100%;
+        display: block;
+        margin-top: 28px !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p {
+        width: 100% !important;
+        max-width: 440px !important;
+        margin: 0 !important;
+
+        color: rgba(247, 248, 248, 0.73);
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p span {
+        display: inline;
+        color: #f7f8f8;
+        font-weight: 700;
+    }
+
+    /* =====================================================
+       COUNTER SECTION
+    ====================================================== */
+
+    .counter-section {
+        padding: 78px 0 !important;
+        background: #090b0d;
+    }
+
+    .counter-section .container {
+        width: calc(100% - 28px) !important;
+        max-width: none !important;
+    }
+
+    .counter-section > .container > .title {
+        max-width: 100%;
+        margin: 0 0 46px !important;
+
+        font-size: clamp(38px, 10.5vw, 52px) !important;
+        line-height: 1.02 !important;
+        letter-spacing: -0.045em !important;
+    }
+
+    .counter-section .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .counter-section .row > div {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .counter-section .counter-box-items {
+        min-height: 0;
+        padding: 30px 0 32px;
+
+        border-left: 0 !important;
+        border-right: 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        border-top: 0;
+
+        background: transparent;
+    }
+
+    .counter-section .row > div:first-child .counter-box-items {
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        border-left: 0 !important;
+    }
+
+    .counter-box-items .counter-title {
+        margin: 0 0 38px !important;
+
+        font-size: 54px !important;
+        line-height: 1 !important;
+        color: #d6a84b !important;
+    }
+
+    .counter-box-items .title-2 {
+        margin: 0 0 10px !important;
+
+        font-size: 23px !important;
+        line-height: 1.15 !important;
+    }
+
+    .counter-box-items p {
+        max-width: 330px;
+        margin: 0 !important;
+
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+}
+
+
+/* =========================================================
+   SMALLER PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .header.header-six .container-1719,
+    .hero-section.hero-new .container,
+    .counter-section .container {
+        width: calc(100% - 24px) !important;
+    }
+
+    .header.header-six .logo img {
+        max-width: 108px !important;
+    }
+
+    .hero-section.hero-new {
+        min-height: 100svh;
+    }
+
+    .hero-section.hero-new .hero-bg-media img {
+        /* Shift further right on narrow screens */
+        object-position: 73% center !important;
+    }
+
+    .hero-section.hero-new .hero-content {
+        min-height: 100svh;
+        padding-top: 120px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .hero-section.hero-new .hero-content > h1 {
+        font-size: 15vw !important;
+        line-height: 0.89 !important;
+        letter-spacing: -0.06em !important;
+    }
+
+    .hero-section.hero-new .hero-bottom {
+        margin-top: 23px !important;
+    }
+
+    .hero-section.hero-new .hero-bottom p {
+        max-width: 100% !important;
+        font-size: 13.5px !important;
+        line-height: 1.58 !important;
+    }
+
+    .counter-section {
+        padding: 65px 0 !important;
+    }
+
+    .counter-section > .container > .title {
+        margin-bottom: 38px !important;
+        font-size: 10.5vw !important;
+    }
+
+    .counter-section .counter-box-items {
+        padding: 27px 0 29px;
+    }
+
+    .counter-box-items .counter-title {
+        margin-bottom: 32px !important;
+        font-size: 49px !important;
+    }
+
+    .counter-box-items .title-2 {
+        font-size: 21px !important;
+    }
+}
