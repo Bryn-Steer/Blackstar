@@ -20697,3 +20697,29 @@ body.tw-magic-cursor #magic-cursor {
         transform: none !important;
     }
 }
+
+@media (max-width: 767px) {
+
+    /* Keep service tags on one line */
+    .tag-item {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+
+    .tag-item span {
+        width: auto !important;
+        max-width: none !important;
+
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+
+        padding: 9px 14px !important;
+
+        white-space: nowrap !important;
+
+        font-size: 13px !important;
+        line-height: 1 !important;
+    }
+}
