@@ -20645,3 +20645,55 @@ body.tw-magic-cursor #magic-cursor {
   transition: none !important;
   animation: none !important;
 }
+
+@media (max-width: 767px) {
+    .ordinary-section .about-left-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .ordinary-section .heading-text {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 0 36px !important;
+
+        z-index: 2;
+    }
+
+    .ordinary-section .about-image {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        margin: 0 !important;
+
+        transform: none !important;
+
+        z-index: 1;
+    }
+
+    .ordinary-section .about-image img {
+        width: 100% !important;
+        height: auto !important;
+
+        display: block;
+
+        object-fit: contain !important;
+        object-position: center !important;
+
+        transform: none !important;
+    }
+}
