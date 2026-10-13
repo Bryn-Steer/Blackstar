@@ -1,33 +1,59 @@
 /* =========================================================
-   BLACKSTAR ABOUT PAGE - MOBILE
-   Load this AFTER main.css and dark.css.
+   BLACKSTAR ABOUT PAGE - COMPLETE MOBILE STYLESHEET
+   File: assets/css/about-mobile.css
+
+   IMPORTANT:
+   Load AFTER main.css and dark.css
 ========================================================= */
 
 :root {
     --blackstar-bg: #090b0d;
     --blackstar-surface: #111417;
+    --blackstar-surface-2: #15191d;
     --blackstar-text: #f7f8f8;
     --blackstar-muted: #a9afb5;
     --blackstar-gold: #d6a84b;
     --blackstar-border: rgba(255, 255, 255, 0.12);
 }
 
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 767px) {
+
+    /* =====================================================
+       GLOBAL
+    ====================================================== */
 
     html,
     body {
+        width: 100%;
+        max-width: 100%;
         overflow-x: hidden !important;
         background: var(--blackstar-bg) !important;
+    }
+
+    body {
+        color: var(--blackstar-text);
     }
 
     .container {
         width: calc(100% - 32px) !important;
         max-width: none !important;
+
         margin-left: auto !important;
         margin-right: auto !important;
+
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+
+    section {
+        overflow-x: hidden;
+    }
+
 
     /* =====================================================
        HEADER
@@ -35,16 +61,24 @@
 
     .header.header-six {
         position: relative !important;
+
+        top: auto !important;
+        left: auto !important;
+
         width: 100% !important;
         min-height: 82px !important;
+
         padding: 14px 0 !important;
+
         background: var(--blackstar-bg) !important;
+
         z-index: 999 !important;
     }
 
     .header.header-six .container-1719 {
         width: calc(100% - 32px) !important;
         max-width: none !important;
+
         margin-left: auto !important;
         margin-right: auto !important;
     }
@@ -54,6 +88,7 @@
     }
 
     .header.header-six .logo img {
+        width: auto !important;
         max-width: 132px !important;
         height: auto !important;
     }
@@ -61,11 +96,15 @@
     .toggle-mobileMenu {
         width: 42px !important;
         height: 42px !important;
+
         padding: 0 !important;
+
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
+
         border: 0 !important;
+
         background: transparent !important;
     }
 
@@ -74,14 +113,32 @@
         height: auto !important;
     }
 
+
     /* =====================================================
-       PORTFOLIO / SECURITY ENVIRONMENTS
+       PORTFOLIO / PROJECTS
     ====================================================== */
 
     .portfolio-area {
-        padding-top: 42px !important;
-        padding-bottom: 88px !important;
+        position: relative;
+
+        width: 100%;
+
+        padding: 80px 0 90px !important;
+
+        overflow: hidden !important;
+
         background: var(--blackstar-bg) !important;
+    }
+
+    .portfolio-area .container {
+        width: calc(100% - 32px) !important;
+        max-width: none !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
     .portfolio-area .row {
@@ -90,101 +147,243 @@
     }
 
     .portfolio-area .row > [class*="col-"] {
+        width: 100% !important;
+        max-width: 100% !important;
+
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
+
+    /* =====================================================
+       PORTFOLIO HEADING
+    ====================================================== */
+
     .portfolio-area .position-relative.z-1.tw-mb-2 {
-        margin-bottom: 34px !important;
+        position: relative !important;
+
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        margin: 0 0 52px !important;
+
+        text-align: center !important;
+
+        transform: none !important;
     }
 
     .portfolio-top-subtitle {
-        margin-bottom: 7px !important;
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        display: block !important;
+
+        width: 100% !important;
+
+        margin: 0 0 12px !important;
+
         color: var(--blackstar-gold) !important;
+
         font-size: 13px !important;
-        line-height: 1.2 !important;
-        letter-spacing: 0.14em !important;
+        font-weight: 700 !important;
+        line-height: 1 !important;
+
+        letter-spacing: 0.22em !important;
+
+        text-align: center !important;
+        text-transform: uppercase !important;
+
+        transform: none !important;
     }
 
     .portfolio-top-title {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
         color: var(--blackstar-text) !important;
-        font-size: clamp(42px, 12vw, 58px) !important;
-        line-height: 0.95 !important;
+
+        font-size: clamp(58px, 16vw, 78px) !important;
+        font-weight: 700 !important;
+        line-height: 0.88 !important;
+
         letter-spacing: -0.045em !important;
+
+        text-align: center !important;
+        text-transform: uppercase !important;
+
+        transform: none !important;
     }
 
     .portfolio-shape {
         display: none !important;
     }
 
+
+    /* =====================================================
+       PORTFOLIO CARDS
+    ====================================================== */
+
     .portfolio-panel-area {
         width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .portfolio-panel {
         position: relative !important;
+
         width: 100% !important;
-        height: clamp(500px, 72svh, 610px) !important;
+
+        height: clamp(500px, 68svh, 590px) !important;
         min-height: 0 !important;
-        margin: 0 0 26px !important;
+
+        display: block !important;
+
+        margin: 0 0 24px !important;
+
         padding: 26px !important;
+
         overflow: hidden !important;
+
         border-radius: 24px !important;
+
         background-size: cover !important;
-        background-position: center !important;
+        background-position: center center !important;
         background-repeat: no-repeat !important;
+
+        transform: none !important;
+
         isolation: isolate;
     }
 
     .portfolio-panel::after {
         content: "";
+
         position: absolute;
         inset: 0;
-        z-index: -1;
+
+        z-index: 0;
+
         pointer-events: none;
-        background: linear-gradient(
-            180deg,
-            rgba(5, 6, 7, 0.06) 0%,
-            rgba(5, 6, 7, 0.04) 48%,
-            rgba(5, 6, 7, 0.82) 100%
-        );
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5, 6, 7, 0.04) 0%,
+                rgba(5, 6, 7, 0.02) 42%,
+                rgba(5, 6, 7, 0.18) 66%,
+                rgba(5, 6, 7, 0.88) 100%
+            );
     }
 
     .portfolio-wrap {
         position: relative !important;
+
         z-index: 2 !important;
+
         width: 100% !important;
         height: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+
+        transform: none !important;
     }
+
+
+    /* PROJECT NUMBER */
 
     .portfolio-wrap .font-heading {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        display: block !important;
+
+        margin: 0 !important;
+
         color: #ffffff !important;
-        font-size: clamp(58px, 18vw, 82px) !important;
+
+        font-size: clamp(68px, 19vw, 88px) !important;
         font-weight: 700 !important;
-        line-height: 0.9 !important;
-        letter-spacing: -0.05em !important;
+        line-height: 0.85 !important;
+
+        letter-spacing: -0.06em !important;
+
+        transform: none !important;
     }
+
+
+    /* PROJECT NAME */
 
     .portfolio-title {
-        max-width: 92% !important;
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
         margin: 0 !important;
-        font-size: clamp(30px, 8.5vw, 42px) !important;
+
+        color: #ffffff !important;
+
+        font-size: clamp(36px, 9.5vw, 46px) !important;
+        font-weight: 700 !important;
         line-height: 0.98 !important;
+
         letter-spacing: -0.035em !important;
+
+        text-transform: uppercase !important;
+
+        transform: none !important;
     }
 
-    .portfolio-title,
     .portfolio-title a {
+        display: block !important;
+
+        width: 100% !important;
+
         color: #ffffff !important;
+
+        font: inherit !important;
+        line-height: inherit !important;
+        letter-spacing: inherit !important;
+
         text-decoration: none !important;
     }
 
+
     /* =====================================================
-       TESTIMONIALS
+       TESTIMONIAL SECTION
     ====================================================== */
 
     .testimonial-area {
         padding: 84px 0 !important;
+
+        overflow: hidden !important;
+
         background: var(--blackstar-bg) !important;
     }
 
@@ -196,36 +395,64 @@
     .testimonial-area .row > [class*="col-"] {
         width: 100% !important;
         max-width: 100% !important;
+
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
+
+    /* SMALL SECTION LABEL */
+
     .testimonial-area .border.border-main-600 {
         display: inline-flex !important;
+
         margin-bottom: 22px !important;
+
         padding: 8px 14px !important;
+
         border-color: rgba(214, 168, 75, 0.55) !important;
+
         color: var(--blackstar-gold) !important;
+
         font-size: 12px !important;
+        line-height: 1 !important;
     }
 
+
+    /* TESTIMONIAL TITLE */
+
     .testimonial-section-title {
+        max-width: 100% !important;
+
         margin: 0 0 36px !important;
+
         color: var(--blackstar-text) !important;
+
         font-size: clamp(42px, 11vw, 58px) !important;
         line-height: 0.96 !important;
+
         letter-spacing: -0.045em !important;
     }
 
+
+    /* REVIEW STATISTICS */
+
     .testimonial-clients {
         display: grid !important;
+
         grid-template-columns: auto 1fr !important;
+
         gap: 18px 20px !important;
+
         align-items: center !important;
+
         margin-bottom: 38px !important;
+
         padding: 22px !important;
+
         border: 1px solid var(--blackstar-border) !important;
         border-radius: 20px !important;
+
         background: var(--blackstar-surface) !important;
     }
 
@@ -236,7 +463,10 @@
     .testimonial-clients .tw-w-140.tw-h-140 {
         width: 78px !important;
         height: 78px !important;
+
         margin-left: 0 !important;
+
+        border-width: 1px !important;
     }
 
     .testimonial-count-title {
@@ -245,15 +475,23 @@
 
     .testimonial-clients .tw-text-xl {
         margin: 0 !important;
+
         color: var(--blackstar-text) !important;
+
         font-size: 15px !important;
         line-height: 1.45 !important;
     }
 
     .testimonial-clients > .d-flex.tw-gap-4 {
         grid-column: 1 / -1 !important;
+
+        display: flex !important;
+        align-items: center !important;
+
         gap: 12px !important;
+
         padding-top: 16px !important;
+
         border-top: 1px solid var(--blackstar-border) !important;
     }
 
@@ -262,19 +500,40 @@
         height: auto !important;
     }
 
+    .testimonial-clients > .d-flex.tw-gap-4 .tw-text-xl {
+        color: var(--blackstar-gold) !important;
+
+        font-size: 20px !important;
+    }
+
+
+    /* TESTIMONIAL CARD */
+
     .testimonial-slide {
         width: 100% !important;
+
         overflow: hidden !important;
     }
 
     .testimonial-wrapper {
         display: block !important;
+
         width: 100% !important;
+
+        min-height: 0 !important;
+
         padding: 26px !important;
+
+        gap: 0 !important;
+
         border: 1px solid var(--blackstar-border) !important;
         border-radius: 22px !important;
+
         background: var(--blackstar-surface) !important;
     }
+
+
+    /* REMOVE OVERSIZED DECORATIVE ARTWORK */
 
     .testimonial-wrapper > .position-relative.z-1 {
         display: none !important;
@@ -282,22 +541,66 @@
 
     .testimonial-wrapper .tw-mb-4 {
         width: 100% !important;
+
         margin: 0 !important;
+    }
+
+    .testimonial-wrapper .tw-mb-8 {
+        margin-bottom: 18px !important;
+    }
+
+    .testimonial-wrapper .ph-star {
+        font-size: 20px !important;
+    }
+
+    .testimonial-wrapper .tw-mb-13 {
+        margin-bottom: 24px !important;
     }
 
     .testimonial-wrapper .tw-w-435-px {
         width: 100% !important;
         max-width: 100% !important;
+
         margin: 0 !important;
+
         color: var(--blackstar-text) !important;
+
         font-size: 17px !important;
         line-height: 1.65 !important;
+
         overflow-wrap: anywhere !important;
+    }
+
+    .testimonial-wrapper h2 {
+        margin-bottom: 3px !important;
+
+        color: var(--blackstar-text) !important;
+
+        font-size: 20px !important;
+    }
+
+    .testimonial-wrapper p {
+        overflow-wrap: anywhere !important;
+    }
+
+    .testimonial-arrow {
+        display: flex !important;
+
+        gap: 8px !important;
+    }
+
+    .testimonial-arrow button {
+        width: 42px !important;
+        height: 42px !important;
+
+        border: 1px solid var(--blackstar-border) !important;
+        border-radius: 50% !important;
     }
 
     .testimonial-arrow-shape {
         display: none !important;
     }
+
 
     /* =====================================================
        MARQUEE
@@ -305,41 +608,65 @@
 
     .maquee-area {
         padding: 18px 0 !important;
+
         border-top: 1px solid var(--blackstar-border) !important;
         border-bottom: 1px solid var(--blackstar-border) !important;
+
         background: #0c0f11 !important;
+    }
+
+    .maquee-box {
+        gap: 12px !important;
+    }
+
+    .maquee-icon img {
+        width: 22px !important;
+        height: 22px !important;
     }
 
     .maquee-title {
         font-size: 22px !important;
+        line-height: 1 !important;
     }
+
 
     /* =====================================================
        HOW WE WORK
     ====================================================== */
 
     .feature-two-area {
-        padding: 86px 0 76px !important;
+        padding-top: 86px !important;
+        padding-bottom: 76px !important;
+
         background: var(--blackstar-bg) !important;
     }
 
     .feature-two-area .section-two-wrapper {
         margin: 0 0 46px !important;
+
         padding: 0 !important;
+
         text-align: left !important;
     }
 
     .feature-two-area .section-two-title {
         margin: 0 0 18px !important;
+
         color: var(--blackstar-text) !important;
+
         font-size: clamp(44px, 12vw, 60px) !important;
         line-height: 0.95 !important;
+
         letter-spacing: -0.045em !important;
     }
 
     .feature-two-area .section-two-wrapper > p {
+        max-width: 100% !important;
+
         margin: 0 !important;
+
         color: var(--blackstar-muted) !important;
+
         font-size: 16px !important;
         font-weight: 400 !important;
         line-height: 1.65 !important;
@@ -353,60 +680,98 @@
     .feature-two-area .row > [class*="col-"] {
         width: 100% !important;
         max-width: 100% !important;
+
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
+
+    /* HOW WE WORK CARDS */
+
     .feature-two-wrapper {
         width: 100% !important;
+
         margin: 0 0 16px !important;
+
         padding: 24px !important;
+
         border: 1px solid var(--blackstar-border) !important;
         border-radius: 22px !important;
+
         background: var(--blackstar-surface) !important;
     }
 
     .feature-two-content {
         display: flex !important;
+
         align-items: flex-start !important;
+
         gap: 18px !important;
+
         margin-bottom: 20px !important;
     }
+
+
+    /* ICON */
 
     .feature-ip-icon {
         width: 82px !important;
         height: 82px !important;
+
         min-width: 82px !important;
+
         background: var(--blackstar-gold) !important;
     }
 
     .feature-ip-icon img {
         width: 38px !important;
         height: 38px !important;
+
         object-fit: contain !important;
+    }
+
+
+    /* STEP NUMBER */
+
+    .feature-number {
+        top: -7px !important;
+        right: -7px !important;
     }
 
     .feature-number span {
         width: 32px !important;
         height: 32px !important;
+
         font-size: 11px !important;
     }
 
+
+    /* CARD TITLE */
+
     .feature-two-title {
         margin: 15px 0 0 !important;
+
         color: var(--blackstar-text) !important;
+
         font-size: 25px !important;
         line-height: 1.08 !important;
+
         letter-spacing: -0.025em !important;
     }
 
+
+    /* CARD DESCRIPTION */
+
     .feature-two-wrapper > div:last-child p {
         margin: 0 !important;
+
         color: var(--blackstar-muted) !important;
+
         font-size: 15px !important;
         font-weight: 400 !important;
         line-height: 1.65 !important;
     }
+
 
     /* =====================================================
        SECURITY ADVICE / BLOG
@@ -414,7 +779,10 @@
 
     .blog-area {
         padding: 86px 0 92px !important;
+
         background: var(--blackstar-bg) !important;
+
+        overflow: hidden !important;
     }
 
     .blog-area .position-relative.z-1.tw-mb-14 {
@@ -423,15 +791,24 @@
 
     .blog-area .testimonial-section-title {
         margin: 0 !important;
+
         text-align: left !important;
+
         font-size: clamp(44px, 12vw, 60px) !important;
     }
+
+
+    /* DECORATIVE ARROWS */
 
     .blog-shape-1,
     .blog-shape-2 {
         opacity: 0.18 !important;
+
         transform: scale(0.7) !important;
     }
+
+
+    /* BLOG GRID */
 
     .blog-area .row {
         margin-left: 0 !important;
@@ -441,60 +818,111 @@
     .blog-area .row > [class*="col-"] {
         width: 100% !important;
         max-width: 100% !important;
+
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
+
+    /* BLOG CARD */
+
     .blog-wrapper {
         width: 100% !important;
+
         margin: 0 0 22px !important;
+
         padding: 18px !important;
+
         overflow: visible !important;
+
         border: 1px solid var(--blackstar-border) !important;
         border-radius: 20px !important;
+
         background: var(--blackstar-surface) !important;
     }
 
+
+    /* BLOG IMAGE */
+
     .blog-main-thumb {
         position: relative !important;
+
         width: 100% !important;
+        height: auto !important;
+
         aspect-ratio: 16 / 10 !important;
+
         margin: 0 0 20px !important;
+
         overflow: hidden !important;
+
         border-radius: 16px !important;
+
         background: #0b0d0f !important;
     }
 
     .blog-main-thumb > img {
         position: absolute !important;
+
         inset: 0 !important;
+
         width: 100% !important;
         height: 100% !important;
+
+        max-width: none !important;
+
         object-fit: cover !important;
         object-position: center !important;
+
         opacity: 1 !important;
         visibility: visible !important;
+
         transform: none !important;
+
         transition: none !important;
+
         filter: none !important;
     }
+
+
+    /* HIDE DUPLICATE IMAGE */
 
     .blog-main-thumb > img:nth-of-type(2) {
         display: none !important;
     }
 
+    .blog-card-image-link {
+        z-index: 3 !important;
+    }
+
+
+    /* BLOG META */
+
     .blog-meta {
         display: flex !important;
         flex-wrap: wrap !important;
+        align-items: center !important;
+
         gap: 7px 10px !important;
+
         margin-bottom: 16px !important;
     }
 
     .blog-meta > span {
         margin: 0 !important;
+
+        color: var(--blackstar-muted) !important;
+
         font-size: 12px !important;
         line-height: 1.35 !important;
     }
+
+    .blog-meta .text-main-600 {
+        color: var(--blackstar-gold) !important;
+    }
+
+
+    /* BLOG TITLE */
 
     .blog-wrapper .tw-me-10 {
         margin-right: 0 !important;
@@ -502,43 +930,126 @@
 
     .blog-wrapper .tw-text-9 {
         margin: 0 !important;
+
         font-size: 27px !important;
         line-height: 1.16 !important;
+
         letter-spacing: -0.025em !important;
     }
 
     .blog-wrapper .tw-text-9 a {
         color: var(--blackstar-text) !important;
+
         text-decoration: none !important;
+    }
+
+
+    /* VIEW ALL BUTTON */
+
+    .blog-area .row.justify-content-center.tw-mt-10 {
+        margin-top: 20px !important;
     }
 
     .blog-area .theme-btn-main {
         width: 100% !important;
+
         display: flex !important;
         justify-content: center !important;
     }
+
+    .blog-area .theme-btn {
+        min-height: 50px !important;
+
+        padding: 12px 20px !important;
+
+        font-size: 14px !important;
+    }
+
+
+    /* =====================================================
+       BACK TO TOP BUTTON
+    ====================================================== */
+
+    .scroll-to-top,
+    .scrollTop,
+    .progress-wrap,
+    .scroll-up {
+        right: 18px !important;
+        bottom: 22px !important;
+
+        transform: scale(0.86) !important;
+
+        transform-origin: bottom right !important;
+    }
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
 @media (max-width: 480px) {
+
+    /* =====================================================
+       GLOBAL
+    ====================================================== */
 
     .container,
     .header.header-six .container-1719 {
         width: calc(100% - 24px) !important;
     }
 
+
+    /* =====================================================
+       PORTFOLIO
+    ====================================================== */
+
+    .portfolio-area {
+        padding: 68px 0 76px !important;
+    }
+
+    .portfolio-area .container {
+        width: calc(100% - 24px) !important;
+    }
+
+    .portfolio-area .position-relative.z-1.tw-mb-2 {
+        margin-bottom: 42px !important;
+    }
+
+    .portfolio-top-subtitle {
+        margin-bottom: 10px !important;
+
+        font-size: 11px !important;
+
+        letter-spacing: 0.2em !important;
+    }
+
+    .portfolio-top-title {
+        font-size: 15vw !important;
+    }
+
     .portfolio-panel {
-        height: clamp(470px, 68svh, 560px) !important;
+        height: clamp(470px, 65svh, 550px) !important;
+
+        margin-bottom: 20px !important;
+
         padding: 22px !important;
+
         border-radius: 20px !important;
     }
 
     .portfolio-wrap .font-heading {
-        font-size: 58px !important;
+        font-size: 17vw !important;
     }
 
     .portfolio-title {
-        font-size: 30px !important;
+        font-size: clamp(34px, 9vw, 42px) !important;
     }
+
+
+    /* =====================================================
+       SECTIONS
+    ====================================================== */
 
     .testimonial-area,
     .feature-two-area,
@@ -547,12 +1058,22 @@
         padding-bottom: 72px !important;
     }
 
-    .feature-two-wrapper,
+
+    /* =====================================================
+       CARDS
+    ====================================================== */
+
     .testimonial-wrapper,
     .testimonial-clients,
+    .feature-two-wrapper,
     .blog-wrapper {
         border-radius: 18px !important;
     }
+
+
+    /* =====================================================
+       HOW WE WORK
+    ====================================================== */
 
     .feature-two-wrapper {
         padding: 20px !important;
@@ -561,6 +1082,7 @@
     .feature-ip-icon {
         width: 72px !important;
         height: 72px !important;
+
         min-width: 72px !important;
     }
 
@@ -572,6 +1094,11 @@
     .feature-two-title {
         font-size: 22px !important;
     }
+
+
+    /* =====================================================
+       BLOG
+    ====================================================== */
 
     .blog-wrapper .tw-text-9 {
         font-size: 24px !important;
