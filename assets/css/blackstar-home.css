@@ -1240,7 +1240,7 @@ body {
 
     .project-section-new .project-thumb,
     .project-section-new .project-thumb.style-1 {
-        width: 90% !important;
+        width: 82% !important;
 
         /* centre image */
         margin-left: auto !important;
@@ -1259,5 +1259,14 @@ body {
 
         object-fit: cover !important;
         object-position: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .project-section-new .project-thumb,
+    .project-section-new .project-thumb.style-1 {
+        width: 80% !important;
+        aspect-ratio: 1.5 / 1 !important;
     }
 }
