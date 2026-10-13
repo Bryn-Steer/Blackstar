@@ -1231,3 +1231,33 @@ body {
         transform: translateY(-35px) !important;
     }
 }
+
+/* =========================================================
+   VENUE IMAGES - SMALLER ON MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .project-section-new .project-thumb,
+    .project-section-new .project-thumb.style-1 {
+        width: 90% !important;
+
+        /* centre image */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 32px !important;
+
+        /* slightly wider / shorter image shape */
+        aspect-ratio: 1.55 / 1 !important;
+
+        height: auto !important;
+    }
+
+    .project-section-new .project-thumb img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+}
