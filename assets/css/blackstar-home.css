@@ -1248,7 +1248,7 @@ body {
         margin-bottom: 32px !important;
 
         /* slightly wider / shorter image shape */
-        aspect-ratio: 1.55 / 1 !important;
+        aspect-ratio: 1.35 / 1 !important;
 
         height: auto !important;
     }
@@ -1267,6 +1267,6 @@ body {
     .project-section-new .project-thumb,
     .project-section-new .project-thumb.style-1 {
         width: 80% !important;
-        aspect-ratio: 1.5 / 1 !important;
+        aspect-ratio: 1.3 / 1 !important;
     }
 }
