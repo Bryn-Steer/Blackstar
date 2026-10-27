@@ -227,6 +227,12 @@ html {
     text-transform: uppercase;
 }
 
+.career-header__logo {
+    display: block;
+    width: 150px;
+    height: auto;
+}
+
 .career-header__nav {
     display: flex;
     align-items: center;
@@ -2558,3 +2564,692 @@ html {
     text-transform: uppercase;
 }
 
+/* =========================================================
+   CAREER SIGNAL STRIP
+========================================================= */
+
+.career-signal-strip {
+    position: relative;
+    z-index: 5;
+    background: #090b0d;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.career-signal-strip__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.career-signal {
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 22px;
+    align-items: center;
+    padding: 34px 40px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.career-signal:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.career-signal__number {
+    align-self: start;
+    padding-top: 4px;
+
+    color: #d6a84b;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.career-signal strong {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #f7f8f8;
+
+    font-family: "Mona Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+
+.career-signal p {
+    max-width: 320px;
+    margin: 0;
+
+    color: rgba(167, 175, 183, 0.76);
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+    .career-signal-strip__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .career-signal {
+        min-height: 0;
+        padding: 28px 24px;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .career-signal:last-child {
+        border-bottom: 0;
+    }
+}
+
+/* =========================================================
+   BLACKSTAR CAREERS
+   PREMIUM V3 VISUAL SYSTEM
+========================================================= */
+
+:root {
+    --career-ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+    --career-surface-premium: #0e1113;
+    --career-surface-raised: #121619;
+    --career-hairline: rgba(255, 255, 255, 0.085);
+    --career-gold-muted: rgba(214, 168, 75, 0.12);
+}
+
+/* ---------------------------------------------------------
+   PAGE ATMOSPHERE
+--------------------------------------------------------- */
+
+.blackstar-careers-page {
+    background:
+        radial-gradient(
+            circle at 75% 18%,
+            rgba(214, 168, 75, 0.035),
+            transparent 24%
+        ),
+        #090b0d;
+}
+
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+
+.career-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    padding: 16px 0;
+}
+
+.career-header__inner {
+    min-height: 68px;
+    padding: 0 24px;
+
+    background: rgba(7, 9, 10, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 18px;
+
+    backdrop-filter: blur(24px) saturate(130%);
+    -webkit-backdrop-filter: blur(24px) saturate(130%);
+
+    box-shadow:
+        0 18px 55px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* ---------------------------------------------------------
+   EYEBROWS
+--------------------------------------------------------- */
+
+.careers-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.careers-eyebrow::before {
+    content: "";
+
+    width: 5px;
+    height: 5px;
+
+    flex: 0 0 5px;
+
+    border-radius: 50%;
+
+    background: var(--career-gold);
+
+    box-shadow:
+        0 0 0 5px rgba(214, 168, 75, 0.08);
+}
+
+/* ---------------------------------------------------------
+   HERO
+--------------------------------------------------------- */
+
+.careers-hero {
+    isolation: isolate;
+}
+
+.careers-hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+    pointer-events: none;
+
+    opacity: 0.16;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 72px 72px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 4%,
+            black 35%,
+            black 72%,
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 4%,
+            black 35%,
+            black 72%,
+            transparent 100%
+        );
+}
+
+.careers-hero__image {
+    transform: scale(1.025);
+
+    animation:
+        blackstarHeroReveal
+        1.6s
+        var(--career-ease-premium)
+        both;
+}
+
+@keyframes blackstarHeroReveal {
+    from {
+        transform: scale(1.07);
+        opacity: 0.78;
+    }
+
+    to {
+        transform: scale(1.025);
+        opacity: 1;
+    }
+}
+
+.careers-hero__content {
+    max-width: 1000px;
+
+    padding-left: 28px;
+
+    border-left: 1px solid rgba(214, 168, 75, 0.55);
+}
+
+.careers-hero__content h1 {
+    text-wrap: balance;
+}
+
+.careers-hero__lead {
+    max-width: 610px;
+
+    color: rgba(247, 248, 248, 0.72);
+}
+
+/* ---------------------------------------------------------
+   BUTTON DETAILS
+--------------------------------------------------------- */
+
+.career-btn {
+    position: relative;
+
+    gap: 10px;
+
+    transition:
+        transform 0.35s var(--career-ease-premium),
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.career-btn--primary::after,
+.career-btn--gold::after {
+    content: "→";
+
+    font-size: 16px;
+
+    transition:
+        transform
+        0.35s
+        var(--career-ease-premium);
+}
+
+.career-btn--primary:hover::after,
+.career-btn--gold:hover::after {
+    transform: translateX(4px);
+}
+
+.career-btn--primary:hover,
+.career-btn--gold:hover {
+    box-shadow:
+        0 12px 35px rgba(214, 168, 75, 0.12);
+}
+
+/* ---------------------------------------------------------
+   SECTION TITLES
+--------------------------------------------------------- */
+
+.career-section-heading h2,
+.career-intro__heading h2,
+.career-assessment__intro h2,
+.career-final-cta h2 {
+    text-wrap: balance;
+}
+
+.career-section-heading > p:last-child,
+.career-intro__copy {
+    max-width: 680px;
+}
+
+/* ---------------------------------------------------------
+   VALUE CARDS
+--------------------------------------------------------- */
+
+.career-value-card {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        background-color 0.35s ease,
+        transform 0.45s var(--career-ease-premium);
+}
+
+.career-value-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    opacity: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--career-gold),
+            transparent
+        );
+
+    transition: opacity 0.35s ease;
+}
+
+@media (hover: hover) {
+
+    .career-value-card:hover {
+        transform: translateY(-3px);
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(214, 168, 75, 0.04),
+                rgba(255, 255, 255, 0.012)
+            );
+    }
+
+    .career-value-card:hover::before {
+        opacity: 0.75;
+    }
+}
+
+/* ---------------------------------------------------------
+   PATHWAY CARDS
+--------------------------------------------------------- */
+
+.career-pathway-card {
+    border-color: rgba(255, 255, 255, 0.10);
+
+    transition:
+        transform 0.5s var(--career-ease-premium),
+        border-color 0.35s ease,
+        box-shadow 0.45s ease;
+}
+
+@media (hover: hover) {
+
+    .career-pathway-card:hover {
+        transform: translateY(-6px);
+
+        border-color: rgba(214, 168, 75, 0.28);
+
+        box-shadow:
+            0 35px 80px rgba(0, 0, 0, 0.23);
+    }
+}
+
+/* ---------------------------------------------------------
+   ROLES
+--------------------------------------------------------- */
+
+.career-role-grid {
+    gap: 14px;
+
+    background: transparent;
+
+    border: 0;
+}
+
+.career-role-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.025),
+            rgba(255, 255, 255, 0.005)
+        );
+
+    transition:
+        transform 0.45s var(--career-ease-premium),
+        border-color 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.career-role-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--career-gold);
+
+    transition:
+        width
+        0.55s
+        var(--career-ease-premium);
+}
+
+.career-role-card a::after {
+    content: " →";
+
+    transition:
+        margin-left
+        0.3s
+        var(--career-ease-premium);
+}
+
+@media (hover: hover) {
+
+    .career-role-card:hover {
+        transform: translateY(-5px);
+
+        border-color: rgba(214, 168, 75, 0.28);
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(214, 168, 75, 0.055),
+                rgba(255, 255, 255, 0.008)
+            );
+    }
+
+    .career-role-card:hover::before {
+        width: 100%;
+    }
+
+    .career-role-card:hover a::after {
+        margin-left: 5px;
+    }
+}
+
+/* ---------------------------------------------------------
+   RECRUITMENT PROCESS
+--------------------------------------------------------- */
+
+.career-process__steps > li {
+    position: relative;
+
+    transition:
+        padding-left
+        0.4s
+        var(--career-ease-premium);
+}
+
+@media (hover: hover) {
+
+    .career-process__steps > li:hover {
+        padding-left: 12px;
+    }
+}
+
+/* ---------------------------------------------------------
+   ASSESSMENT
+--------------------------------------------------------- */
+
+.career-assessment__shell {
+    border-color: rgba(255, 255, 255, 0.13);
+
+    box-shadow:
+        0 50px 130px rgba(0, 0, 0, 0.38),
+        0 0 0 1px rgba(255, 255, 255, 0.015),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.career-assessment__shell:focus-within {
+    border-color: rgba(214, 168, 75, 0.25);
+}
+
+.career-assessment__stage {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.career-assessment__stage::before {
+    content: "";
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--career-gold);
+}
+
+.career-assessment__progress {
+    overflow: visible;
+}
+
+.career-assessment__progress-fill {
+    box-shadow:
+        0 0 18px rgba(214, 168, 75, 0.35);
+}
+
+/* Answers */
+
+.assessment-option > span {
+    transition:
+        transform 0.35s var(--career-ease-premium),
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        color 0.3s ease;
+}
+
+@media (hover: hover) {
+
+    .assessment-option:hover > span {
+        transform: translateX(4px);
+    }
+}
+
+.assessment-option input:checked + span {
+    box-shadow:
+        inset 3px 0 0 var(--career-gold),
+        0 14px 36px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------------------------------------------------------
+   GUIDANCE
+--------------------------------------------------------- */
+
+.assessment-guidance {
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* ---------------------------------------------------------
+   RESULTS
+--------------------------------------------------------- */
+
+.assessment-result-card {
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s
+        var(--career-ease-premium),
+        border-color 0.3s ease;
+}
+
+@media (hover: hover) {
+
+    .assessment-result-card:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* ---------------------------------------------------------
+   FINAL CTA
+--------------------------------------------------------- */
+
+.career-final-cta {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.career-final-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    top: 50%;
+    right: -160px;
+
+    transform: translateY(-50%);
+
+    border: 1px solid rgba(214, 168, 75, 0.08);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 85px rgba(214, 168, 75, 0.025),
+        0 0 0 170px rgba(214, 168, 75, 0.012);
+
+    pointer-events: none;
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+    .career-header {
+        padding: 10px 0;
+    }
+
+    .career-header__inner {
+        min-height: 58px;
+
+        padding: 0 14px;
+
+        border-radius: 14px;
+    }
+
+    .career-header__logo {
+        width: 122px;
+    }
+
+    .careers-hero__content {
+        padding-left: 0;
+
+        border-left: 0;
+    }
+
+    .careers-hero::after {
+        background-size: 46px 46px;
+
+        opacity: 0.11;
+    }
+
+    .career-role-grid {
+        gap: 10px;
+    }
+
+    .career-role-card {
+        min-height: 235px;
+
+        border-radius: 16px;
+    }
+
+    .career-pathway-card {
+        border-radius: 20px;
+    }
+
+    .assessment-option:hover > span {
+        transform: none;
+    }
+
+    .career-final-cta::before {
+        width: 330px;
+        height: 330px;
+
+        right: -220px;
+    }
+}

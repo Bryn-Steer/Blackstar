@@ -9,10 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const CONFIG = {
         totalQuestions: 20,
 
-        /* Replace with Talos application URL when ready */
-        applicationUrl: "contact.html",
+        applicationUrl: "https://blackstarsecurityltd.talosats-careers.com",
 
-        /* Replace if your training page uses another URL */
         trainingUrl: "training.html",
 
         recruitmentUrl: "contact.html"
@@ -1454,14 +1452,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================================
-       RESULT BUTTONS
+    RESULT BUTTONS
     ========================================================= */
 
     function configureResultButtons(status) {
         if (applyButton) {
             applyButton.style.display = "";
             applyButton.href = CONFIG.applicationUrl;
-            applyButton.textContent = "Continue to application";
+            applyButton.target = "_blank";
+            applyButton.rel = "noopener noreferrer";
+            applyButton.textContent = "View Current Vacancies";
         }
 
         if (trainingButton) {
@@ -1469,6 +1469,7 @@ document.addEventListener("DOMContentLoaded", () => {
             trainingButton.href = CONFIG.trainingUrl;
         }
 
+        // Candidate needs training first
         if (status === "training") {
             if (applyButton) {
                 applyButton.style.display = "none";
@@ -1476,37 +1477,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (trainingButton) {
                 trainingButton.style.display = "";
-                trainingButton.textContent =
-                    "View Blackstar training";
+                trainingButton.textContent = "View Blackstar Training";
             }
 
             return;
         }
 
+        // Candidate is not ready and should contact recruitment
         if (status === "not-ready") {
             if (applyButton) {
                 applyButton.href = CONFIG.recruitmentUrl;
-                applyButton.textContent =
-                    "Contact recruitment";
+                applyButton.target = "_self";
+                applyButton.removeAttribute("rel");
+                applyButton.textContent = "Contact Recruitment";
             }
 
             return;
         }
 
+        // Candidate needs an individual recruitment review
         if (status === "review") {
             if (applyButton) {
                 applyButton.href = CONFIG.recruitmentUrl;
-                applyButton.textContent =
-                    "Request recruitment review";
+                applyButton.target = "_self";
+                applyButton.removeAttribute("rel");
+                applyButton.textContent = "Request Recruitment Review";
             }
 
             return;
         }
 
+        // Candidate has minor issues but can still view current opportunities
         if (status === "almost-ready") {
             if (applyButton) {
-                applyButton.textContent =
-                    "Continue to application";
+                applyButton.href = CONFIG.applicationUrl;
+                applyButton.target = "_blank";
+                applyButton.rel = "noopener noreferrer";
+                applyButton.textContent = "View Current Vacancies";
             }
         }
     }
