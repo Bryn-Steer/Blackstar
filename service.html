@@ -417,9 +417,19 @@
 
     <link rel="stylesheet" href="assets/css/main.css">
 
+    <!-- Redesign: shared system, then Services page layout -->
+    <link rel="stylesheet" href="assets/css/bs-editorial.css">
+    <link rel="stylesheet" href="assets/css/bs-services.css">
+    <link rel="stylesheet" href="assets/css/bs-footer.css">
+
+    <!-- Enables reveal motion only when JavaScript runs -->
+    <script>document.documentElement.classList.add('sv-js');</script>
+
 </head>
 
-<body class="home-one-bg tw-magic-cursor">
+<body class="home-one-bg tw-magic-cursor sv-page">
+
+    <a class="bs-skip" href="#main-content">Skip to main content</a>
 
 
     <!--==================== Preloader Start ====================-->
@@ -511,7 +521,7 @@
 
     <!-- ==================== Scroll to Top End Here ==================== -->
     <div class="back-to-top-wrapper">
-        <button id="back_to_top" type="button" class="back-to-top-btn">
+        <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to top">
             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -530,930 +540,516 @@
 
     <!--==================== Offcanvas Start Here ====================-->
 <div class="twoffcanvas-area">
-    <div class="twoffcanvas bg-img bg-black position-fixed top-0 bottom-0 tw-p-13">
+    <div class="twoffcanvas bs-drawer bs-drawer--panel position-fixed top-0 bottom-0" role="dialog" aria-label="Contact Blackstar">
 
-        <div class="twoffcanvas__close-btn">
-            <button class="close-btn">
-                <i class="ph-bold ph-x"></i>
+        <div class="bs-drawer__top">
+            <a href="index.html" class="bs-drawer__logo">
+                <img src="assets/images/logo/logo.png" alt="Blackstar Security" width="146" height="40">
+            </a>
+            <button class="close-btn bs-drawer__close" type="button" aria-label="Close contact panel">
+                <span aria-hidden="true"></span>
             </button>
         </div>
 
-        <div class="twoffcanvas__logo tw-mb-15">
-            <a href="index.html">
-                <img src="assets/images/logo/logo.png" alt="Blackstar Security">
-            </a>
-        </div>
+        <p class="bs-drawer__intro">
+            Professional security teams who protect people, represent your business properly and know when to act.
+        </p>
 
-        <div class="twoffcanvas__title tw-mb-12">
-            <p class="text-white">
-                Professional security teams who protect people, represent your business properly and know when to act.
-            </p>
-        </div>
-
-        <div class="twoffcanvas__contact-info tw-mb-13">
-            <div class="twoffcanvas__contact-title tw-mb-8">
-                <span class="font-body fw-semibold text-capitalize tw-text-3xl tw-mb-6 d-inline-block text-white">
-                    Contact Blackstar
-                </span>
-            </div>
-
-            <ul>
-                <li class="d-flex align-items-center tw-mb-4">
-                    <i class="text-main-600 ph ph-map-pin"></i>
-                    <p class="text-white tw-ms-3">
-                        Manchester, United Kingdom
-                    </p>
-                </li>
-
-                <li class="d-flex align-items-center tw-mb-4">
-                    <i class="text-main-600 ph ph-envelope"></i>
-                    <a class="text-white hover-text-main-600 tw-ms-3"
-                       href="mailto:info@blackstarsecurity.co.uk">
-                        info@blackstarsecurity.co.uk
-                    </a>
-                </li>
-
-                <li class="d-flex align-items-center">
-                    <i class="text-main-600 ph ph-phone-outgoing"></i>
-                    <a class="text-white hover-text-main-600 tw-ms-3"
-                       href="tel:+441618186787">
-                        0161 818 6787
-                    </a>
-                </li>
+        <div class="bs-drawer__block">
+            <p class="bs-drawer__heading">Contact Blackstar</p>
+            <ul class="bs-drawer__contact">
+                <li>Manchester, United Kingdom</li>
+                <li><a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a></li>
+                <li><a href="tel:+441618186787">0161 818 6787</a></li>
             </ul>
         </div>
 
-        <div class="twoffcanvas__input">
-            <div class="twoffcanvas__input-title">
-                <span class="font-body fw-semibold text-capitalize tw-text-3xl text-white tw-mb-6">
-                    Stay Updated
-                </span>
-            </div>
-
-            <form action="#">
-                <div class="position-relative">
-                    <input
-                        class="placeholder-text-white"
-                        type="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-
-                    <button type="submit">
-                        <i class="ph ph-paper-plane-tilt"></i>
-                    </button>
-                </div>
+        <div class="bs-drawer__block">
+            <p class="bs-drawer__heading">Stay Updated</p>
+            <form action="#" class="bs-drawer__form">
+                <label class="visually-hidden" for="bs-drawer-email">Email address</label>
+                <input id="bs-drawer-email" type="email" placeholder="Enter your email" required>
+                <button type="submit" aria-label="Subscribe">
+                    <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+                </button>
             </form>
         </div>
 
-        <div class="twoffcanvas__social">
-            <ul class="footer-social d-flex align-items-center tw-gap-4">
-
-                <li>
-                    <a href="https://www.facebook.com/BlackstarSec"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Blackstar Security on Facebook"
-                       class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                        <i class="ph-bold ph-facebook-logo"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.instagram.com/blackstar_security/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Blackstar Security on Instagram"
-                       class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                        <i class="ph-bold ph-instagram-logo"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.linkedin.com/company/blackstar-security-ltd/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Blackstar Security on LinkedIn"
-                       class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                        <i class="ph-bold ph-linkedin-logo"></i>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
+        <ul class="bs-drawer__social">
+            <li>
+                <a href="https://www.facebook.com/BlackstarSec" target="_blank" rel="noopener noreferrer" aria-label="Blackstar Security on Facebook">Facebook</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/blackstar_security/" target="_blank" rel="noopener noreferrer" aria-label="Blackstar Security on Instagram">Instagram</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/blackstar-security-ltd/" target="_blank" rel="noopener noreferrer" aria-label="Blackstar Security on LinkedIn">LinkedIn</a>
+            </li>
+        </ul>
 
     </div>
 </div>
 
 <div class="body-overlay"></div>
 <!--==================== Offcanvas End Here ====================-->
-    <!--==================== Offcanvus End Here ====================-->
 
-
-
-
-
-
-    
     <!-- ==================== Mobile Menu Start Here ==================== -->
-<div class="mobile-menu d-lg-none d-block scroll-sm position-fixed bg-black tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw--translate-x-full tw-pb-68 ">
+<div class="mobile-menu bs-drawer bs-drawer--mobile d-lg-none tw--translate-x-full" role="dialog" aria-label="Menu">
 
-    <button type="button" class="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center text-neutral-900 bg-neutral-200 hover-bg-neutral-900 hover-text-white">
-        <i class="ph ph-x"></i>
-    </button>
-
-    <div class="mobile-menu__inner">
-        <a href="index.html" class="mobile-menu__logo">
-            <img src="assets/images/logo/logo.png" alt="Logo">
+    <div class="bs-drawer__top">
+        <a href="index.html" class="bs-drawer__logo">
+            <img src="assets/images/logo/logo.png" alt="Blackstar Security" width="146" height="40">
         </a>
+        <button type="button" class="close-button bs-drawer__close" aria-label="Close menu">
+            <span aria-hidden="true"></span>
+        </button>
+    </div>
 
-        <div class="mobile-menu__menu">
-            <!-- ============================ Nav menu Start section  ======================================= -->
-            <ul class="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8">
+    <nav class="bs-drawer__menu" aria-label="Mobile">
+        <ul class="bs-drawer__nav">
+            <li class="nav-menu__item"><a href="index.html">Home</a></li>
+            <li class="nav-menu__item"><a href="about.html">About</a></li>
+            <li class="nav-menu__item"><a href="service.html" aria-current="page">Services</a></li>
+            <li class="nav-menu__item"><a href="blog.html">Insights</a></li>
+            <li class="nav-menu__item"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-                <li class="nav-menu__item">
-                    <a href="index.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Home
-                    </a>
-                </li>
-
-                <li class="nav-menu__item">
-                    <a href="about.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        About
-                    </a>
-                </li>
-
-                <li class="nav-menu__item">
-                    <a href="service.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Services
-                    </a>
-                </li>
-
-               <!--- --->
-
-                <li class="nav-menu__item">
-                    <a href="blog.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Insights
-                    </a>
-                </li>
-
-                <li class="nav-menu__item">
-                    <a href="contact.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-            <!-- ============================ Nav menu End section  ======================================= -->
-        </div>
+    <div class="bs-drawer__foot">
+        <a class="bs-btn bs-btn--solid" href="contact.html">Request a quote</a>
+        <ul class="bs-drawer__contact bs-drawer__contact--small">
+            <li><a href="tel:+441618186787">0161 818 6787</a></li>
+            <li><a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a></li>
+        </ul>
     </div>
 </div>
 <!-- ==================== Mobile Menu End Here ==================== -->
 
-<!-- ==================== Header Start Here ==================== -->
-<header class="header header-six tw-py-5 tw-transition-all tw-z-99 header-transparent">
-    <div class="container container-1719">
-        <nav class="d-flex align-items-center justify-content-between position-relative">
+    <!-- ==================== Header Start Here ==================== -->
+<header class="header bs-header">
+    <div class="bs-header__inner">
 
-            <div class="header-left">
-                <!-- Logo Start -->
-                <div class="logo">
-                    <a href="index.html" class="link">
-                        <img src="assets/images/logo/logo-1.png" alt="Logo" class="max-w-200-px">
-                    </a>
-                </div>
-                <!-- Logo End  -->
-            </div>
+        <a href="index.html" class="bs-header__logo">
+            <img src="assets/images/logo/logo-1.png" alt="Blackstar Security" width="146" height="40">
+        </a>
 
-            <!-- Menu Start  -->
-            <div class="header-menu header-six-menu d-lg-block d-none">
-                <!-- ============================ Nav menu Start section  ======================================= -->
-                <ul class="nav-menu d-lg-flex align-items-center tw-gap-8">
-
-                    <li class="nav-menu__item has-submenu activePage position-relative">
-                        <a href="javascript:void(0)" class="nav-menu__link tw-pe-4 text-white hover-text-main-600 tw-py-4 fw-medium w-100">Home</a>
-
-                        <li class="nav-menu__item">
-                        <a href="index.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="about.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            About
-                        </a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="service.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Services
-                        </a>
-                    </li>
-
-                    <!--- --->
-
-                    <li class="nav-menu__item">
-                        <a href="blog.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Insights
-                        </a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="contact.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-                <!-- ============================ Nav menu End section  ======================================= -->
-            </div>
-            <!-- Menu End  -->
-
-            <!-- Header Right start -->
-            <div class="header-right d-flex align-items-center tw-gap-5">
-
-                <!-- Search Start  
-                <div class="header-search">
-                    <button class="open-search tw-w-12 tw-h-12 lh-1 d-inline-flex justify-content-center align-items-center rounded-circle bg-neutral-800 text-white hover-bg-main-600 hover-text-heading tw-transition-3" aria-label="search products" title="open search box">
-                        <span class="tw-text-lg"><i class="ph-bold ph-magnifying-glass"></i></span>
-                    </button>
-                </div>
-                 Search End  -->
-
-                <!-- offcanvas Button Start  -->
-                <div class="header-offcanvas d-none d-lg-block">
-                    <button class="tw-menu-bar" type="button">
-                        <span><img src="assets/images/icons/memu-toggole.svg" alt="icon"></span>
-                    </button>
-                </div>
-                <!-- offcanvas Button End  -->
-
-                <!-- MobileMenu Button Start  -->
-                <button type="button" class="toggle-mobileMenu d-lg-none text-white tw-text-9">
-                    <span><img src="assets/images/icons/memu-toggole.svg" alt="icon"></span>
-                </button>
-                <!-- MobileMenu Button End  -->
-
-            </div>
-            <!-- Header Right End  -->
-
+        <nav class="bs-header__nav" aria-label="Main">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html" aria-current="page">Services</a></li>
+                <li><a href="blog.html">Insights</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+
+        <div class="bs-header__actions">
+            <a class="bs-header__phone" href="tel:+441618186787">0161 818 6787</a>
+            <a class="bs-header__cta" href="contact.html">
+                Request a quote
+                <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <!-- Contact panel (desktop) -->
+            <div class="header-offcanvas">
+                <button class="tw-menu-bar bs-menu-btn" type="button" aria-label="Open contact panel">
+                    <span class="bs-menu-btn__lines" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <!-- Menu (mobile and tablet) -->
+            <button type="button" class="toggle-mobileMenu bs-menu-btn" aria-label="Open menu">
+                <span class="bs-menu-btn__lines" aria-hidden="true"></span>
+            </button>
+        </div>
+
     </div>
 </header>
 <!-- ==================== Header End Here ==================== -->
+
 <div id="smooth-wrapper">
     <div id="smooth-content">
-    <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb-area bg-img position-relative z-1 overflow-hidden" data-background-image="assets/images/thumbs/breadcrumb-bg.jpg">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div>
-                    <ul class="d-flex align-items-center justify-content-center tw-gap-4 tw-mb-7">
-                        <li class="tw-text-lg fw-medium"><a href="index.html" class="text-white hover--translate-y-1 hover-underline d-inline-flex align-items-center tw-gap-3 "><span class="d-inline-flex lh-1"><img src="assets/images/icons/breadcrumb-home-icon.svg" alt="home"></span> Home</a> </li>
-                        <li>
-                            <span class="d-inline-flex lh-1"><i class="ph-bold ph-caret-right text-white"></i></span>
-                            <span class="d-inline-flex lh-1"><i class="ph-bold ph-caret-right text-white"></i></span>
-                        </li>
-                        <li class=" tw-text-lg fw-medium"> <span class="text-white"> Our Services </span> </li>
-                    </ul>
-                    <h1 class="breadcrumb-title text-center tw-mb-6 text-white tw-text-29 text-uppercase lh-1"> Our Services</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <img class="breadcrumb-shape-1 banner-rotate-content position-absolute z-n1" src="assets/images/shapes/breadcrumb-shape1.png" alt="shape"><!-- -->
-    </div>
-</section>
-<!-- ==================== Breadcrumb End Here ==================== -->
-    <!-- ============================ Service Start section  ======================================= -->
-<section class="service-area pt-140 position-relative z-1">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-7 col-lg-9">
-                <div class="tw-mb-22">
-                    <div class="section-wrapper tw-mb-10">
-                        <h2 class="section-title tw-text-29 fw-semibold text-uppercase tw-char-animation">A Better Class of Security.</h2>
-                        <p class="tw-text-base fw-medium text-white tw-me-10">The right team protects more than the premises. They protect the experience, the reputation and the people behind your business. This is our commitment.</p>
-                    </div>
-                    <div>
-                        <a class="theme-btn-main d-inline-flex align-items-center position-relative tw-transition-all" href="service.html">
-                            <span class="theme-btn-arrow-left tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center border border-main-600 text-main-600 rounded-circle position-absolute tw-transition-3"><i class="ph ph-arrow-right"></i></span>
-                            <span class="theme-btn border border-main-600 text-main-600 tw-py-4 tw-px-10 fw-medium d-inline-flex align-items-center tw-gap-8 text-capitalize tw-rounded-4xl tw-transition-3 z-2">Here's What We Cover</span>
-                            <span class="theme-btn-arrow-right tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center border border-main-600 text-main-600 rounded-circle tw-transition-3"><i class="ph ph-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="service-wrapper tw-rounded-3xl position-relative z-1 tw-mb-8 tw-transition-4 overflow-hidden animation-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="service-icon tw-mb-15">
-                        <span><img class="tw-transition-3 animate__wobble" src="assets/images/icons/cta-five-icon3.svg" alt="icon"></span>
-                    </div>
-                    <div>
-                        <h2 class="service-title tw-text-13 tw-mb-5 lh-1 tw-transition-3"><a href="door-supervisor.html">Door Supervisors</a></h2>
-                        <p class="service-paragraph text-white fw-medium tw-mb-10 tw-transition-3">Firm when needed, welcoming at every other moment.</p>
-                        <div class="service-list">
-                            <ul>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> A stronger first impression</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> Customers feel welcome</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> Confidence when it matters</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-button">
-                        <a class="service-btn" href="door-supervisor.html"><i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="service-wrapper tw-rounded-3xl position-relative z-1 tw-mb-8 tw-transition-4 overflow-hidden animation-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    <div class="service-icon tw-mb-15">
-                        <span><img class="tw-transition-3 animate__wobble" src="assets/images/icons/cta-five-icon2.svg" alt="icon"></span>
-                    </div>
-                    <div>
-                        <h2 class="service-title tw-text-13 tw-mb-5 lh-1 tw-transition-3"><a href="event-security.html">Event Security</a></h2>
-                        <p class="service-paragraph text-white fw-medium tw-mb-10 tw-transition-3">Protecting the event without becoming the event.</p>
-                        <div class="service-list">
-                            <ul>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> A smoother guest experience</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> Crowds kept under control</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> The event stays the focus</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-button">
-                        <a class="service-btn" href="event-security.html"><i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="service-wrapper tw-rounded-3xl position-relative z-1 tw-mb-8 tw-transition-4 overflow-hidden animation-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="service-icon tw-mb-15">
-                        <span><img class="tw-transition-3 animate__wobble" src="assets/images/icons/cta-five-icon1.svg" alt="icon"></span>
-                    </div>
-                    <div>
-                        <h2 class="service-title tw-text-13 tw-mb-5 lh-1 tw-transition-3"><a href="event-stewarding.html">Safety/Event Stewarding</a></h2>
-                        <p class="service-paragraph  text-white fw-medium tw-mb-10 tw-transition-3">Clear guidance that helps people move safely and confidently.</p>
-                        <div class="service-list">
-                            <ul>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> Clear guidance throughout</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> People move with confidence</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> A safer, calmer environment</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-button">
-                        <a class="service-btn" href="event-stewarding.html"><i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="service-wrapper tw-rounded-3xl position-relative z-1 tw-mb-8 tw-transition-4 overflow-hidden animation-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="service-icon tw-mb-15">
-                        <span><img class="tw-transition-3 animate__wobble" src="assets/images/icons/cta-five-icon3.svg" alt="icon"></span>
-                    </div>
-                    <div>
-                        <h2 class="service-title tw-text-13 tw-mb-5 lh-1 tw-transition-3"><a href="manned-guarding.html">Manned Guarding</a></h2>
-                        <p class="service-paragraph text-white fw-medium tw-mb-10 tw-transition-3">Visible, accountable protection for premises and sites.</p>
-                        <div class="service-list">
-                            <ul>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> A reassuring visible presence</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> Your site stays protected</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> Issues handled professionally</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-button">
-                        <a class="service-btn" href="manned-guarding.html"><i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="service-wrapper tw-rounded-3xl position-relative z-1 tw-mb-8 tw-transition-4 overflow-hidden animation-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    <div class="service-icon tw-mb-15">
-                        <span><img class="tw-transition-3 animate__wobble" src="assets/images/icons/cta-five-icon2.svg" alt="icon"></span>
-                    </div>
-                    <div>
-                        <h2 class="service-title tw-text-13 tw-mb-5 lh-1 tw-transition-3"><a href="school-security.html">School Security</a></h2>
-                        <p class="service-paragraph text-white fw-medium tw-mb-10 tw-transition-3">Safeguarding without making the environment feel intimidating.</p>
-                        <div class="service-list">
-                            <ul>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> A safer school environment</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> Approachable around pupils</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> Support staff can rely on</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-button">
-                        <a class="service-btn" href="school-security.html"><i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="service-wrapper tw-rounded-3xl position-relative z-1 tw-mb-8 tw-transition-4 overflow-hidden animation-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="service-icon tw-mb-15">
-                        <span><img class="tw-transition-3 animate__wobble" src="assets/images/icons/cta-five-icon1.svg" alt="icon"></span>
-                    </div>
-                    <div>
-                        <h2 class="service-title tw-text-13 tw-mb-5 lh-1 tw-transition-3"><a href="residential-security.html">Concierge & Residential</a></h2>
-                        <p class="service-paragraph  text-white fw-medium tw-mb-10 tw-transition-3">Discreet protection with a professional welcome.</p>
-                        <div class="service-list">
-                            <ul>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> A professional welcome</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-mb-4 tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> Residents feel looked after</li>
-                                <li class="d-inline-flex align-items-center tw-gap-2 text-white fw-bold tw-transition-3"><span class="tw-transition-3 d-inline-block lh-1 text-main-600"><i class="ph-bold ph-plus"></i></span> Discreet security throughout</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-button">
-                        <a class="service-btn" href="residential-security.html"><i class="ph ph-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <img class="service-bg-shape-1 position-absolute z-n1" src="assets/images/shapes/service-bg-shape1.png" alt="shape">
-        <img class="service-bg-shape-2 position-absolute z-n1" src="assets/images/shapes/service-bg-shape2.png" alt="shape">
-    </div>
-</section>
-<!-- ============================ Service End section  ======================================= -->
 
-
-
-    <!-- ==================== Feature Start Here ==================== -->
-    <section class="feature-two-area pb-140">
-        <div class="container">
-            <div class="row justify-content-center">
-            <div class="col-xl-7">
-                <div class="section-two-wrapper text-center tw-pt-10 tw-mb-18 tw-me-10">
-                    <h2 class="section-two-title text-uppercase tw-text-29 tw-char-animation">
-                        How We Work
-                    </h2>
-                    <p class="text-white fw-medium tw-mt-4">
-                        We understand what you need, build the right team around it and manage the delivery from start to finish.
-                    </p>
+    <!-- ==================== Hero: statement + six-service index ==================== -->
+    <section class="sv-hero" id="main-content" tabindex="-1" aria-labelledby="sv-hero-title">
+        <div class="sv-wrap sv-hero__top">
+            <nav class="sv-crumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><span aria-current="page">Security services</span></li>
+                </ol>
+            </nav>
+            <h1 class="sv-hero__title" id="sv-hero-title">
+                <span>Professional security teams</span>
+                <span>for venues, events, workplaces, schools and homes<span class="bs-hero__stop">.</span></span>
+            </h1>
+            <div class="sv-hero__aside">
+                <p class="sv-hero__lede">The right team protects more than the premises. They protect the experience, the reputation and the people behind your business.</p>
+                <div class="sv-actions">
+                    <a class="bs-btn bs-btn--solid" href="contact.html">
+                        Request a quote
+                        <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a class="bs-hero__call" href="tel:+441618186787">Call 0161 818 6787</a>
                 </div>
             </div>
         </div>
 
-        <div class="row">
+        <!-- Each tile jumps to that service in the explorer below -->
+        <nav class="sv-strip" aria-label="Our six services">
+            <ul class="sv-wrap sv-strip__list">
+                <li class="sv-strip__item" style="--fx: 70%"><a href="#sv-door"><img src="assets/images/new-img/project-3-02.jpg" alt="" width="1734" height="710" fetchpriority="high"><span class="sv-strip__num">01</span><span class="sv-strip__name">Door supervision</span></a></li>
+                <li class="sv-strip__item" style="--fx: 46%"><a href="#sv-event"><img src="assets/images/new-img/project-3-03.jpg" alt="" width="1734" height="710"><span class="sv-strip__num">02</span><span class="sv-strip__name">Event security</span></a></li>
+                <li class="sv-strip__item" style="--fx: 58%"><a href="#sv-steward"><img src="assets/images/new-img/project-3-04.jpg" alt="" width="1734" height="710"><span class="sv-strip__num">03</span><span class="sv-strip__name">Safety stewarding</span></a></li>
+                <li class="sv-strip__item" style="--fx: 50%"><a href="#sv-guard"><img src="assets/images/new-img/project-3-01.jpg" alt="" width="1734" height="710" loading="lazy"><span class="sv-strip__num">04</span><span class="sv-strip__name">Manned guarding</span></a></li>
+                <li class="sv-strip__item" style="--fx: 50%"><a href="#sv-school"><img src="assets/images/thumbs/cta-two-thumb1.jpg" alt="" width="932" height="736" loading="lazy"><span class="sv-strip__num">05</span><span class="sv-strip__name">School security</span></a></li>
+                <li class="sv-strip__item" style="--fx: 45%"><a href="#sv-residential"><img src="assets/images/new-img/hero-bg.jpg" alt="" width="1920" height="999" loading="lazy"><span class="sv-strip__num">06</span><span class="sv-strip__name">Residential &amp; concierge</span></a></li>
+            </ul>
+        </nav>
+    </section>
 
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="feature-two-wrapper tw-me-14 tw-mb-7 animation-item"
-                     data-aos="fade-up"
-                     data-aos-duration="1000"
-                     data-aos-delay="200">
-
-                    <div class="feature-two-content d-flex align-items-center tw-gap-6 tw-mb-10">
-
-                        <div class="position-relative z-1">
-                            <span class="feature-ip-icon tw-w-31 tw-h-31 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 rounded-circle">
-                                <img class="animate__wobble"
-                                     src="assets/images/icons/feature-two-icon1.svg"
-                                     alt="Understand your requirements">
-                            </span>
-
-                            <div class="feature-number position-absolute top-0 end-0">
-                                <span class="tw-w-10 tw-h-10 lh-1 d-inline-flex justify-content-center align-items-center bg-white rounded-circle tw-text-lg fw-bolder text-heading">
-                                    01
-                                </span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h2 class="feature-two-title tw-text-13 text-uppercase lh-1">
-                                Your Environment
-                            </h2>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <p class="text-white fw-medium">
-                            We learn how your venue, event or site operates, what matters to you and where the pressure points are.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="feature-two-wrapper tw-me-14 tw-mb-7 animation-item"
-                     data-aos="fade-up"
-                     data-aos-duration="1000"
-                     data-aos-delay="300">
-
-                    <div class="feature-two-content d-flex align-items-center tw-gap-6 tw-mb-10">
-
-                        <div class="position-relative z-1">
-                            <span class="feature-ip-icon tw-w-31 tw-h-31 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 rounded-circle">
-                                <img class="animate__wobble"
-                                     src="assets/images/icons/feature-two-icon2.svg"
-                                     alt="Build the right security team">
-                            </span>
-
-                            <div class="feature-number position-absolute top-0 end-0">
-                                <span class="tw-w-10 tw-h-10 lh-1 d-inline-flex justify-content-center align-items-center bg-white rounded-circle tw-text-lg fw-bolder text-heading">
-                                    02
-                                </span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h2 class="feature-two-title tw-text-13 text-uppercase lh-1">
-                                Build the Right Team
-                            </h2>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <p class="text-white fw-medium">
-                            We put the right people in the right roles, with the professionalism and approach your environment requires.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="feature-two-wrapper tw-me-14 tw-mb-7 animation-item"
-                     data-aos="fade-up"
-                     data-aos-duration="1000"
-                     data-aos-delay="400">
-
-                    <div class="feature-two-content d-flex align-items-center tw-gap-6 tw-mb-10">
-
-                        <div class="position-relative z-1">
-                            <span class="feature-ip-icon tw-w-31 tw-h-31 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 rounded-circle">
-                                <img class="animate__wobble"
-                                     src="assets/images/icons/feature-two-icon3.svg"
-                                     alt="Managed security delivery">
-                            </span>
-
-                            <div class="feature-number position-absolute top-0 end-0">
-                                <span class="tw-w-10 tw-h-10 lh-1 d-inline-flex justify-content-center align-items-center bg-white rounded-circle tw-text-lg fw-bolder text-heading">
-                                    03
-                                </span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h2 class="feature-two-title tw-text-13 text-uppercase lh-1">
-                                Stay Accountable
-                            </h2>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <p class="text-white fw-medium">
-                            We manage the team, maintain communication and make sure the service continues to work properly.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
+    <!-- ==================== Editorial photography moment ==================== -->
+    <section class="sv-film" aria-label="Our approach">
+        <figure class="sv-film__frame">
+            <img src="assets/images/new-img/project-3-04.jpg" alt="Blackstar steward and officer guiding guests at a venue entrance at night" width="1734" height="710" loading="lazy" decoding="async" data-speed="0.88">
+        </figure>
+        <div class="sv-wrap sv-film__copy">
+            <p class="sv-film__quote" data-reveal>Every environment works differently. We understand the venue, event or site before deciding what the security team needs to look like.</p>
         </div>
     </section>
-    <!-- ==================== Feature End Here ==================== -->
-    <!-- ==================== Footer Start Here ==================== -->
-<footer class="footer position-relative z-1 bg-img" data-background-image="assets/images/thumbs/footer-bg.jpg">
-    <div class="py-120">
-        <div class="container">
 
-            <div class="row tw-pb-24">
-                <div class="col-xl-4">
-                    <div class="tw-mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <a href="index.html">
-                            <img src="assets/images/logo/footer-logo.png" alt="Blackstar Security">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-xl-8">
-                    <div class="footer-col-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-
-                        <h2 class="tw-text-9 fw-medium text-uppercase tw-mb-2 text--white">
-                            Stay Ahead of Your Security Requirements
-                        </h2>
-
-                        <p class="text--white tw-mb-5">
-                            Get updates from Blackstar on security, events, training and the environments we help protect.
-                        </p>
-
-                        <form action="#" class="footer-form position-relative form-submit d-flex tw-gap-3 tw-mb-3">
-                            <input
-                                type="email"
-                                class="form-control bg-white shadow-none border border-neutral-700 text-heading rounded-pill tw-ps-6 tw-pe-13 focus-border-main-600 tw-h-13 tw-placeholder-text-neutral-900 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
-                                placeholder="Your email address"
-                                required
-                            >
-
-                            <div class="footer-form-button">
-                                <button class="theme-btn-main tw-w-232-px d-inline-flex align-items-center position-relative tw-transition-all">
-
-                                    <span class="theme-btn-arrow-left tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 text-heading rounded-circle position-absolute tw-transition-3">
-                                        <i class="ph ph-arrow-right"></i>
-                                    </span>
-
-                                    <span class="theme-btn bg-main-600 text-heading tw-py-4 tw-px-10 fw-medium d-inline-flex align-items-center tw-gap-8 text-capitalize tw-rounded-4xl tw-transition-3 z-2">
-                                        Keep Me Updated
-                                    </span>
-
-                                    <span class="theme-btn-arrow-right tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 text-heading rounded-circle tw-transition-3">
-                                        <i class="ph ph-arrow-right"></i>
-                                    </span>
-
-                                </button>
-                            </div>
-                        </form>
-
-                        <p class="fw-medium text--white">
-                            By subscribing, you agree to our
-                            <a class="text-white text-decoration-underline hover-text-main-600" href="privacy-policy.html">
-                                Privacy Policy
-                            </a>
-                        </p>
-
-                    </div>
-                </div>
+    <!-- ==================== Service explorer ==================== -->
+    <!-- Without JS: six full articles in sequence. bs-services.js turns them into tabs
+         (desktop/tablet) and a swipeable panel with chips and arrows (mobile). -->
+    <section class="sv-explorer" aria-labelledby="sv-explorer-title">
+        <div class="sv-wrap">
+            <div class="sv-explorer__head">
+                <p class="sv-label"><span>01</span>Explore our services</p>
+                <h2 class="sv-explorer__title" id="sv-explorer-title">Six services, each built around the place it protects<span class="bs-hero__stop">.</span></h2>
             </div>
 
-            <div class="row tw-pb-10">
+            <div class="sv-tabs" role="tablist" aria-label="Security services" hidden>
+                <button type="button" role="tab" class="sv-tab" id="sv-tab-door" aria-controls="sv-door"><span>01</span>Door supervision</button>
+                <button type="button" role="tab" class="sv-tab" id="sv-tab-event" aria-controls="sv-event"><span>02</span>Event security</button>
+                <button type="button" role="tab" class="sv-tab" id="sv-tab-steward" aria-controls="sv-steward"><span>03</span>Safety stewarding</button>
+                <button type="button" role="tab" class="sv-tab" id="sv-tab-guard" aria-controls="sv-guard"><span>04</span>Manned guarding</button>
+                <button type="button" role="tab" class="sv-tab" id="sv-tab-school" aria-controls="sv-school"><span>05</span>School security</button>
+                <button type="button" role="tab" class="sv-tab" id="sv-tab-residential" aria-controls="sv-residential"><span>06</span>Residential &amp; concierge</button>
+            </div>
 
-                <!-- SERVICES -->
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="200">
-                    <div class="footer-col-2">
-
-                        <h2 class="tw-text-9 fw-medium text--white tw-mb-2">
-                            Security Services
-                        </h2>
-
-                        <span class="tw-w-26 border border-main-600 d-inline-block lh-1 tw-mb-8"></span>
-
-                        <ul class="d-flex flex-column tw-gap-5">
-                            <li>
-                                <a href="door-supervision.html" class="text--white hover-text-main-600 hover-underline">
-                                    Door Supervision
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="event-security.html" class="text--white hover-text-main-600 hover-underline">
-                                    Event Security
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="safety-stewarding.html" class="text--white hover-text-main-600 hover-underline">
-                                    Safety Stewarding
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="manned-guarding.html" class="text--white hover-text-main-600 hover-underline">
-                                    Manned Guarding
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="school-security.html" class="text--white hover-text-main-600 hover-underline">
-                                    School Security
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="concierge-residential.html" class="text--white hover-text-main-600 hover-underline">
-                                    Concierge & Residential
-                                </a>
-                            </li>
-                        </ul>
-
+            <div class="sv-panels">
+                <article class="sv-panel" id="sv-door" aria-labelledby="sv-door-title" style="--fx: 70%">
+                    <figure class="sv-panel__media">
+                        <img src="assets/images/new-img/project-3-02.jpg" alt="Blackstar door supervisors at a Manchester venue entrance at night" width="1734" height="710" loading="lazy" decoding="async">
+                        <figcaption class="sv-panel__badge">SIA licensed door supervisors</figcaption>
+                    </figure>
+                    <div class="sv-panel__body">
+                        <p class="sv-panel__num">01 / 06</p>
+                        <h3 class="sv-panel__title" id="sv-door-title">Door supervision</h3>
+                        <p class="sv-panel__intro">Firm when needed, welcoming at every other moment.</p>
+                        <dl class="sv-facts">
+                            <div><dt>What we provide</dt><dd>Professional SIA licensed door supervisors who manage entry, set the tone at the door and are ready to act when the situation demands it.</dd></div>
+                            <div><dt>Where it fits</dt><dd>Nightclubs, bars, hotels, live music venues and licensed events, for one-off, short-notice and ongoing requirements.</dd></div>
+                            <div><dt>The problem it solves</dt><dd>The door is the first impression. Handled badly, it creates friction; handled well, customers feel welcome and the venue stays in control.</dd></div>
+                        </dl>
+                        <ul class="sv-outcomes"><li>A stronger first impression</li><li>Customers feel welcome</li><li>Confidence when it matters</li></ul>
+                        <a class="bs-link" href="door-supervisor.html">Door supervision in detail<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                     </div>
-                </div>
+                </article>
 
-                <!-- COMPANY -->
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="300">
-                    <div class="footer-col-3 tw-ms-10">
-
-                        <h2 class="tw-text-9 fw-medium text--white tw-mb-2">
-                            Blackstar
-                        </h2>
-
-                        <span class="tw-w-26 border border-main-600 d-inline-block lh-1 tw-mb-8"></span>
-
-                        <ul class="d-flex flex-column tw-gap-5">
-                            <li>
-                                <a href="about.html" class="text--white hover-text-main-600 hover-underline">
-                                    About Blackstar
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="services.html" class="text--white hover-text-main-600 hover-underline">
-                                    What We Protect
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="training.html" class="text--white hover-text-main-600 hover-underline">
-                                    Training
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="careers.html" class="text--white hover-text-main-600 hover-underline">
-                                    Careers
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="blog.html" class="text--white hover-text-main-600 hover-underline">
-                                    Security Insights
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="contact.html" class="text--white hover-text-main-600 hover-underline">
-                                    Contact Us
-                                </a>
-                            </li>
-                        </ul>
-
+                <article class="sv-panel" id="sv-event" aria-labelledby="sv-event-title" style="--fx: 46%">
+                    <figure class="sv-panel__media">
+                        <img src="assets/images/new-img/project-3-03.jpg" alt="Blackstar event security officer in high-visibility uniform at an event gate" width="1734" height="710" loading="lazy" decoding="async">
+                        <figcaption class="sv-panel__badge">Entry, crowds and incident response</figcaption>
+                    </figure>
+                    <div class="sv-panel__body">
+                        <p class="sv-panel__num">02 / 06</p>
+                        <h3 class="sv-panel__title" id="sv-event-title">Event security</h3>
+                        <p class="sv-panel__intro">Protecting the event without becoming the event.</p>
+                        <dl class="sv-facts">
+                            <div><dt>What we provide</dt><dd>Security for entry points, restricted areas, crowd management and incident response, planned around how your event runs.</dd></div>
+                            <div><dt>Where it fits</dt><dd>Concerts, festivals, sporting fixtures, conferences, live entertainment and public events.</dd></div>
+                            <div><dt>The problem it solves</dt><dd>Busy events need controlled access and a quick response, without slowing guests down or changing the atmosphere they came for.</dd></div>
+                        </dl>
+                        <ul class="sv-outcomes"><li>A smoother guest experience</li><li>Crowds kept under control</li><li>The event stays the focus</li></ul>
+                        <a class="bs-link" href="event-security.html">Event security in detail<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                     </div>
-                </div>
+                </article>
 
-                <!-- CONTACT -->
-                <div class="col-lg-5 col-sm-6" data-aos="fade-up" data-aos-duration="400">
-                    <div class="footer-col-4 footer-address">
-
-                        <div class="contact-left">
-
-                            <div class="contact-left-item d-flex tw-gap-6 tw-mb-9">
-                                <div>
-                                    <span class="tw-w-15 tw-h-15 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 text-heading rounded-circle tw-text-8">
-                                        <i class="ph ph-phone"></i>
-                                    </span>
-                                </div>
-
-                                <div>
-                                    <span class="fw-medium d-block text-white">
-                                        Speak to Blackstar
-                                    </span>
-
-                                    <a class="font-heading fw-medium tw-text-3xl d-block text-white hover-text-main-600"
-                                       href="tel:+441618186787">
-                                        0161 818 6787
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="contact-left-item d-flex tw-gap-6 tw-mb-9">
-                                <div>
-                                    <span class="tw-w-15 tw-h-15 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 text-heading rounded-circle tw-text-8">
-                                        <i class="ph ph-envelope-simple"></i>
-                                    </span>
-                                </div>
-
-                                <div>
-                                    <span class="fw-medium d-block text-white">
-                                        Email
-                                    </span>
-
-                                    <a class="font-heading fw-medium tw-text-3xl d-block text-white hover-text-main-600"
-                                       href="mailto:info@blackstarsecurity.co.uk">
-                                        info@blackstarsecurity.co.uk
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="contact-left-item d-flex tw-gap-6 tw-mb-9">
-                                <div>
-                                    <span class="tw-w-15 tw-h-15 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 text-heading rounded-circle tw-text-8">
-                                        <i class="ph ph-shield-check"></i>
-                                    </span>
-                                </div>
-
-                                <div>
-                                    <span class="fw-medium d-block text-white">
-                                        Need Security?
-                                    </span>
-
-                                    <a class="font-heading fw-medium tw-text-3xl d-block text-white hover-text-main-600"
-                                       href="contact.html">
-                                        Discuss Your Requirements
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
+                <article class="sv-panel" id="sv-steward" aria-labelledby="sv-steward-title" style="--fx: 58%">
+                    <figure class="sv-panel__media">
+                        <img src="assets/images/new-img/project-3-04.jpg" alt="Blackstar steward and officer guiding guests at an entrance at night" width="1734" height="710" loading="lazy" decoding="async">
+                        <figcaption class="sv-panel__badge">Guidance, wayfinding and crowd flow</figcaption>
+                    </figure>
+                    <div class="sv-panel__body">
+                        <p class="sv-panel__num">03 / 06</p>
+                        <h3 class="sv-panel__title" id="sv-steward-title">Safety stewarding</h3>
+                        <p class="sv-panel__intro">Clear guidance that helps people move safely and confidently.</p>
+                        <dl class="sv-facts">
+                            <div><dt>What we provide</dt><dd>Approachable stewards who guide guests, manage crowd flow and support organisers and the wider security operation.</dd></div>
+                            <div><dt>Where it fits</dt><dd>Stadiums, sporting fixtures, concerts, festivals, conferences and public events.</dd></div>
+                            <div><dt>Stewarding or security?</dt><dd>Genuine stewarding duties can fall outside SIA licensing. Where duties amount to licensable security activity, appropriately licensed personnel are required, and requirements involving both can be discussed.</dd></div>
+                        </dl>
+                        <ul class="sv-outcomes"><li>Clear guidance throughout</li><li>People move with confidence</li><li>A safer, calmer environment</li></ul>
+                        <a class="bs-link" href="event-stewarding.html">Safety stewarding in detail<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                     </div>
-                </div>
+                </article>
 
+                <article class="sv-panel" id="sv-guard" aria-labelledby="sv-guard-title" style="--fx: 50%">
+                    <figure class="sv-panel__media">
+                        <img src="assets/images/new-img/project-3-01.jpg" alt="Two Blackstar security guards in uniform at a commercial site" width="1734" height="710" loading="lazy" decoding="async">
+                        <figcaption class="sv-panel__badge">Access control, patrols and site protection</figcaption>
+                    </figure>
+                    <div class="sv-panel__body">
+                        <p class="sv-panel__num">04 / 06</p>
+                        <h3 class="sv-panel__title" id="sv-guard-title">Manned guarding</h3>
+                        <p class="sv-panel__intro">Visible, accountable protection for premises and sites.</p>
+                        <dl class="sv-facts">
+                            <div><dt>What we provide</dt><dd>Security guards for access control, patrols and site protection, giving your premises a visible presence and an immediate human response.</dd></div>
+                            <div><dt>Where it fits</dt><dd>Commercial premises, industrial sites, managed property and businesses.</dd></div>
+                            <div><dt>The problem it solves</dt><dd>Sites need someone present, accountable and able to respond, so issues are handled professionally rather than discovered later.</dd></div>
+                        </dl>
+                        <ul class="sv-outcomes"><li>A reassuring visible presence</li><li>Your site stays protected</li><li>Issues handled professionally</li></ul>
+                        <a class="bs-link" href="manned-guarding.html">Manned guarding in detail<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    </div>
+                </article>
+
+                <article class="sv-panel" id="sv-school" aria-labelledby="sv-school-title" style="--fx: 50%">
+                    <figure class="sv-panel__media">
+                        <img src="assets/images/thumbs/cta-two-thumb1.jpg" alt="Four Blackstar Security officers in uniform standing together" width="932" height="736" loading="lazy" decoding="async">
+                        <figcaption class="sv-panel__badge">Access, visitors and site security</figcaption>
+                    </figure>
+                    <div class="sv-panel__body">
+                        <p class="sv-panel__num">05 / 06</p>
+                        <h3 class="sv-panel__title" id="sv-school-title">School security</h3>
+                        <p class="sv-panel__intro">Safeguarding-focused security that never feels intimidating.</p>
+                        <dl class="sv-facts">
+                            <div><dt>What we provide</dt><dd>Support with access control, visitor procedures and site security, with clearly defined security responsibilities.</dd></div>
+                            <div><dt>Where it fits</dt><dd>Schools, colleges and education settings.</dd></div>
+                            <div><dt>How it works with safeguarding</dt><dd>Security complements the school’s own safeguarding and security arrangements. Safeguarding responsibilities remain with the school and its designated personnel.</dd></div>
+                        </dl>
+                        <ul class="sv-outcomes"><li>A safer school environment</li><li>Approachable around pupils</li><li>Support staff can rely on</li></ul>
+                        <a class="bs-link" href="school-security.html">School security in detail<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    </div>
+                </article>
+
+                <article class="sv-panel" id="sv-residential" aria-labelledby="sv-residential-title" style="--fx: 45%">
+                    <figure class="sv-panel__media">
+                        <img src="assets/images/new-img/hero-bg.jpg" alt="Blackstar officer in formal attire providing a discreet presence at an entrance" width="1920" height="999" loading="lazy" decoding="async">
+                        <figcaption class="sv-panel__badge">Front-of-house presence and access support</figcaption>
+                    </figure>
+                    <div class="sv-panel__body">
+                        <p class="sv-panel__num">06 / 06</p>
+                        <h3 class="sv-panel__title" id="sv-residential-title">Residential &amp; concierge</h3>
+                        <p class="sv-panel__intro">Discreet protection with a professional welcome.</p>
+                        <dl class="sv-facts">
+                            <div><dt>What we provide</dt><dd>Front-of-house presence, access support and security that helps residents and visitors feel looked after.</dd></div>
+                            <div><dt>Where it fits</dt><dd>Apartment buildings, managed developments and residential communities.</dd></div>
+                            <div><dt>The problem it solves</dt><dd>Residential buildings need to feel welcoming and secure at the same time, for residents, visitors and the people who manage the property.</dd></div>
+                        </dl>
+                        <ul class="sv-outcomes"><li>A professional welcome</li><li>Residents feel looked after</li><li>Discreet security throughout</li></ul>
+                        <a class="bs-link" href="residential-security.html">Residential security in detail<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="sv-pager" hidden>
+                <button type="button" class="sv-pager__btn sv-pager__prev" aria-label="Previous service"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <p class="sv-pager__count" aria-live="polite"><b>1</b> of 6</p>
+                <button type="button" class="sv-pager__btn sv-pager__next" aria-label="Next service"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <p class="sv-pager__hint">Swipe or use the arrows</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Bottom Footer -->
-    <div class="container">
-        <div class="tw-py-8">
-
-            <div class="container container-two">
-                <div class="footer-copyright-wrapper d-flex align-items-center justify-content-between tw-gap-4 flex-wrap">
-
-                    <p class="text--white text-line-1 fw-normal">
-                        © 2026
-                        <a href="index.html" class="fw-semibold text-main-600 hover-underline hover-text-white">
-                            Blackstar Group Solutions Ltd
-                        </a>.
-                        All rights reserved.
-                    </p>
-
-                    <ul class="footer-social d-flex align-items-center tw-gap-4">
-
-                        <li>
-                            <a href="https://www.facebook.com/BlackstarSec"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                                <i class="ph-bold ph-facebook-logo"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.instagram.com/blackstar_security/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                                <i class="ph-bold ph-instagram-logo"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#"
-                               class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                                <i class="ph-bold ph-linkedin-logo"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#"
-                               class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                                <i class="ph-bold ph-tiktok-logo"></i>
-                            </a>
-                        </li>
-
-                    </ul>
-
-                    <div class="d-flex tw-gap-4">
-                        <a href="privacy-policy.html" class="text--white hover-text-main-600">
-                            Privacy
-                        </a>
-
-                        <a href="terms.html" class="text--white hover-text-main-600">
-                            Terms
-                        </a>
-                    </div>
-
+    <!-- ==================== Find the right service (paper directory) ==================== -->
+    <section class="sv-match" aria-labelledby="sv-match-title">
+        <div class="sv-match__panel">
+            <div class="sv-wrap sv-match__grid">
+                <div class="sv-match__head">
+                    <p class="sv-label sv-label--ink"><span>02</span>Find the right service</p>
+                    <h2 class="sv-match__title" id="sv-match-title">Start with your environment<span class="bs-hero__stop">.</span></h2>
+                    <p class="sv-match__text">Find your type of site and the services most often suited to it. Not sure? Tell us how the place runs and we will recommend the right team.</p>
+                    <a href="contact.html" class="sv-link-ink">Ask for a recommendation<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
+
+                <dl class="sv-directory">
+                    <div class="sv-directory__row" data-reveal>
+                        <dt>Nightclubs, bars &amp; live music venues</dt>
+                        <dd><a href="door-supervisor.html">Door supervision</a></dd>
+                    </div>
+                    <div class="sv-directory__row" data-reveal>
+                        <dt>Hotels &amp; licensed events</dt>
+                        <dd><a href="door-supervisor.html">Door supervision</a><a href="event-security.html">Event security</a></dd>
+                    </div>
+                    <div class="sv-directory__row" data-reveal>
+                        <dt>Concerts, festivals &amp; public events</dt>
+                        <dd><a href="event-security.html">Event security</a><a href="event-stewarding.html">Safety stewarding</a></dd>
+                    </div>
+                    <div class="sv-directory__row" data-reveal>
+                        <dt>Stadiums &amp; sporting fixtures</dt>
+                        <dd><a href="event-stewarding.html">Safety stewarding</a><a href="event-security.html">Event security</a></dd>
+                    </div>
+                    <div class="sv-directory__row" data-reveal>
+                        <dt>Conferences</dt>
+                        <dd><a href="event-security.html">Event security</a><a href="event-stewarding.html">Safety stewarding</a></dd>
+                    </div>
+                    <div class="sv-directory__row" data-reveal>
+                        <dt>Commercial premises &amp; offices</dt>
+                        <dd><a href="manned-guarding.html">Manned guarding</a></dd>
+                    </div>
+                    <div class="sv-directory__row" data-reveal>
+                        <dt>Industrial sites &amp; managed property</dt>
+                        <dd><a href="manned-guarding.html">Manned guarding</a></dd>
+                    </div>
+                    <div class="sv-directory__row" data-reveal>
+                        <dt>Schools, colleges &amp; education</dt>
+                        <dd><a href="school-security.html">School security</a></dd>
+                    </div>
+                    <div class="sv-directory__row" data-reveal>
+                        <dt>Apartment buildings &amp; developments</dt>
+                        <dd><a href="residential-security.html">Residential &amp; concierge</a></dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Evidence ==================== -->
+    <section class="sv-proof" aria-labelledby="sv-proof-title">
+        <div class="sv-wrap sv-proof__grid">
+            <figure class="sv-proof__media" data-reveal="image">
+                <img src="assets/images/thumbs/cta-two-thumb1.jpg" alt="Four Blackstar Security officers in uniform" width="932" height="736" loading="lazy" decoding="async">
+            </figure>
+            <div class="sv-proof__card" data-reveal style="--d: 1">
+                <p class="sv-proof__card-label">SIA Approved Contractor Scheme</p>
+                <p class="sv-proof__card-big">Door Supervision <span>&amp;</span> Security Guarding</p>
             </div>
 
+            <div class="sv-proof__copy">
+                <p class="sv-label"><span>03</span>Operational standards</p>
+                <h2 class="sv-proof__title" id="sv-proof-title">Standards you can check before you appoint us<span class="bs-hero__stop">.</span></h2>
+                <ol class="sv-ledger">
+                    <li data-reveal><span class="sv-ledger__key">2013</span><span class="sv-ledger__val"><strong>Established</strong>Over a decade protecting people, venues and businesses.</span></li>
+                    <li data-reveal style="--d: 1"><span class="sv-ledger__key">SIA</span><span class="sv-ledger__val"><strong>Licensed where it is required</strong>Appropriately licensed personnel wherever duties amount to licensable security activity.</span></li>
+                    <li data-reveal style="--d: 2"><span class="sv-ledger__key">2026</span><span class="sv-ledger__val"><strong>Oldham Business Awards finalist</strong>Recognition reflecting the people, growth and commitment behind Blackstar.</span></li>
+                </ol>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div>
-        <img
-            class="footer-bg-shape position-absolute end-0 bottom-0 z-n1"
-            src="assets/images/shapes/footer-bg-shape.jpg"
-            alt=""
-        >
-    </div>
+    <!-- ==================== Engagement types ==================== -->
+    <section class="sv-engage" aria-labelledby="sv-engage-title">
+        <div class="sv-wrap">
+            <div class="sv-engage__head">
+                <p class="sv-label"><span>04</span>How we can help</p>
+                <h2 class="sv-engage__title" id="sv-engage-title">However you need us, the delivery is managed<span class="bs-hero__stop">.</span></h2>
+                <p class="sv-engage__text">We understand what you need, build the right team around it and manage the delivery from start to finish.</p>
+            </div>
+            <ul class="sv-engage__list">
+                <li class="sv-mode" data-reveal>
+                    <svg class="sv-mode__icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor"/><circle cx="20" cy="20" r="3" fill="currentColor"/></svg>
+                    <h3>One-off</h3>
+                    <p>A single event, launch or occasion, with a team planned around how that day runs.</p>
+                </li>
+                <li class="sv-mode" data-reveal style="--d: 1">
+                    <svg class="sv-mode__icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor"/><path d="M20 9v11l7 5" fill="none" stroke="currentColor" stroke-linecap="round"/></svg>
+                    <h3>Short notice</h3>
+                    <p>When a requirement changes quickly and you need professional cover in place.</p>
+                </li>
+                <li class="sv-mode" data-reveal style="--d: 2">
+                    <svg class="sv-mode__icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor"/><path d="M11 20a9 9 0 1 0 9-9" fill="none" stroke="currentColor" stroke-linecap="round"/><path d="m20 7 3 4-4 3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3>Ongoing</h3>
+                    <p>Regular cover with oversight maintained and the client kept informed, long after the first shift.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-</footer>
-<!-- ==================== Footer End Here ==================== -->
+    <!-- ==================== Final enquiry ==================== -->
+    <section class="sv-cta" aria-labelledby="sv-cta-title">
+        <div class="sv-cta__panel">
+            <div class="sv-cta__copy">
+                <p class="sv-label"><span>05</span>Request a quote</p>
+                <h2 class="sv-cta__title" id="sv-cta-title">Tell us about the place you need protected<span class="bs-hero__stop">.</span></h2>
+                <p class="sv-cta__text">Share your venue, event or site and the dates you have in mind. We will talk it through and recommend the right team.</p>
+                <div class="sv-actions">
+                    <a class="bs-btn bs-btn--solid" href="contact.html">
+                        Request a quote
+                        <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a class="bs-hero__call" href="tel:+441618186787">Call 0161 818 6787</a>
+                </div>
+            </div>
+            <ul class="sv-cta__services" aria-label="Services">
+                <li><a href="door-supervisor.html">Door supervision</a></li>
+                <li><a href="event-security.html">Event security</a></li>
+                <li><a href="event-stewarding.html">Safety stewarding</a></li>
+                <li><a href="manned-guarding.html">Manned guarding</a></li>
+                <li><a href="school-security.html">School security</a></li>
+                <li><a href="residential-security.html">Residential &amp; concierge</a></li>
+            </ul>
+        </div>
+    </section>
 
+    <!-- ==================== Footer (shared homepage design) ==================== -->
+    <footer class="hv-footer">
+        <div class="sv-wrap hv-footer__grid">
+            <div class="hv-footer__brand">
+                <a href="index.html" class="hv-footer__logo"><img src="assets/images/logo/logo-1.png" alt="Blackstar Security" width="146" height="40" loading="lazy"></a>
+                <p>Professional security in Manchester that helps people feel safe, welcome and looked after.</p>
+                <p class="sv-news__title">Stay ahead of your security requirements</p>
+                <!-- .form-submit keeps the existing main.js newsletter handler -->
+                <form action="#" class="sv-news form-submit">
+                    <label class="visually-hidden" for="sv-news-email">Email address</label>
+                    <input id="sv-news-email" type="email" placeholder="Your email address" required>
+                    <button type="submit">Keep me updated</button>
+                </form>
+                <p class="sv-news__note">By subscribing, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            </div>
+            <nav class="hv-footer__col" aria-label="Footer">
+                <p class="hv-footer__heading">Security services</p>
+                <ul>
+                    <li><a href="door-supervisor.html">Door supervision</a></li>
+                    <li><a href="event-security.html">Event security</a></li>
+                    <li><a href="event-stewarding.html">Safety stewarding</a></li>
+                    <li><a href="manned-guarding.html">Manned guarding</a></li>
+                    <li><a href="school-security.html">School security</a></li>
+                    <li><a href="residential-security.html">Concierge &amp; residential</a></li>
+                </ul>
+            </nav>
+            <nav class="hv-footer__col" aria-label="Blackstar">
+                <p class="hv-footer__heading">Blackstar</p>
+                <ul>
+                    <li><a href="about.html">About Blackstar</a></li>
+                    <li><a href="service.html">What we protect</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="blog.html">Security insights</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="hv-footer__col">
+                <p class="hv-footer__heading">Contact</p>
+                <ul>
+                    <li><a href="tel:+441618186787">0161 818 6787</a></li>
+                    <li><a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a></li>
+                    <li><a href="https://www.facebook.com/BlackstarSec" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/blackstar_security/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sv-wrap hv-footer__base">
+            <p>© 2026 Blackstar Group Solutions Ltd. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
 
-
-
-
-
-
-
-
-                    
     </div>
 </div>
+
 
 
     <!-- Jquery js -->
@@ -1466,14 +1062,10 @@
 <script src="assets/js/waypoints.js"></script>
 <!-- swiper bundle Js -->
 <script src="assets/js/swiper-bundle.js"></script>
-<!-- three js -->
-<script src="assets/js/three.min.js"></script>
 <!-- odometer counter js -->
 <script src="assets/js/odometer.min.js"></script>
 <!-- magnific popup js -->
 <script src="assets/js/magnific-popup.min.js"></script>
-<!-- jquery-knob js -->
-<script src="assets/js/jquery-knob.js"></script>
 <!-- aos -->
 <script src="assets/js/aos.js"></script>
 
@@ -1497,5 +1089,7 @@
 <script src="assets/js/main.js"></script>
 <!-- tw-cursor js -->
 <script src="assets/js/tw-cursor.js"></script>
+<!-- Services page interactions -->
+<script src="assets/js/bs-services.js"></script>
     </body>
 </html>

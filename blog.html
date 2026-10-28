@@ -371,9 +371,19 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
 
+    <!-- Redesign: shared system, Insights layout, shared footer -->
+    <link rel="stylesheet" href="assets/css/bs-editorial.css">
+    <link rel="stylesheet" href="assets/css/bs-insights.css">
+    <link rel="stylesheet" href="assets/css/bs-footer.css">
+
+    <!-- Enables reveal motion only when JavaScript runs -->
+    <script>document.documentElement.classList.add('in-js');</script>
+
 </head>
 
-<body class="home-one-bg tw-magic-cursor">
+<body class="home-one-bg tw-magic-cursor in-page">
+
+    <a class="bs-skip" href="#main-content">Skip to main content</a>
 
 
     <!--==================== Preloader Start ====================-->
@@ -465,7 +475,7 @@
 
     <!-- ==================== Scroll to Top End Here ==================== -->
     <div class="back-to-top-wrapper">
-        <button id="back_to_top" type="button" class="back-to-top-btn">
+        <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to top">
             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -484,1425 +494,379 @@
 
     <!--==================== Offcanvas Start Here ====================-->
 <div class="twoffcanvas-area">
-    <div class="twoffcanvas bg-img bg-black position-fixed top-0 bottom-0 tw-p-13">
+    <div class="twoffcanvas bs-drawer bs-drawer--panel position-fixed top-0 bottom-0" role="dialog" aria-label="Contact Blackstar">
 
-        <div class="twoffcanvas__close-btn">
-            <button class="close-btn">
-                <i class="ph-bold ph-x"></i>
+        <div class="bs-drawer__top">
+            <a href="index.html" class="bs-drawer__logo">
+                <img src="assets/images/logo/logo.png" alt="Blackstar Security" width="146" height="40">
+            </a>
+            <button class="close-btn bs-drawer__close" type="button" aria-label="Close contact panel">
+                <span aria-hidden="true"></span>
             </button>
         </div>
 
-        <div class="twoffcanvas__logo tw-mb-15">
-            <a href="index.html">
-                <img src="assets/images/logo/logo.png" alt="Blackstar Security">
-            </a>
-        </div>
+        <p class="bs-drawer__intro">
+            Professional security teams who protect people, represent your business properly and know when to act.
+        </p>
 
-        <div class="twoffcanvas__title tw-mb-12">
-            <p class="text-white">
-                Professional security teams who protect people, represent your business properly and know when to act.
-            </p>
-        </div>
-
-        <div class="twoffcanvas__contact-info tw-mb-13">
-            <div class="twoffcanvas__contact-title tw-mb-8">
-                <span class="font-body fw-semibold text-capitalize tw-text-3xl tw-mb-6 d-inline-block text-white">
-                    Contact Blackstar
-                </span>
-            </div>
-
-            <ul>
-                <li class="d-flex align-items-center tw-mb-4">
-                    <i class="text-main-600 ph ph-map-pin"></i>
-                    <p class="text-white tw-ms-3">
-                        Manchester, United Kingdom
-                    </p>
-                </li>
-
-                <li class="d-flex align-items-center tw-mb-4">
-                    <i class="text-main-600 ph ph-envelope"></i>
-                    <a class="text-white hover-text-main-600 tw-ms-3"
-                       href="mailto:info@blackstarsecurity.co.uk">
-                        info@blackstarsecurity.co.uk
-                    </a>
-                </li>
-
-                <li class="d-flex align-items-center">
-                    <i class="text-main-600 ph ph-phone-outgoing"></i>
-                    <a class="text-white hover-text-main-600 tw-ms-3"
-                       href="tel:+441618186787">
-                        0161 818 6787
-                    </a>
-                </li>
+        <div class="bs-drawer__block">
+            <p class="bs-drawer__heading">Contact Blackstar</p>
+            <ul class="bs-drawer__contact">
+                <li>Manchester, United Kingdom</li>
+                <li><a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a></li>
+                <li><a href="tel:+441618186787">0161 818 6787</a></li>
             </ul>
         </div>
 
-        <div class="twoffcanvas__input">
-            <div class="twoffcanvas__input-title">
-                <span class="font-body fw-semibold text-capitalize tw-text-3xl text-white tw-mb-6">
-                    Stay Updated
-                </span>
-            </div>
-
-            <form action="#">
-                <div class="position-relative">
-                    <input
-                        class="placeholder-text-white"
-                        type="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-
-                    <button type="submit">
-                        <i class="ph ph-paper-plane-tilt"></i>
-                    </button>
-                </div>
+        <div class="bs-drawer__block">
+            <p class="bs-drawer__heading">Stay Updated</p>
+            <form action="#" class="bs-drawer__form">
+                <label class="visually-hidden" for="bs-drawer-email">Email address</label>
+                <input id="bs-drawer-email" type="email" placeholder="Enter your email" required>
+                <button type="submit" aria-label="Subscribe">
+                    <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+                </button>
             </form>
         </div>
 
-        <div class="twoffcanvas__social">
-            <ul class="footer-social d-flex align-items-center tw-gap-4">
-
-                <li>
-                    <a href="https://www.facebook.com/BlackstarSec"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Blackstar Security on Facebook"
-                       class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                        <i class="ph-bold ph-facebook-logo"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.instagram.com/blackstar_security/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Blackstar Security on Instagram"
-                       class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                        <i class="ph-bold ph-instagram-logo"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.linkedin.com/company/blackstar-security-ltd/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Blackstar Security on LinkedIn"
-                       class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                        <i class="ph-bold ph-linkedin-logo"></i>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
+        <ul class="bs-drawer__social">
+            <li>
+                <a href="https://www.facebook.com/BlackstarSec" target="_blank" rel="noopener noreferrer" aria-label="Blackstar Security on Facebook">Facebook</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/blackstar_security/" target="_blank" rel="noopener noreferrer" aria-label="Blackstar Security on Instagram">Instagram</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/blackstar-security-ltd/" target="_blank" rel="noopener noreferrer" aria-label="Blackstar Security on LinkedIn">LinkedIn</a>
+            </li>
+        </ul>
 
     </div>
 </div>
 
 <div class="body-overlay"></div>
 <!--==================== Offcanvas End Here ====================-->
-    <!--==================== Offcanvus End Here ====================-->
 
-
-
-
-
-
-    
     <!-- ==================== Mobile Menu Start Here ==================== -->
-<div class="mobile-menu d-lg-none d-block scroll-sm position-fixed bg-black tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw--translate-x-full tw-pb-68 ">
+<div class="mobile-menu bs-drawer bs-drawer--mobile d-lg-none tw--translate-x-full" role="dialog" aria-label="Menu">
 
-    <button type="button" class="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center text-neutral-900 bg-neutral-200 hover-bg-neutral-900 hover-text-white">
-        <i class="ph ph-x"></i>
-    </button>
-
-    <div class="mobile-menu__inner">
-        <a href="index.html" class="mobile-menu__logo">
-            <img src="assets/images/logo/logo.png" alt="Logo">
+    <div class="bs-drawer__top">
+        <a href="index.html" class="bs-drawer__logo">
+            <img src="assets/images/logo/logo.png" alt="Blackstar Security" width="146" height="40">
         </a>
+        <button type="button" class="close-button bs-drawer__close" aria-label="Close menu">
+            <span aria-hidden="true"></span>
+        </button>
+    </div>
 
-        <div class="mobile-menu__menu">
-            <!-- ============================ Nav menu Start section  ======================================= -->
-            <ul class="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8">
+    <nav class="bs-drawer__menu" aria-label="Mobile">
+        <ul class="bs-drawer__nav">
+            <li class="nav-menu__item"><a href="index.html">Home</a></li>
+            <li class="nav-menu__item"><a href="about.html">About</a></li>
+            <li class="nav-menu__item"><a href="service.html">Services</a></li>
+            <li class="nav-menu__item"><a href="blog.html" aria-current="page">Insights</a></li>
+            <li class="nav-menu__item"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-                <li class="nav-menu__item">
-                    <a href="index.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Home
-                    </a>
-                </li>
-
-                <li class="nav-menu__item">
-                    <a href="about.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        About
-                    </a>
-                </li>
-
-                <li class="nav-menu__item">
-                    <a href="service.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Services
-                    </a>
-                </li>
-
-               <!--- --->
-
-                <li class="nav-menu__item">
-                    <a href="blog.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Insights
-                    </a>
-                </li>
-
-                <li class="nav-menu__item">
-                    <a href="contact.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-            <!-- ============================ Nav menu End section  ======================================= -->
-        </div>
+    <div class="bs-drawer__foot">
+        <a class="bs-btn bs-btn--solid" href="contact.html">Request a quote</a>
+        <ul class="bs-drawer__contact bs-drawer__contact--small">
+            <li><a href="tel:+441618186787">0161 818 6787</a></li>
+            <li><a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a></li>
+        </ul>
     </div>
 </div>
 <!-- ==================== Mobile Menu End Here ==================== -->
 
-<!-- ==================== Header Start Here ==================== -->
-<header class="header header-six tw-py-5 tw-transition-all tw-z-99 header-transparent">
-    <div class="container container-1719">
-        <nav class="d-flex align-items-center justify-content-between position-relative">
+    <!-- ==================== Header Start Here ==================== -->
+<header class="header bs-header">
+    <div class="bs-header__inner">
 
-            <div class="header-left">
-                <!-- Logo Start -->
-                <div class="logo">
-                    <a href="index.html" class="link">
-                        <img src="assets/images/logo/logo-1.png" alt="Logo" class="max-w-200-px">
-                    </a>
-                </div>
-                <!-- Logo End  -->
-            </div>
+        <a href="index.html" class="bs-header__logo">
+            <img src="assets/images/logo/logo-1.png" alt="Blackstar Security" width="146" height="40">
+        </a>
 
-            <!-- Menu Start  -->
-            <div class="header-menu header-six-menu d-lg-block d-none">
-                <!-- ============================ Nav menu Start section  ======================================= -->
-                <ul class="nav-menu d-lg-flex align-items-center tw-gap-8">
-
-                    <li class="nav-menu__item has-submenu activePage position-relative">
-                        <a href="javascript:void(0)" class="nav-menu__link tw-pe-4 text-white hover-text-main-600 tw-py-4 fw-medium w-100">Home</a>
-
-                    <li class="nav-menu__item">
-                        <a href="index.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="about.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            About
-                        </a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="service.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Services
-                        </a>
-                    </li>
-
-                    <!--- --->
-
-                    <li class="nav-menu__item">
-                        <a href="blog.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Insights
-                        </a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="contact.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-                <!-- ============================ Nav menu End section  ======================================= -->
-            </div>
-            <!-- Menu End  -->
-
-            <!-- Header Right start -->
-            <div class="header-right d-flex align-items-center tw-gap-5">
-
-                <!-- Search Start  
-                <div class="header-search">
-                    <button class="open-search tw-w-12 tw-h-12 lh-1 d-inline-flex justify-content-center align-items-center rounded-circle bg-neutral-800 text-white hover-bg-main-600 hover-text-heading tw-transition-3" aria-label="search products" title="open search box">
-                        <span class="tw-text-lg"><i class="ph-bold ph-magnifying-glass"></i></span>
-                    </button>
-                </div>
-                 Search End  -->
-
-                <!-- offcanvas Button Start  -->
-                <div class="header-offcanvas d-none d-lg-block">
-                    <button class="tw-menu-bar" type="button">
-                        <span><img src="assets/images/icons/memu-toggole.svg" alt="icon"></span>
-                    </button>
-                </div>
-                <!-- offcanvas Button End  -->
-
-                <!-- MobileMenu Button Start  -->
-                <button type="button" class="toggle-mobileMenu d-lg-none text-white tw-text-9">
-                    <span><img src="assets/images/icons/memu-toggole.svg" alt="icon"></span>
-                </button>
-                <!-- MobileMenu Button End  -->
-
-            </div>
-            <!-- Header Right End  -->
-
+        <nav class="bs-header__nav" aria-label="Main">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="blog.html" aria-current="page">Insights</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+
+        <div class="bs-header__actions">
+            <a class="bs-header__phone" href="tel:+441618186787">0161 818 6787</a>
+            <a class="bs-header__cta" href="contact.html">
+                Request a quote
+                <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <!-- Contact panel (desktop) -->
+            <div class="header-offcanvas">
+                <button class="tw-menu-bar bs-menu-btn" type="button" aria-label="Open contact panel">
+                    <span class="bs-menu-btn__lines" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <!-- Menu (mobile and tablet) -->
+            <button type="button" class="toggle-mobileMenu bs-menu-btn" aria-label="Open menu">
+                <span class="bs-menu-btn__lines" aria-hidden="true"></span>
+            </button>
+        </div>
+
     </div>
 </header>
 <!-- ==================== Header End Here ==================== -->
+
 <div id="smooth-wrapper">
     <div id="smooth-content">
-    <!-- ==================== Breadcrumb Start Here ==================== -->
-<section
-    class="breadcrumb-area bg-img position-relative z-1 overflow-hidden"
-    data-background-image="assets/images/thumbs/breadcrumb-bg.jpg"
->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9">
 
-                <div>
-                    <ul class="d-flex align-items-center justify-content-center tw-gap-4 tw-mb-7">
-
-                        <li class="tw-text-lg fw-medium">
-                            <a
-                                href="index.html"
-                                class="text-white hover--translate-y-1 hover-underline d-inline-flex align-items-center tw-gap-3"
-                            >
-                                <span class="d-inline-flex lh-1">
-                                    <img
-                                        src="assets/images/icons/breadcrumb-home-icon.svg"
-                                        alt="Blackstar Security home"
-                                    >
-                                </span>
-                                Home
-                            </a>
-                        </li>
-
-                        <li>
-                            <span class="d-inline-flex lh-1">
-                                <i class="ph-bold ph-caret-right text-main-600"></i>
-                            </span>
-                        </li>
-
-                        <li class="tw-text-lg fw-medium">
-                            <span class="text-white">
-                                Security Advice & Guidance
-                            </span>
-                        </li>
-
-                    </ul>
-
-                    <h1 class="breadcrumb-title text-center tw-mb-6 text-white tw-text-29 text-uppercase lh-1">
-                        Security Advice & Guidance
-                    </h1>
-
-                    <p
-                        class="text-white text-center fw-medium tw-mx-auto"
-                        style="max-width: 820px;"
-                    >
-                        Practical guidance for businesses, venues and event organisers looking for
-                        security guards, door supervisors, event security and professional security
-                        services in Manchester.
-                    </p>
-
-                </div>
-
+    <!-- ==================== Masthead ==================== -->
+    <section class="in-masthead" id="main-content" tabindex="-1" aria-labelledby="in-title">
+        <div class="in-wrap in-masthead__grid">
+            <nav class="in-crumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><span aria-current="page">Insights</span></li>
+                </ol>
+            </nav>
+            <p class="in-label"><span>Blackstar</span>Knowledge</p>
+            <h1 class="in-masthead__title" id="in-title">Straight answers about security<span class="bs-hero__stop">.</span></h1>
+            <div class="in-masthead__aside">
+                <p class="in-masthead__lede">Answering the questions businesses across Manchester ask about security costs, SIA licensing, door supervision, events, manned guarding and protecting the people who matter.</p>
+                <p class="in-masthead__meta"><strong>9</strong> practical guides <span aria-hidden="true">/</span> Updated August 2026</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div>
-        <img
-            class="breadcrumb-shape-1 banner-rotate-content position-absolute z-n1"
-            src="assets/images/shapes/breadcrumb-shape1.png"
-            alt=""
-        >
-    </div>
-</section>
-<!-- ==================== Breadcrumb End Here ==================== -->
-
-
-<!-- ==================== Blog Start Here ==================== -->
-<section class="blog-ip-area py-140">
-
-    <div class="container">
-
-        <!-- Section Intro -->
-        <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-9">
-
-                <div class="text-center tw-mb-16">
-
-                    <span class="text-main-600 fw-semibold text-uppercase d-inline-block tw-mb-4">
-                        Blackstar Knowledge
-                    </span>
-
-                    <h2 class="testimonial-section-title tw-text-29 fw-semibold text-uppercase tw-char-animation">
-                        Straight Answers About Security
-                    </h2>
-
-                    <p
-                        class="text-white fw-medium tw-mt-5 tw-mx-auto"
-                        style="max-width: 760px;"
-                    >
-                        Answering the questions businesses across Manchester ask about
-                        security costs, SIA licensing, door supervision, events,
-                        manned guarding and protecting the people who matter.
-                    </p>
-
+    <!-- ==================== Featured guides ==================== -->
+    <section class="in-featured" aria-labelledby="in-featured-title">
+        <h2 class="visually-hidden" id="in-featured-title">Featured guides</h2>
+        <div class="in-wrap in-featured__grid">
+            <article class="in-lead">
+                <figure class="in-lead__media">
+                    <img src="assets/images/new-img/project-3-01.jpg" alt="Two Blackstar security guards in uniform at a site entrance" width="1734" height="710" fetchpriority="high">
+                </figure>
+                <div class="in-lead__card">
+                    <p class="in-topic">Security costs</p>
+                    <h3 class="in-lead__title"><a href="security-guard-cost-manchester.html">How much does a security guard cost in Manchester?</a></h3>
+                    <p class="in-lead__text">See typical hourly rates, what affects security prices, and costs for event security, door supervisors and manned guarding.</p>
+                    <p class="in-meta"><time datetime="2026-08-16">16 August 2026</time><span aria-hidden="true"></span>7 min read</p>
+                    <span class="in-more" aria-hidden="true">Read the guide<svg class="bs-chevron" viewBox="0 0 16 16"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </div>
+            </article>
 
+            <div class="in-picks">
+                <article class="in-pick" data-reveal>
+                    <figure class="in-pick__media">
+                        <img src="assets/images/thumbs/cta-two-thumb2.jpg" alt="Door supervisors at a venue entrance at night" width="868" height="358" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="in-pick__body">
+                        <p class="in-topic">Martyn’s Law</p>
+                        <h3 class="in-pick__title"><a href="martyns-law-manchester-venues.html">What is Martyn’s Law and does it apply to my Manchester venue?</a></h3>
+                        <p class="in-meta">14 min read</p>
+                    </div>
+                </article>
+                <article class="in-pick" data-reveal style="--d: 1">
+                    <figure class="in-pick__media">
+                        <img src="assets/images/new-img/project-3-02.jpg" alt="Door supervisors at a Manchester venue entrance at night" width="1734" height="710" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="in-pick__body">
+                        <p class="in-topic">SIA guidance</p>
+                        <h3 class="in-pick__title"><a href="door-supervisor-vs-security-guard.html">Door supervisor vs security guard: what’s the difference?</a></h3>
+                        <p class="in-meta">8 min read</p>
+                    </div>
+                </article>
             </div>
         </div>
+    </section>
 
-
-        <div class="row">
-
-            <!-- ==================================================
-                 ARTICLE 01
-                 TARGET: security guard cost Manchester
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Security guard services in Manchester"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Professional SIA security guard Manchester"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="security-guard-cost-manchester.html"
-                            aria-label="How much does a security guard cost in Manchester?"
-                        ></a>
-
+    <!-- ==================== Library: filter + search ==================== -->
+    <!-- Without JS every guide is listed; bs-insights.js reveals the topic filter and search. -->
+    <section class="in-library" aria-labelledby="in-library-title">
+        <div class="in-wrap">
+            <div class="in-library__head">
+                <h2 class="in-library__title" id="in-library-title">All guides</h2>
+                <div class="in-tools" hidden>
+                    <div class="in-filters" role="group" aria-label="Filter guides by topic">
+                        <button type="button" class="in-filter" data-topic="all" aria-pressed="true">All</button>
+                        <button type="button" class="in-filter" data-topic="costs" aria-pressed="false">Costs &amp; choosing</button>
+                        <button type="button" class="in-filter" data-topic="events" aria-pressed="false">Events</button>
+                        <button type="button" class="in-filter" data-topic="door" aria-pressed="false">Door supervision</button>
+                        <button type="button" class="in-filter" data-topic="law" aria-pressed="false">Law &amp; licensing</button>
+                        <button type="button" class="in-filter" data-topic="guarding" aria-pressed="false">Guarding</button>
                     </div>
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-shield-check"></i>
-                            </span>
-                            Security Costs
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <a
-                            class="tw-ms-3 text-main-600 fw-medium"
-                            href="security-guard-cost-manchester.html"
-                        >
-                            Manchester
-                        </a>
-
+                    <div class="in-search">
+                        <label class="visually-hidden" for="in-search-input">Search guides</label>
+                        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                        <input id="in-search-input" type="search" placeholder="Search guides" autocomplete="off">
                     </div>
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-                            <a
-                                class="hover-text-main-600"
-                                href="security-guard-cost-manchester.html"
-                            >
-                                How Much Does a Security Guard Cost in Manchester?
-                            </a>
-                        </h2>
-
-                    </div>
-
                 </div>
-
+                <p class="in-status" aria-live="polite"></p>
             </div>
 
-
-            <!-- ==================================================
-                 ARTICLE 02
-                 TARGET: security company Manchester
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="300"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Professional security company in Manchester"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="SIA approved security services Manchester"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="choose-security-company-manchester.html"
-                            aria-label="How to choose a security company in Manchester"
-                        ></a>
-
-                    </div>
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-buildings"></i>
-                            </span>
-                            Security Companies
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <a
-                            class="tw-ms-3 text-main-600 fw-medium"
-                            href="choose-security-company-manchester.html"
-                        >
-                            Manchester
-                        </a>
-
-                    </div>
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-                            <a
-                                class="hover-text-main-600"
-                                href="choose-security-company-manchester.html"
-                            >
-                                How to Choose the Best Security Company in Manchester
-                            </a>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ==================================================
-                 ARTICLE 03
-                 TARGET: event security Manchester
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="400"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Event security guards in Manchester"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Professional event security Manchester"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="do-i-need-event-security-manchester.html"
-                            aria-label="Do I need security for my event in Manchester?"
-                        ></a>
-
-                    </div>
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-users-three"></i>
-                            </span>
-                            Event Security
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <a
-                            class="tw-ms-3 text-main-600 fw-medium"
-                            href="do-i-need-event-security-manchester.html"
-                        >
-                            Manchester
-                        </a>
-
-                    </div>
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-                            <a
-                                class="hover-text-main-600"
-                                href="do-i-need-event-security-manchester.html"
-                            >
-                                Do I Need Security for My Event in Manchester?
-                            </a>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ==================================================
-                 ARTICLE 04
-                 TARGET: how many security guards do I need
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Security guards and event staffing in Manchester"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="SIA event security staffing Manchester"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="how-many-security-guards-for-event.html"
-                            aria-label="How many security guards do I need for an event?"
-                        ></a>
-
-                    </div>
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-users"></i>
-                            </span>
-                            Event Planning
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <a
-                            class="tw-ms-3 text-main-600 fw-medium"
-                            href="how-many-security-guards-for-event.html"
-                        >
-                            Security
-                        </a>
-
-                    </div>
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-                            <a
-                                class="hover-text-main-600"
-                                href="how-many-security-guards-for-event.html"
-                            >
-                                How Many Security Guards Do I Need for an Event?
-                            </a>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ==================================================
-                 ARTICLE 05
-                 TARGET: door supervisor vs security guard
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="300"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Door supervisor and security guard Manchester"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="SIA licensed door supervisors Manchester"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="door-supervisor-vs-security-guard.html"
-                            aria-label="Door supervisor versus security guard"
-                        ></a>
-
-                    </div>
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-identification-card"></i>
-                            </span>
-                            SIA Guidance
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <a
-                            class="tw-ms-3 text-main-600 fw-medium"
-                            href="door-supervisor-vs-security-guard.html"
-                        >
-                            Door Supervision
-                        </a>
-
-                    </div>
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-                            <a
-                                class="hover-text-main-600"
-                                href="door-supervisor-vs-security-guard.html"
-                            >
-                                Door Supervisor vs Security Guard: What’s the Difference?
-                            </a>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ==================================================
-                 ARTICLE 06
-                 TARGET: door supervisors Manchester
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="400"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Door supervisors for bars and nightclubs Manchester"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Nightclub and bar security Manchester"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="need-door-supervisors-manchester.html"
-                            aria-label="Do I need door supervisors for my bar pub or nightclub?"
-                        ></a>
-
-                    </div>
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-door-open"></i>
-                            </span>
-                            Door Supervision
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <a
-                            class="tw-ms-3 text-main-600 fw-medium"
-                            href="need-door-supervisors-manchester.html"
-                        >
-                            Manchester
-                        </a>
-
-                    </div>
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-                            <a
-                                class="hover-text-main-600"
-                                href="need-door-supervisors-manchester.html"
-                            >
-                                Do I Need Door Supervisors for My Bar, Pub or Nightclub?
-                            </a>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ==================================================
-                 ARTICLE 07
-                 TARGET: security guard powers UK
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Security guard legal powers in the UK"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="SIA security guard legal guidance UK"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="security-guard-powers-uk.html"
-                            aria-label="What can security guards legally do in the UK?"
-                        ></a>
-
-                    </div>
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-scales"></i>
-                            </span>
-                            Security Law
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <a
-                            class="tw-ms-3 text-main-600 fw-medium"
-                            href="security-guard-powers-uk.html"
-                        >
-                            UK
-                        </a>
-
-                    </div>
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-                            <a
-                                class="hover-text-main-600"
-                                href="security-guard-powers-uk.html"
-                            >
-                                What Can Security Guards Legally Do in the UK?
-                            </a>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ==================================================
-                 ARTICLE 08
-                 TARGET: Martyn's Law Manchester
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="300"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Martyn's Law guidance for Manchester venues"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Manchester venue security and Martyn's Law"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="martyns-law-manchester-venues.html"
-                            aria-label="What is Martyn's Law and does it apply to my Manchester venue?"
-                        ></a>
-
-                    </div>
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-shield-warning"></i>
-                            </span>
-                            Martyn's Law
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <a
-                            class="tw-ms-3 text-main-600 fw-medium"
-                            href="martyns-law-manchester-venues.html"
-                        >
-                            Manchester
-                        </a>
-
-                    </div>
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-                            <a
-                                class="hover-text-main-600"
-                                href="martyns-law-manchester-venues.html"
-                            >
-                                What Is Martyn’s Law and Does It Apply to My Manchester Venue?
-                            </a>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ==================================================
-                 ARTICLE 09
-                 TARGET: manned guarding Manchester
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="400"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Manned guarding security services Manchester"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Commercial security guards Manchester"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="manned-guarding-manchester.html"
-                            aria-label="What is manned guarding and does my business need it?"
-                        ></a>
-
-                    </div>
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-buildings"></i>
-                            </span>
-                            Manned Guarding
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <a
-                            class="tw-ms-3 text-main-600 fw-medium"
-                            href="manned-guarding-manchester.html"
-                        >
-                            Manchester
-                        </a>
-
-                    </div>
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-                            <a
-                                class="hover-text-main-600"
-                                href="manned-guarding-manchester.html"
-                            >
-                                What Is Manned Guarding and Does My Business Need It?
-                            </a>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- ==================== Bottom CTA ==================== -->
-        <div class="row justify-content-center tw-mt-14">
-
-            <div class="col-xl-8 col-lg-9">
-
-                <div class="text-center">
-
-                    <h2 class="tw-text-14 text-white tw-mb-5">
-                        Still Have a Question About Security?
-                    </h2>
-
-                    <p class="text-white fw-medium tw-mb-8 tw-mx-auto" style="max-width: 680px;">
-                        Tell Blackstar about your venue, event, business or site and we’ll help you understand
-                        the security cover you actually need.
-                    </p>
-
-                    <a
-                        class="theme-btn-main d-inline-flex align-items-center position-relative tw-transition-all"
-                        href="contact.html"
-                    >
-
-                        <span
-                            class="theme-btn-arrow-left tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 text-heading rounded-circle position-absolute tw-transition-3"
-                        >
-                            <i class="ph ph-arrow-right"></i>
-                        </span>
-
-                        <span
-                            class="theme-btn bg-main-600 text-heading tw-py-4 tw-px-10 fw-medium d-inline-flex align-items-center tw-gap-8 text-capitalize tw-rounded-4xl tw-transition-3 z-2"
-                        >
-                            Discuss Your Requirements
-                        </span>
-
-                        <span
-                            class="theme-btn-arrow-right tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 text-heading rounded-circle tw-transition-3"
-                        >
-                            <i class="ph ph-arrow-right"></i>
-                        </span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ==================== Blog End Here ==================== -->
-    <!-- ==================== Footer Start Here ==================== -->
-<footer class="footer position-relative z-1 bg-img" data-background-image="assets/images/thumbs/footer-bg.jpg">
-    <div class="py-120">
-        <div class="container">
-
-            <div class="row tw-pb-24">
-                <div class="col-xl-4">
-                    <div class="tw-mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <a href="index.html">
-                            <img src="assets/images/logo/footer-logo.png" alt="Blackstar Security">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-xl-8">
-                    <div class="footer-col-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-
-                        <h2 class="tw-text-9 fw-medium text-uppercase tw-mb-2 text--white">
-                            Stay Ahead of Your Security Requirements
-                        </h2>
-
-                        <p class="text--white tw-mb-5">
-                            Get updates from Blackstar on security, events, training and the environments we help protect.
-                        </p>
-
-                        <form action="#" class="footer-form position-relative form-submit d-flex tw-gap-3 tw-mb-3">
-                            <input
-                                type="email"
-                                class="form-control bg-white shadow-none border border-neutral-700 text-heading rounded-pill tw-ps-6 tw-pe-13 focus-border-main-600 tw-h-13 tw-placeholder-text-neutral-900 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
-                                placeholder="Your email address"
-                                required
-                            >
-
-                            <div class="footer-form-button">
-                                <button class="theme-btn-main tw-w-232-px d-inline-flex align-items-center position-relative tw-transition-all">
-
-                                    <span class="theme-btn-arrow-left tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 text-heading rounded-circle position-absolute tw-transition-3">
-                                        <i class="ph ph-arrow-right"></i>
-                                    </span>
-
-                                    <span class="theme-btn bg-main-600 text-heading tw-py-4 tw-px-10 fw-medium d-inline-flex align-items-center tw-gap-8 text-capitalize tw-rounded-4xl tw-transition-3 z-2">
-                                        Keep Me Updated
-                                    </span>
-
-                                    <span class="theme-btn-arrow-right tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 text-heading rounded-circle tw-transition-3">
-                                        <i class="ph ph-arrow-right"></i>
-                                    </span>
-
-                                </button>
-                            </div>
-                        </form>
-
-                        <p class="fw-medium text--white">
-                            By subscribing, you agree to our
-                            <a class="text-white text-decoration-underline hover-text-main-600" href="privacy-policy.html">
-                                Privacy Policy
-                            </a>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="row tw-pb-10">
-
-                <!-- SERVICES -->
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="200">
-                    <div class="footer-col-2">
-
-                        <h2 class="tw-text-9 fw-medium text--white tw-mb-2">
-                            Security Services
-                        </h2>
-
-                        <span class="tw-w-26 border border-main-600 d-inline-block lh-1 tw-mb-8"></span>
-
-                        <ul class="d-flex flex-column tw-gap-5">
-                            <li>
-                                <a href="door-supervision.html" class="text--white hover-text-main-600 hover-underline">
-                                    Door Supervision
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="event-security.html" class="text--white hover-text-main-600 hover-underline">
-                                    Event Security
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="safety-stewarding.html" class="text--white hover-text-main-600 hover-underline">
-                                    Safety Stewarding
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="manned-guarding.html" class="text--white hover-text-main-600 hover-underline">
-                                    Manned Guarding
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="school-security.html" class="text--white hover-text-main-600 hover-underline">
-                                    School Security
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="concierge-residential.html" class="text--white hover-text-main-600 hover-underline">
-                                    Concierge & Residential
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <!-- COMPANY -->
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="300">
-                    <div class="footer-col-3 tw-ms-10">
-
-                        <h2 class="tw-text-9 fw-medium text--white tw-mb-2">
-                            Blackstar
-                        </h2>
-
-                        <span class="tw-w-26 border border-main-600 d-inline-block lh-1 tw-mb-8"></span>
-
-                        <ul class="d-flex flex-column tw-gap-5">
-                            <li>
-                                <a href="about.html" class="text--white hover-text-main-600 hover-underline">
-                                    About Blackstar
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="services.html" class="text--white hover-text-main-600 hover-underline">
-                                    What We Protect
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="training.html" class="text--white hover-text-main-600 hover-underline">
-                                    Training
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="careers.html" class="text--white hover-text-main-600 hover-underline">
-                                    Careers
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="blog.html" class="text--white hover-text-main-600 hover-underline">
-                                    Security Insights
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="contact.html" class="text--white hover-text-main-600 hover-underline">
-                                    Contact Us
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <!-- CONTACT -->
-                <div class="col-lg-5 col-sm-6" data-aos="fade-up" data-aos-duration="400">
-                    <div class="footer-col-4 footer-address">
-
-                        <div class="contact-left">
-
-                            <div class="contact-left-item d-flex tw-gap-6 tw-mb-9">
-                                <div>
-                                    <span class="tw-w-15 tw-h-15 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 text-heading rounded-circle tw-text-8">
-                                        <i class="ph ph-phone"></i>
-                                    </span>
-                                </div>
-
-                                <div>
-                                    <span class="fw-medium d-block text-white">
-                                        Speak to Blackstar
-                                    </span>
-
-                                    <a class="font-heading fw-medium tw-text-3xl d-block text-white hover-text-main-600"
-                                       href="tel:+441618186787">
-                                        0161 818 6787
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="contact-left-item d-flex tw-gap-6 tw-mb-9">
-                                <div>
-                                    <span class="tw-w-15 tw-h-15 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 text-heading rounded-circle tw-text-8">
-                                        <i class="ph ph-envelope-simple"></i>
-                                    </span>
-                                </div>
-
-                                <div>
-                                    <span class="fw-medium d-block text-white">
-                                        Email
-                                    </span>
-
-                                    <a class="font-heading fw-medium tw-text-3xl d-block text-white hover-text-main-600"
-                                       href="mailto:info@blackstarsecurity.co.uk">
-                                        info@blackstarsecurity.co.uk
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="contact-left-item d-flex tw-gap-6 tw-mb-9">
-                                <div>
-                                    <span class="tw-w-15 tw-h-15 lh-1 d-inline-flex align-items-center justify-content-center bg-main-600 text-heading rounded-circle tw-text-8">
-                                        <i class="ph ph-shield-check"></i>
-                                    </span>
-                                </div>
-
-                                <div>
-                                    <span class="fw-medium d-block text-white">
-                                        Need Security?
-                                    </span>
-
-                                    <a class="font-heading fw-medium tw-text-3xl d-block text-white hover-text-main-600"
-                                       href="contact.html">
-                                        Discuss Your Requirements
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
+            <ol class="in-list">
+                <li class="in-item" data-topics="costs" data-reveal>
+                    <article>
+                        <p class="in-topic">Security costs</p>
+                        <h3 class="in-item__title"><a href="security-guard-cost-manchester.html">How much does a security guard cost in Manchester?</a></h3>
+                        <p class="in-item__text">Typical hourly rates, what affects security prices, and costs for event security, door supervisors and manned guarding.</p>
+                        <p class="in-meta">7 min read</p>
+                    </article>
+                </li>
+                <li class="in-item" data-topics="costs" data-reveal>
+                    <article>
+                        <p class="in-topic">Security companies</p>
+                        <h3 class="in-item__title"><a href="choose-security-company-manchester.html">How to choose the best security company in Manchester</a></h3>
+                        <p class="in-item__text">How to compare SIA approved security companies, security guards, door supervisors, event security and manned guarding providers.</p>
+                        <p class="in-meta">8 min read</p>
+                    </article>
+                </li>
+                <li class="in-item" data-topics="events" data-reveal>
+                    <article>
+                        <p class="in-topic">Event security</p>
+                        <h3 class="in-item__title"><a href="do-i-need-event-security-manchester.html">Do I need security for my event in Manchester?</a></h3>
+                        <p class="in-item__text">When to hire event security guards, when SIA licences may be required, how many staff you may need and the difference between security and stewards.</p>
+                        <p class="in-meta">9 min read</p>
+                    </article>
+                </li>
+                <li class="in-item" data-topics="events" data-reveal>
+                    <article>
+                        <p class="in-topic">Event planning</p>
+                        <h3 class="in-item__title"><a href="how-many-security-guards-for-event.html">How many security guards do I need for an event?</a></h3>
+                        <p class="in-item__text">Security guard ratios, staffing for 100, 500 or 1,000 guests, SIA security, door supervisors and event security planning.</p>
+                        <p class="in-meta">9 min read</p>
+                    </article>
+                </li>
+                <li class="in-item" data-topics="door law" data-reveal>
+                    <article>
+                        <p class="in-topic">SIA guidance</p>
+                        <h3 class="in-item__title"><a href="door-supervisor-vs-security-guard.html">Door supervisor vs security guard: what’s the difference?</a></h3>
+                        <p class="in-item__text">The difference between the roles, SIA licence requirements, where each can work, what they can do and which your business or venue needs.</p>
+                        <p class="in-meta">8 min read</p>
+                    </article>
+                </li>
+                <li class="in-item" data-topics="door" data-reveal>
+                    <article>
+                        <p class="in-topic">Door supervision</p>
+                        <h3 class="in-item__title"><a href="need-door-supervisors-manchester.html">Do I need door supervisors for my bar, pub or nightclub?</a></h3>
+                        <p class="in-item__text">SIA door supervisors, premises licence requirements, staffing levels and professional door security for Manchester venues.</p>
+                        <p class="in-meta">9 min read</p>
+                    </article>
+                </li>
+                <li class="in-item" data-topics="law" data-reveal>
+                    <article>
+                        <p class="in-topic">Security law</p>
+                        <h3 class="in-item__title"><a href="security-guard-powers-uk.html">What can security guards legally do in the UK?</a></h3>
+                        <p class="in-item__text">Whether security guards can detain, search, remove people or use force, and what an SIA licence actually allows.</p>
+                        <p class="in-meta">11 min read</p>
+                    </article>
+                </li>
+                <li class="in-item" data-topics="law events" data-reveal>
+                    <article>
+                        <p class="in-topic">Martyn’s Law</p>
+                        <h3 class="in-item__title"><a href="martyns-law-manchester-venues.html">What is Martyn’s Law and does it apply to my Manchester venue?</a></h3>
+                        <p class="in-item__text">The 200-person threshold, standard and enhanced tiers, venue duties and how to prepare.</p>
+                        <p class="in-meta">14 min read</p>
+                    </article>
+                </li>
+                <li class="in-item" data-topics="guarding costs" data-reveal>
+                    <article>
+                        <p class="in-topic">Manned guarding</p>
+                        <h3 class="in-item__title"><a href="manned-guarding-manchester.html">What is manned guarding and does my business need it?</a></h3>
+                        <p class="in-item__text">What security guards do, when your business may need on-site security, SIA licensing, costs and how to choose the right guarding service.</p>
+                        <p class="in-meta">10 min read</p>
+                    </article>
+                </li>
+            </ol>
+
+            <div class="in-empty" hidden>
+                <p>No guides match that search yet.</p>
+                <button type="button" class="in-reset">Show all guides</button>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Bottom Footer -->
-    <div class="container">
-        <div class="tw-py-8">
-
-            <div class="container container-two">
-                <div class="footer-copyright-wrapper d-flex align-items-center justify-content-between tw-gap-4 flex-wrap">
-
-                    <p class="text--white text-line-1 fw-normal">
-                        © 2026
-                        <a href="index.html" class="fw-semibold text-main-600 hover-underline hover-text-white">
-                            Blackstar Group Solutions Ltd
-                        </a>.
-                        All rights reserved.
-                    </p>
-
-                    <ul class="footer-social d-flex align-items-center tw-gap-4">
-
-                        <li>
-                            <a href="https://www.facebook.com/BlackstarSec"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                                <i class="ph-bold ph-facebook-logo"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.instagram.com/blackstar_security/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                                <i class="ph-bold ph-instagram-logo"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#"
-                               class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                                <i class="ph-bold ph-linkedin-logo"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#"
-                               class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                                <i class="ph-bold ph-tiktok-logo"></i>
-                            </a>
-                        </li>
-
-                    </ul>
-
-                    <div class="d-flex tw-gap-4">
-                        <a href="privacy-policy.html" class="text--white hover-text-main-600">
-                            Privacy
-                        </a>
-
-                        <a href="terms.html" class="text--white hover-text-main-600">
-                            Terms
-                        </a>
-                    </div>
-
-                </div>
+    <!-- ==================== Question panel ==================== -->
+    <section class="in-ask" aria-labelledby="in-ask-title">
+        <div class="in-ask__panel">
+            <div class="in-ask__copy">
+                <h2 class="in-ask__title" id="in-ask-title">Still have a question about security<span class="bs-hero__stop">?</span></h2>
+                <p class="in-ask__text">Tell Blackstar about your venue, event, business or site and we’ll help you understand the security cover you actually need.</p>
             </div>
-
+            <div class="in-ask__actions">
+                <a class="bs-btn in-btn-ink" href="contact.html">
+                    Discuss your requirements
+                    <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a class="in-ask__call" href="tel:+441618186787">Call 0161 818 6787</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div>
-        <img
-            class="footer-bg-shape position-absolute end-0 bottom-0 z-n1"
-            src="assets/images/shapes/footer-bg-shape.jpg"
-            alt=""
-        >
-    </div>
+    <!-- ==================== Footer (shared design, bs-footer.css) ==================== -->
+    <footer class="hv-footer">
+        <div class="in-wrap hv-footer__grid">
+            <div class="hv-footer__brand">
+                <a href="index.html" class="hv-footer__logo"><img src="assets/images/logo/logo-1.png" alt="Blackstar Security" width="146" height="40" loading="lazy"></a>
+                <p>Professional security in Manchester that helps people feel safe, welcome and looked after.</p>
+                <p class="sv-news__title">Stay ahead of your security requirements</p>
+                <!-- .form-submit keeps the existing main.js newsletter handler -->
+                <form action="#" class="sv-news form-submit">
+                    <label class="visually-hidden" for="sv-news-email">Email address</label>
+                    <input id="sv-news-email" type="email" placeholder="Your email address" required>
+                    <button type="submit">Keep me updated</button>
+                </form>
+                <p class="sv-news__note">By subscribing, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            </div>
+            <nav class="hv-footer__col" aria-label="Footer">
+                <p class="hv-footer__heading">Security services</p>
+                <ul>
+                    <li><a href="door-supervisor.html">Door supervision</a></li>
+                    <li><a href="event-security.html">Event security</a></li>
+                    <li><a href="event-stewarding.html">Safety stewarding</a></li>
+                    <li><a href="manned-guarding.html">Manned guarding</a></li>
+                    <li><a href="school-security.html">School security</a></li>
+                    <li><a href="residential-security.html">Concierge &amp; residential</a></li>
+                </ul>
+            </nav>
+            <nav class="hv-footer__col" aria-label="Blackstar">
+                <p class="hv-footer__heading">Blackstar</p>
+                <ul>
+                    <li><a href="about.html">About Blackstar</a></li>
+                    <li><a href="service.html">What we protect</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="blog.html">Security insights</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="hv-footer__col">
+                <p class="hv-footer__heading">Contact</p>
+                <ul>
+                    <li><a href="tel:+441618186787">0161 818 6787</a></li>
+                    <li><a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a></li>
+                    <li><a href="https://www.facebook.com/BlackstarSec" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/blackstar_security/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="in-wrap hv-footer__base">
+            <p>© 2026 Blackstar Group Solutions Ltd. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
 
-</footer>
-<!-- ==================== Footer End Here ==================== -->
-
-
-
-
-
-
-
-
-
-                    
     </div>
 </div>
+
+
+
     <!-- Jquery js -->
 <script src="assets/js/jquery-3.7.1.min.js"></script>
 <!-- phosphor Js -->
@@ -1913,14 +877,10 @@
 <script src="assets/js/waypoints.js"></script>
 <!-- swiper bundle Js -->
 <script src="assets/js/swiper-bundle.js"></script>
-<!-- three js -->
-<script src="assets/js/three.min.js"></script>
 <!-- odometer counter js -->
 <script src="assets/js/odometer.min.js"></script>
 <!-- magnific popup js -->
 <script src="assets/js/magnific-popup.min.js"></script>
-<!-- jquery-knob js -->
-<script src="assets/js/jquery-knob.js"></script>
 <!-- aos -->
 <script src="assets/js/aos.js"></script>
 
@@ -1944,5 +904,7 @@
 <script src="assets/js/main.js"></script>
 <!-- tw-cursor js -->
 <script src="assets/js/tw-cursor.js"></script>
+<!-- Insights page interactions -->
+<script src="assets/js/bs-insights.js"></script>
     </body>
 </html>

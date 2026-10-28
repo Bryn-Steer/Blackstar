@@ -42,7 +42,8 @@ function smoothSctoll() {
 	});
 }
 smoothSctoll();
-if($('#smooth-wrapper').length && $('#smooth-content').length){
+// Smooth scrolling is skipped for visitors who prefer reduced motion
+if($('#smooth-wrapper').length && $('#smooth-content').length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
 	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, TweenMax, ScrollToPlugin);
 
 	gsap.config({

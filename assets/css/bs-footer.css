@@ -1,0 +1,171 @@
+/* =========================================================
+   BLACKSTAR FOOTER
+   Shared footer for redesigned inner pages (Services, Insights).
+   The homepage keeps its own copy inside bs-home.css.
+========================================================= */
+
+.hv-footer {
+    padding-top: clamp(72px, 8vw, 112px);
+    background: var(--bs-ed-ink);
+    color: var(--bs-ed-warm-2);
+    font-family: var(--bs-ed-font);
+}
+
+.hv-footer__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr));
+    gap: 48px clamp(24px, 3vw, 48px);
+}
+
+.hv-footer__logo img {
+    display: block;
+    width: 140px;
+    height: auto;
+}
+
+.hv-footer .hv-footer__brand > p:first-of-type {
+    max-width: 22em;
+    margin: 24px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.hv-footer .hv-footer__heading,
+.hv-footer .sv-news__title {
+    margin: 0 0 18px;
+    color: var(--bs-ed-fog) !important;
+    font-size: 13px;
+}
+
+.hv-footer .sv-news__title {
+    margin: 32px 0 12px;
+}
+
+.sv-news {
+    display: flex;
+    max-width: 420px;
+    padding: 5px 5px 5px 20px;
+    border: 1px solid var(--bs-ed-rule);
+    border-radius: 999px;
+    transition: border-color 0.25s ease;
+}
+
+.sv-news:focus-within {
+    border-color: var(--bs-ed-gold-soft);
+}
+
+.sv-news input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    color: var(--bs-ed-warm);
+    font-family: var(--bs-ed-font);
+    font-size: 15px;
+}
+
+.sv-news input::placeholder {
+    color: var(--bs-ed-fog);
+}
+
+.sv-page .hv-footer .sv-news input:focus-visible {
+    outline: none;
+}
+
+.sv-news button {
+    min-height: 44px;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--bs-ed-warm);
+    color: var(--bs-ed-ink);
+    font-family: var(--bs-ed-font);
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.sv-news button:hover {
+    background: #fff;
+}
+
+.hv-footer .sv-news__note {
+    margin: 10px 0 0;
+    color: var(--bs-ed-fog) !important;
+    font-size: 13px;
+}
+
+.hv-footer__col ul {
+    display: grid;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+}
+
+.hv-footer__col li {
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+}
+
+.hv-footer a {
+    color: var(--bs-ed-warm-2);
+    transition: color 0.25s ease;
+}
+
+.hv-footer a:hover {
+    color: var(--bs-ed-warm);
+}
+
+.hv-footer__base {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 32px;
+    margin-top: clamp(56px, 7vw, 96px);
+    padding-block: 28px;
+    border-top: 1px solid var(--bs-ed-rule-soft);
+    font-size: 13px;
+}
+
+.hv-footer .hv-footer__base p {
+    margin: 0;
+    color: var(--bs-ed-fog) !important;
+}
+
+.hv-footer__base ul {
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (max-width: 991px) {
+    .hv-footer__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .hv-footer__brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .hv-footer__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 40px;
+    }
+
+    .hv-footer__col:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .hv-footer__base {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -292,9 +292,18 @@
 
     <link rel="stylesheet" href="assets/css/about-mobile.css">
 
+    <!-- Redesign: shared homepage system, then About page layout -->
+    <link rel="stylesheet" href="assets/css/bs-editorial.css">
+    <link rel="stylesheet" href="assets/css/bs-about.css">
+
+    <!-- Enables reveal motion only when JavaScript runs -->
+    <script>document.documentElement.classList.add('ba-js');</script>
+
 </head>
 
-<body class="home-one-bg tw-magic-cursor">
+<body class="home-one-bg tw-magic-cursor ba-page">
+
+    <a class="bs-skip" href="#main-content">Skip to main content</a>
 
 
     <!--==================== Preloader Start ====================-->
@@ -386,7 +395,7 @@
 
     <!-- ==================== Scroll to Top End Here ==================== -->
     <div class="back-to-top-wrapper">
-        <button id="back_to_top" type="button" class="back-to-top-btn">
+        <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to top">
             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -405,1213 +414,472 @@
 
     <!--==================== Offcanvas Start Here ====================-->
 <div class="twoffcanvas-area">
-    <div class="twoffcanvas bg-img bg-black position-fixed top-0 bottom-0 tw-p-13">
+    <div class="twoffcanvas bs-drawer bs-drawer--panel position-fixed top-0 bottom-0" role="dialog" aria-label="Contact Blackstar">
 
-        <div class="twoffcanvas__close-btn">
-            <button class="close-btn">
-                <i class="ph-bold ph-x"></i>
+        <div class="bs-drawer__top">
+            <a href="index.html" class="bs-drawer__logo">
+                <img src="assets/images/logo/logo.png" alt="Blackstar Security" width="146" height="40">
+            </a>
+            <button class="close-btn bs-drawer__close" type="button" aria-label="Close contact panel">
+                <span aria-hidden="true"></span>
             </button>
         </div>
 
-        <div class="twoffcanvas__logo tw-mb-15">
-            <a href="index.html">
-                <img src="assets/images/logo/logo.png" alt="Blackstar Security">
-            </a>
-        </div>
+        <p class="bs-drawer__intro">
+            Professional security teams who protect people, represent your business properly and know when to act.
+        </p>
 
-        <div class="twoffcanvas__title tw-mb-12">
-            <p class="text-white">
-                Professional security teams who protect people, represent your business properly and know when to act.
-            </p>
-        </div>
-
-        <div class="twoffcanvas__contact-info tw-mb-13">
-            <div class="twoffcanvas__contact-title tw-mb-8">
-                <span class="font-body fw-semibold text-capitalize tw-text-3xl tw-mb-6 d-inline-block text-white">
-                    Contact Blackstar
-                </span>
-            </div>
-
-            <ul>
-                <li class="d-flex align-items-center tw-mb-4">
-                    <i class="text-main-600 ph ph-map-pin"></i>
-                    <p class="text-white tw-ms-3">
-                        Manchester, United Kingdom
-                    </p>
-                </li>
-
-                <li class="d-flex align-items-center tw-mb-4">
-                    <i class="text-main-600 ph ph-envelope"></i>
-                    <a class="text-white hover-text-main-600 tw-ms-3"
-                       href="mailto:info@blackstarsecurity.co.uk">
-                        info@blackstarsecurity.co.uk
-                    </a>
-                </li>
-
-                <li class="d-flex align-items-center">
-                    <i class="text-main-600 ph ph-phone-outgoing"></i>
-                    <a class="text-white hover-text-main-600 tw-ms-3"
-                       href="tel:+441618186787">
-                        0161 818 6787
-                    </a>
-                </li>
+        <div class="bs-drawer__block">
+            <p class="bs-drawer__heading">Contact Blackstar</p>
+            <ul class="bs-drawer__contact">
+                <li>Manchester, United Kingdom</li>
+                <li><a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a></li>
+                <li><a href="tel:+441618186787">0161 818 6787</a></li>
             </ul>
         </div>
 
-        <div class="twoffcanvas__input">
-            <div class="twoffcanvas__input-title">
-                <span class="font-body fw-semibold text-capitalize tw-text-3xl text-white tw-mb-6">
-                    Stay Updated
-                </span>
-            </div>
-
-            <form action="#">
-                <div class="position-relative">
-                    <input
-                        class="placeholder-text-white"
-                        type="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-
-                    <button type="submit">
-                        <i class="ph ph-paper-plane-tilt"></i>
-                    </button>
-                </div>
+        <div class="bs-drawer__block">
+            <p class="bs-drawer__heading">Stay Updated</p>
+            <form action="#" class="bs-drawer__form">
+                <label class="visually-hidden" for="bs-drawer-email">Email address</label>
+                <input id="bs-drawer-email" type="email" placeholder="Enter your email" required>
+                <button type="submit" aria-label="Subscribe">
+                    <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+                </button>
             </form>
         </div>
 
-        <div class="twoffcanvas__social">
-            <ul class="footer-social d-flex align-items-center tw-gap-4">
-
-                <li>
-                    <a href="https://www.facebook.com/BlackstarSec"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Blackstar Security on Facebook"
-                       class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                        <i class="ph-bold ph-facebook-logo"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.instagram.com/blackstar_security/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Blackstar Security on Instagram"
-                       class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                        <i class="ph-bold ph-instagram-logo"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.linkedin.com/company/blackstar-security-ltd/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Blackstar Security on LinkedIn"
-                       class="tw-w-10 tw-h-10 lh-1 d-inline-flex align-items-center justify-content-center text-white rounded-circle hover-bg-main-600 hover-text-heading">
-                        <i class="ph-bold ph-linkedin-logo"></i>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
+        <ul class="bs-drawer__social">
+            <li>
+                <a href="https://www.facebook.com/BlackstarSec" target="_blank" rel="noopener noreferrer" aria-label="Blackstar Security on Facebook">Facebook</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/blackstar_security/" target="_blank" rel="noopener noreferrer" aria-label="Blackstar Security on Instagram">Instagram</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/blackstar-security-ltd/" target="_blank" rel="noopener noreferrer" aria-label="Blackstar Security on LinkedIn">LinkedIn</a>
+            </li>
+        </ul>
 
     </div>
 </div>
 
 <div class="body-overlay"></div>
 <!--==================== Offcanvas End Here ====================-->
-    <!--==================== Offcanvus End Here ====================-->
 
-
-
-
-
-
-    
     <!-- ==================== Mobile Menu Start Here ==================== -->
-<div class="mobile-menu d-lg-none d-block scroll-sm position-fixed bg-black tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw--translate-x-full tw-pb-68 ">
+<div class="mobile-menu bs-drawer bs-drawer--mobile d-lg-none tw--translate-x-full" role="dialog" aria-label="Menu">
 
-    <button type="button" class="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center text-neutral-900 bg-neutral-200 hover-bg-neutral-900 hover-text-white">
-        <i class="ph ph-x"></i>
-    </button>
-
-    <div class="mobile-menu__inner">
-        <a href="index.html" class="mobile-menu__logo">
-            <img src="assets/images/logo/logo.png" alt="Logo">
+    <div class="bs-drawer__top">
+        <a href="index.html" class="bs-drawer__logo">
+            <img src="assets/images/logo/logo.png" alt="Blackstar Security" width="146" height="40">
         </a>
+        <button type="button" class="close-button bs-drawer__close" aria-label="Close menu">
+            <span aria-hidden="true"></span>
+        </button>
+    </div>
 
-        <div class="mobile-menu__menu">
-            <!-- ============================ Nav menu Start section  ======================================= -->
-            <ul class="nav-menu d-lg-flex align-items-center nav-menu--mobile d-block tw-mt-8">
+    <nav class="bs-drawer__menu" aria-label="Mobile">
+        <ul class="bs-drawer__nav">
+            <li class="nav-menu__item"><a href="index.html">Home</a></li>
+            <li class="nav-menu__item"><a href="about.html" aria-current="page">About</a></li>
+            <li class="nav-menu__item"><a href="service.html">Services</a></li>
+            <li class="nav-menu__item"><a href="blog.html">Insights</a></li>
+            <li class="nav-menu__item"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-                <li class="nav-menu__item">
-                    <a href="index.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Home
-                    </a>
-                </li>
-
-                <li class="nav-menu__item">
-                    <a href="about.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        About
-                    </a>
-                </li>
-
-                <li class="nav-menu__item">
-                    <a href="service.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Services
-                    </a>
-                </li>
-
-               <!--- --->
-
-                <li class="nav-menu__item">
-                    <a href="blog.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Insights
-                    </a>
-                </li>
-
-                <li class="nav-menu__item">
-                    <a href="contact.html" class="nav-menu__link text-white hover-text-main-600 tw-py-9 fw-medium w-100">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-            <!-- ============================ Nav menu End section  ======================================= -->
-        </div>
+    <div class="bs-drawer__foot">
+        <a class="bs-btn bs-btn--solid" href="contact.html">Request a quote</a>
+        <ul class="bs-drawer__contact bs-drawer__contact--small">
+            <li><a href="tel:+441618186787">0161 818 6787</a></li>
+            <li><a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a></li>
+        </ul>
     </div>
 </div>
 <!-- ==================== Mobile Menu End Here ==================== -->
 
-<!-- ==================== Header Start Here ==================== -->
-<header class="header header-six tw-py-5 tw-transition-all tw-z-99 header-transparent">
-    <div class="container container-1719">
-        <nav class="d-flex align-items-center justify-content-between position-relative">
+    <!-- ==================== Header Start Here ==================== -->
+<header class="header bs-header">
+    <div class="bs-header__inner">
 
-            <div class="header-left">
-                <!-- Logo Start -->
-                <div class="logo">
-                    <a href="index.html" class="link">
-                        <img src="assets/images/logo/logo-1.png" alt="Logo" class="max-w-200-px">
-                    </a>
-                </div>
-                <!-- Logo End  -->
-            </div>
+        <a href="index.html" class="bs-header__logo">
+            <img src="assets/images/logo/logo-1.png" alt="Blackstar Security" width="146" height="40">
+        </a>
 
-            <!-- Menu Start  -->
-            <div class="header-menu header-six-menu d-lg-block d-none">
-                <!-- ============================ Nav menu Start section  ======================================= -->
-                <ul class="nav-menu d-lg-flex align-items-center tw-gap-8">
-
-                    <li class="nav-menu__item">
-                        <a href="index.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="about.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            About
-                        </a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="service.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Services
-                        </a>
-                    </li>
-
-                    <!--- --->
-
-                    <li class="nav-menu__item">
-                        <a href="blog.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Insights
-                        </a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="contact.html" class="nav-menu__link text-white hover-text-main-600 tw-py-4 fw-medium w-100">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-                <!-- ============================ Nav menu End section  ======================================= -->
-            </div>
-            <!-- Menu End  -->
-
-            <!-- Header Right start -->
-            <div class="header-right d-flex align-items-center tw-gap-5">
-
-                <!-- Search Start  
-                <div class="header-search">
-                    <button class="open-search tw-w-12 tw-h-12 lh-1 d-inline-flex justify-content-center align-items-center rounded-circle bg-neutral-800 text-white hover-bg-main-600 hover-text-heading tw-transition-3" aria-label="search products" title="open search box">
-                        <span class="tw-text-lg"><i class="ph-bold ph-magnifying-glass"></i></span>
-                    </button>
-                </div>
-                 Search End  -->
-
-                <!-- offcanvas Button Start  -->
-                <div class="header-offcanvas d-none d-lg-block">
-                    <button class="tw-menu-bar" type="button">
-                        <span><img src="assets/images/icons/memu-toggole.svg" alt="icon"></span>
-                    </button>
-                </div>
-                <!-- offcanvas Button End  -->
-
-                <!-- MobileMenu Button Start  -->
-                <button type="button" class="toggle-mobileMenu d-lg-none text-white tw-text-9">
-                    <span><img src="assets/images/icons/memu-toggole.svg" alt="icon"></span>
-                </button>
-                <!-- MobileMenu Button End  -->
-
-            </div>
-            <!-- Header Right End  -->
-
+        <nav class="bs-header__nav" aria-label="Main">
+            <ul>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="blog.html">Insights</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+
+        <div class="bs-header__actions">
+            <a class="bs-header__phone" href="tel:+441618186787">0161 818 6787</a>
+            <a class="bs-header__cta" href="contact.html">
+                Request a quote
+                <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <!-- Contact panel (desktop) -->
+            <div class="header-offcanvas">
+                <button class="tw-menu-bar bs-menu-btn" type="button" aria-label="Open contact panel">
+                    <span class="bs-menu-btn__lines" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <!-- Menu (mobile and tablet) -->
+            <button type="button" class="toggle-mobileMenu bs-menu-btn" aria-label="Open menu">
+                <span class="bs-menu-btn__lines" aria-hidden="true"></span>
+            </button>
+        </div>
+
     </div>
 </header>
 <!-- ==================== Header End Here ==================== -->
+
 <div id="smooth-wrapper">
     <div id="smooth-content">
-    <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb-area bg-img position-relative z-1 overflow-hidden" data-background-image="assets/images/thumbs/breadcrumb-bg.jpg">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div>
-                    <ul class="d-flex align-items-center justify-content-center tw-gap-4 tw-mb-7">
-                        <li class="tw-text-lg fw-medium"><a href="index.html" class="text-white hover--translate-y-1 hover-underline d-inline-flex align-items-center tw-gap-3 "><span class="d-inline-flex lh-1"><img src="assets/images/icons/breadcrumb-home-icon.svg" alt="home"></span> Home</a> </li>
-                        <li>
-                            <span class="d-inline-flex lh-1"><i class="ph-bold ph-caret-right text-white"></i></span>
-                            <span class="d-inline-flex lh-1"><i class="ph-bold ph-caret-right text-white"></i></span>
-                        </li>
-                        <li class=" tw-text-lg fw-medium"> <span class="text-white"> BlackStar </span> </li>
-                    </ul>
-                    <h1 class="breadcrumb-title text-center tw-mb-6 text-white tw-text-29 text-uppercase lh-1"> BlackStar</h1>
+
+    <!-- ==================== About Hero ==================== -->
+    <section class="ba-hero" id="main-content" tabindex="-1" aria-labelledby="ba-hero-title">
+        <div class="ba-wrap ba-hero__grid">
+            <nav class="ba-crumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><span aria-current="page">About Blackstar</span></li>
+                </ol>
+            </nav>
+
+            <h1 class="ba-hero__title" id="ba-hero-title">
+                The difference is in how people feel when we’re there<span class="bs-hero__stop">.</span>
+            </h1>
+
+            <div class="ba-hero__aside">
+                <p class="ba-hero__lede">
+                    Blackstar believes security should protect people while improving the places it serves. Our teams look after venues, events, businesses, schools and residential sites across Greater Manchester.
+                </p>
+                <div class="ba-actions">
+                    <a class="bs-btn bs-btn--solid" href="contact.html">
+                        Request a quote
+                        <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a class="bs-hero__call" href="tel:+441618186787">Call 0161 818 6787</a>
                 </div>
             </div>
+
+            <figure class="ba-hero__media">
+                <img src="assets/images/new-img/project-3-01.jpg" alt="Four Blackstar Security officers in uniform standing together" width="1734" height="710" fetchpriority="high">
+                <figcaption class="ba-hero__chips">
+                    <span>Established 2013</span>
+                    <span>SIA ACS approved</span>
+                    <span>Greater Manchester</span>
+                </figcaption>
+            </figure>
         </div>
-    </div>
-    <div>
-        <img class="breadcrumb-shape-1 banner-rotate-content position-absolute z-n1" src="assets/images/shapes/breadcrumb-shape1.png" alt="shape">
-</section>
-<!-- ==================== Breadcrumb End Here ==================== -->
-    <!-- ==================== About Start Here ==================== -->
-    <section class="about-four-area py-140">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4">
-                    <div class="tw-mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="tw-mb-12">
-                            <span class="border border-white text-white tw-rounded-4xl tw-py-2 tw-px-6">About Our Company</span>
-                        </div>
-                        <div class="d-flex tw-gap-6">
-                            <div>
-                                <h2 class="about-four-rating tw-text-sm fw-medium font-body tw-mb-3">PROVEN CREDENTIALS</h2>
-                                <div class="d-flex tw-gap-4">
-                                    <p class="text-white fw-bold">4.8 out of 5 </p>
-                                    <div>
-                                        <i class="text-main-600 ph-bold ph-star"></i>
-                                        <i class="text-main-600 ph-bold ph-star"></i>
-                                        <i class="text-main-600 ph-bold ph-star"></i>
-                                        <i class="text-main-600 ph-bold ph-star"></i>
-                                        <i class="text-main-600 ph-bold ph-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <a class="tw-transition-3" href="javascript:void(0)"><span class="tw-w-122 tw-h-122 lh-1 d-inline-flex justify-content-center align-items-center rounded-circle bg-main-six-600 text-white hover-bg-main-600"><i class="ph ph-caret-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
+    </section>
+
+    <!-- ==================== Philosophy ==================== -->
+    <section class="ba-story" aria-labelledby="ba-story-title">
+        <div class="ba-wrap ba-story__grid">
+            <div class="ba-story__rail">
+                <div class="ba-story__pin">
+                    <p class="ba-label"><span>01</span>Our philosophy</p>
+                    <h2 class="ba-story__title" id="ba-story-title">Security should improve the place it protects<span class="bs-hero__stop">.</span></h2>
+                    <ol class="ba-story__index" aria-hidden="true">
+                        <li class="is-active">What we believe</li>
+                        <li>How we approach it</li>
+                        <li>Why people come first</li>
+                    </ol>
                 </div>
-                <div class="col-xl-8 col-lg-8">
-                    <div class="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <div class="tw-mb-14">
-                            <div class="section-two-wrapper tw-mb-9">
-                                <h2 class="section-two-title tw-text-20 tw-char-animation">The Difference Is in How People Feel When We’re There.</h2>
-                            </div>
-                            <div class="about-three-button">
-                                <a class="theme-btn-main tw-w-232-px d-inline-flex align-items-center position-relative tw-transition-all" href="javascript:void(0)">
-                                    <span class="theme-btn-arrow-left tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 text-heading rounded-circle position-absolute tw-transition-3"><i class="ph ph-arrow-right"></i></span>
-                                    <span class="theme-btn bg-main-600 text-heading tw-py-4 tw-px-10 fw-medium d-inline-flex align-items-center tw-gap-8 text-capitalize tw-rounded-4xl tw-transition-3 z-2">Explore More</span>
-                                    <span class="theme-btn-arrow-right tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 text-heading rounded-circle tw-transition-3"><i class="ph ph-arrow-right"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="about-four-wrap d-flex tw-gap-25">
-                            <div>
-                                <div class="about-four-content animation-item d-flex tw-gap-6 tw-mb-4">
-                                    <div>
-                                        <span><img class="animate__wobble" src="assets/images/icons/about-ip-icon1.svg" alt="icon"></span>
-                                    </div>
-                                    <div>
-                                        <h3 class="tw-text-13">Recognised Excellence</h3>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="fw-medium text-white">2026 Oldham Business Awards finalist, reflecting the people, growth and commitment behind Blackstar.</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="about-four-content animation-item d-flex tw-gap-6 tw-mb-4">
-                                    <div>
-                                        <span><img class="animate__wobble" src="assets/images/icons/about-ip-icon2.svg" alt="icon"></span>
-                                    </div>
-                                    <div>
-                                        <h4 class="tw-text-13">Proven Professionalism</h4>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="fw-medium text-white">SIA Approved Contractor for Door Supervision and Security Guarding, backed by accountable teams and consistent delivery.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
+            </div>
+
+            <div class="ba-story__body">
+                <p class="ba-story__intro" data-reveal>
+                    Blackstar Security is a Manchester security company, established in 2013 and operating as Blackstar Group Solutions Ltd. We provide door supervision, event security, safety stewarding, security guarding, school security, and residential and concierge security.
+                </p>
+
+                <article class="ba-chapter" data-chapter="0" data-reveal>
+                    <p class="ba-chapter__num">01</p>
+                    <h3 class="ba-chapter__title">What we believe</h3>
+                    <p>Good security should never make a great venue feel less welcoming. Customers should feel at ease, staff should feel supported and the people responsible for a site should feel in control.</p>
+                </article>
+
+                <article class="ba-chapter" data-chapter="1" data-reveal>
+                    <p class="ba-chapter__num">02</p>
+                    <h3 class="ba-chapter__title">How we approach it</h3>
+                    <p>Every environment works differently, so we start with the place rather than a headcount. We learn how your venue, event or site operates and where the pressure points are, then decide what the team needs to look like.</p>
+                </article>
+
+                <article class="ba-chapter" data-chapter="2" data-reveal>
+                    <p class="ba-chapter__num">03</p>
+                    <h3 class="ba-chapter__title">Why people come first</h3>
+                    <p>Security only works when the person matches the assignment. Professionalism, judgement and accountability are what customers notice, long before anything goes wrong.</p>
+                </article>
+            </div>
+        </div>
+
+        <figure class="ba-story__film" data-reveal="image">
+            <img src="assets/images/new-img/about-briefing.jpg" alt="Blackstar Security team in a planning meeting" width="1274" height="554" loading="lazy" decoding="async">
+            <figcaption>Every assignment starts with understanding the place.</figcaption>
+        </figure>
+    </section>
+
+    <!-- ==================== Credentials ==================== -->
+    <section class="ba-proof" aria-labelledby="ba-proof-title">
+        <div class="ba-wrap">
+            <div class="ba-proof__head">
+                <p class="ba-label"><span>02</span>Proof of professionalism</p>
+                <h2 class="ba-proof__title" id="ba-proof-title">Credentials, not claims<span class="bs-hero__stop">.</span></h2>
+                <p class="ba-proof__text">The standards behind Blackstar are ones you can check, from how long we have operated to the activities we are approved to deliver.</p>
+            </div>
+
+            <div class="ba-bento">
+                <article class="ba-tile ba-tile--lead" data-reveal>
+                    <p class="ba-tile__label">SIA Approved Contractor Scheme</p>
+                    <p class="ba-tile__figure ba-tile__figure--words">Door Supervision <span>&amp;</span> Security Guarding</p>
+                    <p class="ba-tile__text">Approved for both activities, backed by accountable teams and consistent delivery.</p>
+                </article>
+
+                <figure class="ba-tile ba-tile--photo" data-reveal style="--d: 1">
+                    <img src="assets/images/new-img/about-hivis-detail.jpg" alt="Blackstar Security branded high-visibility jacket" width="498" height="294" loading="lazy" decoding="async">
+                    <figcaption>Uniformed, SIA licensed teams</figcaption>
+                </figure>
+
+                <article class="ba-tile" data-reveal style="--d: 1">
+                    <p class="ba-tile__figure">2013</p>
+                    <p class="ba-tile__label">Established</p>
+                    <p class="ba-tile__text">Over a decade protecting people, venues and businesses.</p>
+                </article>
+
+                <article class="ba-tile" data-reveal style="--d: 2">
+                    <p class="ba-tile__figure">2026</p>
+                    <p class="ba-tile__label">Oldham Business Awards finalist</p>
+                    <p class="ba-tile__text">Recognition reflecting the people, growth and commitment behind Blackstar.</p>
+                </article>
+
+                <article class="ba-tile" data-reveal style="--d: 3">
+                    <p class="ba-tile__figure">6</p>
+                    <p class="ba-tile__label">Core security services</p>
+                    <p class="ba-tile__text">Door supervision, event security, safety stewarding, security guarding, school security, and residential and concierge security.</p>
+                </article>
             </div>
         </div>
     </section>
-    <!-- ==================== About End Here ==================== -->
 
-
-    <!-- ==================== About End Here ==================== -->
-    <section class="cta-two-area pb-140">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="cta-two-thumb one tw-mb-5 position-relative z-1 h-100 overflow-hidden"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="200">
-
-                        <img class="tw-rounded-xl w-100 h-100"
-                            src="assets/images/thumbs/cta-two-thumb1.jpg"
-                            alt="Blackstar Security">
-
-                        <div class="cta-two-overlay position-absolute top-0 start-0 w-100 h-100 tw-rounded-xl"></div>
-
-                        <div class="cta-two-content position-absolute tw-me-29">
-
-                            <div class="cta-two-arrow tw-mb-37">
-                                <img class="video-arrow-shape-animate"
-                                    src="assets/images/shapes/cta-two-arrow.png"
-                                    alt="arrow">
-                            </div>
-
-                            <div>
-                                <h2 class="cta-two-title text-white tw-text-20 lh-1 tw-mb-8">
-                                    The Right Presence Changes Everything
-                                </h2>
-
-                                <p class="tw-pb-10 text-white">
-                                    From the first welcome to the moment action is needed, Blackstar helps your venue feel safe, well managed and in control.
-                                </p>
-
-                                <div class="cta-two-button">
-                                    <a class="theme-btn-main d-inline-flex align-items-center position-relative tw-transition-all"
-                                    href="services.html">
-
-                                        <span class="theme-btn-arrow-left tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 text-heading rounded-circle position-absolute tw-transition-3">
-                                            <i class="ph ph-arrow-right"></i>
-                                        </span>
-
-                                        <span class="theme-btn bg-main-600 text-heading tw-py-4 tw-px-10 fw-medium d-inline-flex align-items-center tw-gap-8 text-capitalize tw-rounded-4xl tw-transition-3 z-2">
-                                            Explore More
-                                        </span>
-
-                                        <span class="theme-btn-arrow-right tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 text-heading rounded-circle tw-transition-3">
-                                            <i class="ph ph-arrow-right"></i>
-                                        </span>
-
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="cta-two-thumb two tw-mb-5 position-relative z-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                                <img class="tw-rounded-xl w-100" src="assets/images/thumbs/cta-two-thumb2.jpg" alt="thumb">
-                                <div class="cta-two-counter position-absolute">
-                                    <div class="counter-wrapper d-flex align-items-center tw-gap-4">
-                                        <h2 class="counter-title tw-text-29 fw-semibold font-heading text-main-600 mb-0 lh-1"><span class="font-heading odometer" data-count="7940"></span>+</h2>
-                                        <p class="tw-text-base fw-medium text-heading text-uppercase">Security Hours <br>
-                                            Delivered</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
-                            <div class="cta-two-thumb three" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                                <img class="tw-rounded-xl w-100" src="assets/images/thumbs/cta-two-thumb3.jpg" alt="thumb">
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
-                            <div class="cta-two-thumb four position-relative z-1 animation-item overflow-hidden"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="500">
-
-                                <img class="tw-rounded-xl w-100"
-                                    src="assets/images/thumbs/cta-two-thumb4.jpg"
-                                    alt="thumb">
-
-                                <div class="cta-two-overlay position-absolute top-0 start-0 w-100 h-100 tw-rounded-xl"></div>
-
-                                <div class="cta-two-content position-absolute tw-me-10">
-                                    <div class="cta-two-icon tw-mb-14">
-                                        
-                                    </div>
-
-                                    <div>
-                                        <h3 class="cta-two-sm-title text-white tw-text-13">
-                                            Professional Security
-                                        </h3>
-
-                                        <p class="text-white">
-                                            Reliable door supervision, guarding and event security built around safety, professionalism and peace of mind.
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==================== About End Here ==================== -->
-    <!-- ============================ portfolio Start section  ======================================= -->
-<section class="portfolio-area tw-pt-14 overflow-hidden">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-11">
-                <div class="position-relative z-1 tw-mb-2">
-                    <h3 class="portfolio-top-subtitle tw-text-47 mb-0 lh-1 text-uppercase">portfolioD </h3>
-                    <h2 class="portfolio-top-title tw-text-83 text-main-600 mb-0 text-uppercase lh-1">PROJECTS</h2>
-                    <div class="portfolio-shape position-absolute z-1">
-                        <span><img class="portfolio-shape-arrow" src="assets/images/shapes/portfolio-arrow.png" alt="arrow"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-             <div class="col-xl-12">
-                <div class="portfolio-panel-area">
-                    <div class="portfolio-panel bg-img tw-p-18 tw-mb-5 tw-h-666-px tw-rounded-3xl" data-background-image="assets/images/new-img/project-3-02.jpg">
-                        <div class="portfolio-wrap w-100 h-100 d-flex justify-content-between flex-column">
-                             <div>
-                                 <span class="font-heading text-white fw-bold tw-text-20">#1</span>
-                             </div>
-                             <div>
-                                 
-                                 <div>
-                                     <h2 class="portfolio-title text-uppercase tw-text-20"><a href="portfolio-details.html">Nightclubs, Bars & Venues</a></h2>
-                                    </div>
-                             </div>
-                         </div>
-                        </div>
-                    <div class="portfolio-panel bg-img tw-p-18 tw-mb-5 tw-h-666-px tw-rounded-3xl" data-background-image="assets/images/new-img/project-3-03.jpg">
-                         <div class="portfolio-wrap w-100 h-100 d-flex justify-content-between flex-column">
-                             <div>
-                                 <span class="font-heading text-white fw-bold tw-text-20">#2</span>
-                             </div>
-                             <div>
-                                 <div>
-                                     <h2 class="portfolio-title text-uppercase tw-text-20"><a href="portfolio-details.html">Events & Stadiums</a></h2>
-                                 </div>
-                             </div>
-                         </div>
-                    </div>
-                    <div class="portfolio-panel bg-img tw-p-18 tw-mb-5 tw-h-666-px tw-rounded-3xl" data-background-image="assets/images/new-img/project-3-01.jpg">
-                         <div class="portfolio-wrap w-100 h-100 d-flex justify-content-between flex-column">
-                             <div>
-                                 <span class="font-heading text-white fw-bold tw-text-20">#3</span>
-                             </div>
-                             <div>
-                                 <div>
-                                     <h2 class="portfolio-title text-uppercase tw-text-20"><a href="portfolio-details.html">Manned Guarding</a></h2>
-                                 </div>
-                                </div>
-                         </div>
-                        </div>
-                    <div class="portfolio-panel bg-img tw-p-18 tw-mb-5 tw-h-666-px tw-rounded-3xl" data-background-image="assets/images/new-img/project-3-04.jpg">
-                         <div class="portfolio-wrap w-100 h-100 d-flex justify-content-between flex-column">
-                             <div>
-                                 <span class="font-heading text-white fw-bold tw-text-20">#4</span>
-                                </div>
-                             <div>
-                                 <div>
-                                     <h2 class="portfolio-title text-uppercase tw-text-20"><a href="portfolio-details.html">Residential Security</a></h2>
-                                    </div>
-                             </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ============================ portfolio End section  ======================================= -->
-
-
-
-
-
-
-
-
-    <!-- ============================ Testimonial Start section  ======================================= -->
-<section class="testimonial-area pb-140 position-relative z-1 overflow-hidden">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-xl-2 col-lg-3 col-md-5 col-sm-5">
-                <div>
-                    <span class="border border-main-600 text-main-600 tw-rounded-4xl tw-py-2 tw-px-6">Our Testimonials</span>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-2 col-md-4 col-sm-4">
-                <div class="text-center tw-mt-10">
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-7 col-md-10">
-                <div>
-                    <div class="position-relative z-2 tw-mb-2">
-                        <h2 class="testimonial-section-title tw-text-29 fw-semibold text-uppercase tw-char-animation">What Our clients say about us</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-1"></div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-xl-3">
-                <div class="testimonial-clients">
-                    <div class="tw-mb-20">
-                        <div class="d-flex align-items-center tw-mb-8">
-                            
-                            <div class="tw-w-140 tw-h-140 lh-1 d-flex justify-content-center align-items-center rounded-circle overflow-hidden tw-duration-300 hover-scale-2 tw-hover-z-9 position-relative z-5 tw--ms-16-px border border-2 border-white bg-main-600">
-                                <h2 class="testimonial-count-title tw-text-lg fw-bold font-body text-heading mb-0 lh-1">32+</h2>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="tw-text-xl fw-medium text-white">More then 25K clients <br> reviews in the world-wide</p>
-                        </div>
-                    </div>
-                    <div class="d-flex tw-gap-4">
-                        <div>
-                            <img src="assets/images/shapes/google.png" alt="google">
-                        </div>
-                        <div>
-                            <span class="tw-text-xl fw-bold text-main-600">4.0</span>
-                            <p class="tw-text-sm fw-medium text-uppercase text-white">GOGELE REVIEWS</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-9">
-                <div class="testimonial-slide position-relative z-index-1">
-                    <div class="testimonial-active swiper-container">
-                        <div class="testimonial-swiper-wrapper swiper-wrapper">
-                            
-                            <!-- slide 1 -->
-                            <div class="testimonial-wrapper d-flex align-items-end tw-gap-17 up-bg-primary swiper-slide">
-           
-                                <div class="position-relative z-1">
-                                    <img src="assets/images/thumbs/testi-thumb1.png" alt="thumb">
-                                    <div class="testimonial-reveiw position-absolute z-1 ">
-                                        <span><img src="assets/images/shapes/testi-quate.png" alt="quate"></span>
-                                    </div>
-                                </div>
-                                <div class="tw-mb-4">
-                                    <div class="tw-mb-8">
-                                        <i class="text-main-600 tw-text-2xl ph-bold ph-star"></i>
-                                        <i class="text-main-600 tw-text-2xl ph-bold ph-star"></i>
-                                        <i class="text-main-600 tw-text-2xl ph-bold ph-star"></i>
-                                        <i class="text-main-600 tw-text-2xl ph-bold ph-star"></i>
-                                        <i class="text-main-600 tw-text-2xl ph-bold ph-star"></i>
-                                    </div>
-                                    <div class="tw-mb-13">
-                                        <p class="tw-text-xl fw-medium text-white tw-w-435-px">“We believe in the power of creativity and collaboration Our latest project showcase our commitment to delivering innovative solutions that not only meet”</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div class="d-flex tw-gap-4">
-                                            <div>
-                                            </div>
-                                            <div>
-                                                <h2>John Smith</h2>
-                                                <p class="text-white">Small Business Owner</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-arrow">
-                                            <button class="slider-prev " tabindex="0" aria-label="Previous slide">
-                                                <i class="ph ph-arrow-left"></i>
-                                            </button>
-                                            <button class="slider-next " tabindex="0" aria-label="Next slide">
-                                                <i class="ph ph-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-    <img class="testimonial-arrow-shape banner-arrow-animation position-absolute z-n1" src="assets/images/shapes/testimonial-arrow-shape.png" alt="arrow">
-    </div>
-</section>
-<!-- ============================ Testimonial End section  ======================================= -->
-
-    <!-- ============================ Maquee Start section  ======================================= -->
-<section class="maquee-area overflow-hidden">
-    <div class="maquee-slider">
-        <div class="swiper maquee-active">
-            <div class="swiper-wrapper maquee-transition">
-                <!-- slide 1 -->
-                <div class="maquee-box d-flex align-items-center tw-gap-10 w-auto swiper-slide">
-                    <div class="maquee-icon">
-                        <span class="d-inline-block lh-1"><img src="assets/images/icons/maquee-five-icon.svg" alt="icon"></span>
-                    </div>
-                    <div class="maquee-content">
-                        <h2 class="maquee-title text-white tw-text-24 text-uppercase fw-bold mb-0 border-text lh-1">PROTECTION</h2>
-                    </div>
-                </div>
-                <!-- slide 2 -->
-                <div class="maquee-box d-flex align-items-center tw-gap-10 w-auto swiper-slide">
-                    <div class="maquee-icon">
-                        <span class="d-inline-block lh-1"><img src="assets/images/icons/maquee-five-icon.svg" alt="icon"></span>
-                    </div>
-                    <div class="maquee-content">
-                        <h2 class="maquee-title text-white tw-text-24 text-uppercase fw-bold mb-0 lh-1">WELCOME</h2>
-                    </div>
-                </div>  
-                <!-- slide 3 -->
-                <div class="maquee-box d-flex align-items-center tw-gap-10 w-auto swiper-slide">
-                    <div class="maquee-icon">
-                        <span class="d-inline-block lh-1"><img src="assets/images/icons/maquee-five-icon.svg" alt="icon"></span>
-                    </div>
-                    <div class="maquee-content">
-                        <h2 class="maquee-title text-white tw-text-24 text-uppercase fw-bold mb-0 border-text lh-1">PRESENCE</h2>
-                    </div>
-                </div>  
-                <!-- slide 4 -->
-                <div class="maquee-box d-flex align-items-center tw-gap-10 w-auto swiper-slide">
-                    <div class="maquee-icon">
-                        <span class="d-inline-block lh-1"><img src="assets/images/icons/maquee-five-icon.svg" alt="icon"></span>
-                    </div>
-                    <div class="maquee-content">
-                        <h2 class="maquee-title text-white tw-text-24 text-uppercase fw-bold mb-0 lh-1">TRUST</h2>
-                    </div>
-                </div>  
-                <!-- slide 5 -->
-                <div class="maquee-box d-flex align-items-center tw-gap-10 w-auto swiper-slide">
-                    <div class="maquee-icon">
-                        <span class="d-inline-block lh-1"><img src="assets/images/icons/maquee-five-icon.svg" alt="icon"></span>
-                    </div>
-                    <div class="maquee-content">
-                        <h2 class="maquee-title text-white tw-text-24 text-uppercase fw-bold mb-0 border-text lh-1">SAFETY</h2>
-                    </div>
-                </div>
-                <!-- slide 6 -->
-                <div class="maquee-box d-flex align-items-center tw-gap-10 w-auto swiper-slide">
-                    <div class="maquee-icon">
-                        <span class="d-inline-block lh-1"><img src="assets/images/icons/maquee-five-icon.svg" alt="icon"></span>
-                    </div>
-                    <div class="maquee-content">
-                        <h2 class="maquee-title text-white tw-text-24 text-uppercase fw-bold mb-0 lh-1">SERVICE</h2>
-                    </div>
-                </div>
-                <!-- slide 6 -->
-                <div class="maquee-box d-flex align-items-center tw-gap-10 w-auto swiper-slide">
-                    <div class="maquee-icon">
-                        <span class="d-inline-block lh-1"><img src="assets/images/icons/maquee-five-icon.svg" alt="icon"></span>
-                    </div>
-                    <div class="maquee-content">
-                        <h2 class="maquee-title text-white tw-text-24 text-uppercase fw-bold mb-0 border-text lh-1">CONTROL</h2>
-                    </div>
-                </div>
-                <!-- slide 6 -->
-                <div class="maquee-box d-flex align-items-center tw-gap-10 w-auto swiper-slide">
-                    <div class="maquee-icon">
-                        <span class="d-inline-block lh-1"><img src="assets/images/icons/maquee-five-icon.svg" alt="icon"></span>
-                    </div>
-                    <div class="maquee-content">
-                        <h2 class="maquee-title text-white tw-text-24 text-uppercase fw-bold mb-0 lh-1">CONFIDENCE</h2>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ============================ Maquee End section  ======================================= -->
-    <!-- ==================== Feature Start Here ==================== -->
-<section class="feature-two-area tw-pt-40">
-    <div class="container">
-
-        <div class="row justify-content-center">
-            <div class="col-xl-7">
-                <div class="section-two-wrapper text-center tw-pt-10 tw-mb-18 tw-me-10">
-                    <h2 class="section-two-title text-uppercase tw-text-29 tw-char-animation">
-                        How We Work
-                    </h2>
-                    <p class="text-white fw-medium tw-mt-4">
-                        We understand what you need, build the right team around it and manage the delivery from start to finish.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="feature-two-wrapper tw-me-14 tw-mb-7 animation-item"
-                     data-aos="fade-up"
-                     data-aos-duration="1000"
-                     data-aos-delay="200">
-
-                    <div class="feature-two-content d-flex align-items-center tw-gap-6 tw-mb-10">
-
-                        <div class="position-relative z-1">
-                            <span class="feature-ip-icon tw-w-31 tw-h-31 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 rounded-circle">
-                                <img class="animate__wobble"
-                                     src="assets/images/icons/feature-two-icon1.svg"
-                                     alt="Understand your requirements">
-                            </span>
-
-                            <div class="feature-number position-absolute top-0 end-0">
-                                <span class="tw-w-10 tw-h-10 lh-1 d-inline-flex justify-content-center align-items-center bg-white rounded-circle tw-text-lg fw-bolder text-heading">
-                                    01
-                                </span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h2 class="feature-two-title tw-text-13 text-uppercase lh-1">
-                                Your Environment
-                            </h2>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <p class="text-white fw-medium">
-                            We learn how your venue, event or site operates, what matters to you and where the pressure points are.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="feature-two-wrapper tw-me-14 tw-mb-7 animation-item"
-                     data-aos="fade-up"
-                     data-aos-duration="1000"
-                     data-aos-delay="300">
-
-                    <div class="feature-two-content d-flex align-items-center tw-gap-6 tw-mb-10">
-
-                        <div class="position-relative z-1">
-                            <span class="feature-ip-icon tw-w-31 tw-h-31 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 rounded-circle">
-                                <img class="animate__wobble"
-                                     src="assets/images/icons/feature-two-icon2.svg"
-                                     alt="Build the right security team">
-                            </span>
-
-                            <div class="feature-number position-absolute top-0 end-0">
-                                <span class="tw-w-10 tw-h-10 lh-1 d-inline-flex justify-content-center align-items-center bg-white rounded-circle tw-text-lg fw-bolder text-heading">
-                                    02
-                                </span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h2 class="feature-two-title tw-text-13 text-uppercase lh-1">
-                                Build the Right Team
-                            </h2>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <p class="text-white fw-medium">
-                            We put the right people in the right roles, with the professionalism and approach your environment requires.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="feature-two-wrapper tw-me-14 tw-mb-7 animation-item"
-                     data-aos="fade-up"
-                     data-aos-duration="1000"
-                     data-aos-delay="400">
-
-                    <div class="feature-two-content d-flex align-items-center tw-gap-6 tw-mb-10">
-
-                        <div class="position-relative z-1">
-                            <span class="feature-ip-icon tw-w-31 tw-h-31 lh-1 d-inline-flex justify-content-center align-items-center bg-main-600 rounded-circle">
-                                <img class="animate__wobble"
-                                     src="assets/images/icons/feature-two-icon3.svg"
-                                     alt="Managed security delivery">
-                            </span>
-
-                            <div class="feature-number position-absolute top-0 end-0">
-                                <span class="tw-w-10 tw-h-10 lh-1 d-inline-flex justify-content-center align-items-center bg-white rounded-circle tw-text-lg fw-bolder text-heading">
-                                    03
-                                </span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h2 class="feature-two-title tw-text-13 text-uppercase lh-1">
-                                Stay Accountable
-                            </h2>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <p class="text-white fw-medium">
-                            We manage the team, maintain communication and make sure the service continues to work properly.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- ==================== Feature End Here ==================== -->
-    <!-- ==================== Blog Start Here ==================== -->
-<section class="blog-area py-140 overflow-hidden">
-
-    <div class="container">
-
-        <!-- ==================== Section Heading ==================== -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-12">
-
-                <div class="position-relative z-1 tw-mb-14">
-
-                    <h2 class="testimonial-section-title tw-text-29 fw-semibold text-uppercase text-center tw-char-animation">
-                        Security Advice <br>
-                        & Guidance
-                    </h2>
-
-                    <div>
-                        <img
-                            class="blog-shape-1 position-absolute z-n1"
-                            src="assets/images/shapes/blog-shape1.png"
-                            alt=""
-                        >
-
-                        <img
-                            class="blog-shape-2 position-absolute z-n1"
-                            src="assets/images/shapes/blog-shape2.png"
-                            alt=""
-                        >
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="row">
-
-
-            <!-- ==================================================
-                 ARTICLE 01
-                 SECURITY GUARD COST MANCHESTER
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Professional security guard in Manchester"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Manchester security guard services"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="security-guard-cost-manchester.html"
-                            aria-label="How much does a security guard cost in Manchester?"
-                        ></a>
-
-                    </div>
-
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-currency-gbp"></i>
-                            </span>
-
-                            Security Costs
-
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <span class="tw-ms-3 text-main-600 fw-medium">
-                            Manchester
-                        </span>
-
-                    </div>
-
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-
-                            <a
-                                class="hover-text-main-600"
-                                href="security-guard-cost-manchester.html"
-                            >
-                                How Much Does a Security Guard Cost in Manchester?
-                            </a>
-
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- ==================================================
-                 ARTICLE 02
-                 CHOOSE SECURITY COMPANY MANCHESTER
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="300"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Professional security company in Manchester"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Blackstar Security Manchester"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="choose-security-company-manchester.html"
-                            aria-label="How to choose the best security company in Manchester"
-                        ></a>
-
-                    </div>
-
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-shield-check"></i>
-                            </span>
-
-                            Choosing Security
-
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <span class="tw-ms-3 text-main-600 fw-medium">
-                            Manchester
-                        </span>
-
-                    </div>
-
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-
-                            <a
-                                class="hover-text-main-600"
-                                href="choose-security-company-manchester.html"
-                            >
-                                How to Choose the Best Security Company in Manchester
-                            </a>
-
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- ==================================================
-                 ARTICLE 03
-                 MARTYN'S LAW MANCHESTER
-            =================================================== -->
-            <div class="col-xl-4 col-lg-6 col-md-6">
-
-                <div
-                    class="blog-wrapper position-relative z-1 overflow-hidden tw-mb-8"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="400"
-                >
-
-                    <div class="blog-main-thumb position-relative overflow-hidden tw-rounded-xl tw-mb-9">
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Martyn's Law guidance for Manchester venues"
-                        >
-
-                        <img
-                            class="w-img w-100 tw-rounded-xl tw-transition-5"
-                            src="assets/images/thumbs/blog-thumb2.png"
-                            alt="Manchester venue security and Martyn's Law"
-                        >
-
-                        <a
-                            class="blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"
-                            href="martyns-law-manchester-venues.html"
-                            aria-label="What is Martyn's Law and does it apply to my Manchester venue?"
-                        ></a>
-
-                    </div>
-
-
-                    <div class="blog-meta d-flex align-items-center tw-mb-6">
-
-                        <span class="text-white fw-medium d-inline-flex align-items-center tw-gap-2 tw-me-3">
-
-                            <span class="text-main-600 d-inline-block lh-1">
-                                <i class="ph ph-shield-warning"></i>
-                            </span>
-
-                            Martyn's Law
-
-                        </span>
-
-                        <span class="tw-w-3 border border-white d-inline-block lh-1"></span>
-
-                        <span class="tw-ms-3 text-main-600 fw-medium">
-                            Manchester
-                        </span>
-
-                    </div>
-
-
-                    <div class="tw-me-10">
-
-                        <h2 class="tw-text-9 fw-medium">
-
-                            <a
-                                class="hover-text-main-600"
-                                href="martyns-law-manchester-venues.html"
-                            >
-                                What Is Martyn’s Law and Does It Apply to My Manchester Venue?
-                            </a>
-
-                        </h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-        <!-- ==================== View All ==================== -->
-        <div class="row justify-content-center tw-mt-10">
-
-            <div class="col-auto">
-
-                <a
-                    class="theme-btn-main d-inline-flex align-items-center position-relative tw-transition-all"
-                    href="blog.html"
-                >
-
-                    <span
-                        class="theme-btn-arrow-left tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center border border-main-600 text-main-600 rounded-circle position-absolute tw-transition-3"
-                    >
-                        <i class="ph ph-arrow-right"></i>
-                    </span>
-
-                    <span
-                        class="theme-btn border border-main-600 text-main-600 tw-py-4 tw-px-10 fw-medium d-inline-flex align-items-center tw-gap-8 text-capitalize tw-rounded-4xl tw-transition-3 z-2"
-                    >
-                        View All Security Guidance
-                    </span>
-
-                    <span
-                        class="theme-btn-arrow-right tw-w-14 tw-h-14 lh-1 d-inline-flex justify-content-center align-items-center border border-main-600 text-main-600 rounded-circle tw-transition-3"
-                    >
-                        <i class="ph ph-arrow-right"></i>
-                    </span>
-
+    <!-- ==================== The People ==================== -->
+    <section class="ba-people" aria-labelledby="ba-people-title">
+        <div class="ba-wrap ba-people__grid">
+            <div class="ba-people__copy">
+                <p class="ba-label"><span>03</span>The people behind Blackstar</p>
+                <h2 class="ba-people__title" id="ba-people-title">The right people change how security feels<span class="bs-hero__stop">.</span></h2>
+                <p class="ba-people__text">
+                    Professional security depends on the person in the role. We select people for the way they carry themselves as much as for their licence: professional enough to represent your business, approachable enough to support your customers and prepared enough to act when something changes.
+                </p>
+                <a href="careers.html" class="bs-link">
+                    Careers at Blackstar
+                    <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-
             </div>
 
+            <figure class="ba-portrait ba-portrait--a" data-reveal="image">
+                <img src="assets/images/thumbs/cta-two-thumb4.jpg" alt="Blackstar Security officer smiling beside the Blackstar entrance sign" width="422" height="358" loading="lazy" decoding="async">
+            </figure>
+            <figure class="ba-portrait ba-portrait--b" data-reveal="image" style="--d: 1">
+                <img src="assets/images/thumbs/cta-two-thumb3.jpg" alt="Blackstar steward in high-visibility uniform at an event entrance" width="422" height="358" loading="lazy" decoding="async">
+            </figure>
+
+            <ul class="ba-qualities">
+                <li data-reveal>
+                    <h3>Judgement<span class="bs-hero__stop">.</span></h3>
+                    <p>Knowing when to step in, when to step back and how to calm a situation before it escalates.</p>
+                </li>
+                <li data-reveal style="--d: 1">
+                    <h3>Communication<span class="bs-hero__stop">.</span></h3>
+                    <p>Clear, courteous and approachable with guests, staff and the people we report to.</p>
+                </li>
+                <li data-reveal style="--d: 2">
+                    <h3>Character<span class="bs-hero__stop">.</span></h3>
+                    <p>Reliable, discreet and accountable, on every shift and in every environment.</p>
+                </li>
+            </ul>
         </div>
+    </section>
 
-    </div>
+    <!-- ==================== Operational Experience ==================== -->
+    <!-- Without JS (and on mobile) each environment is a self-contained card.
+         bs-about.js adds .is-enhanced on desktop: hover or focus selects the featured image. -->
+    <section class="ba-work" aria-labelledby="ba-work-title">
+        <div class="ba-wrap">
+            <div class="ba-work__head">
+                <p class="ba-label"><span>04</span>Operational experience</p>
+                <h2 class="ba-work__title" id="ba-work-title">Built around the environments we protect<span class="bs-hero__stop">.</span></h2>
+            </div>
 
-</section>
-<!-- ==================== Blog End Here ==================== -->
+            <div class="ba-showcase">
+                <div class="ba-showcase__stage" aria-hidden="true">
+                    <img src="assets/images/new-img/project-3-02.jpg" alt="" width="1734" height="710" loading="lazy" decoding="async" class="is-active">
+                    <img src="assets/images/new-img/project-3-03.jpg" alt="" width="1734" height="710" loading="lazy" decoding="async">
+                    <img src="assets/images/new-img/project-3-04.jpg" alt="" width="1734" height="710" loading="lazy" decoding="async">
+                </div>
+
+                <ol class="ba-showcase__list">
+                    <li class="ba-case is-active">
+                        <figure class="ba-case__media">
+                            <img src="assets/images/new-img/project-3-02.jpg" alt="Blackstar door supervisors at a Manchester venue entrance at night" width="1734" height="710" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="ba-case__body">
+                            <p class="ba-case__label">Door supervision</p>
+                            <h3 class="ba-case__title">Nightclubs, bars &amp; venues</h3>
+                            <p class="ba-case__text">Security that protects the venue while helping the first welcome feel professional, confident and right for the night.</p>
+                            <a class="bs-link" href="door-supervisor.html">Door supervision<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </li>
+                    <li class="ba-case">
+                        <figure class="ba-case__media">
+                            <img src="assets/images/new-img/project-3-03.jpg" alt="Blackstar event steward in high-visibility uniform at an event gate" width="1734" height="710" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="ba-case__body">
+                            <p class="ba-case__label">Event security and stewarding</p>
+                            <h3 class="ba-case__title">Events &amp; stadiums</h3>
+                            <p class="ba-case__text">Security and stewarding that keeps guests moving, supports organisers and allows the event itself to remain the focus.</p>
+                            <a class="bs-link" href="event-security.html">Event security<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </li>
+                    <li class="ba-case">
+                        <figure class="ba-case__media">
+                            <img src="assets/images/new-img/project-3-04.jpg" alt="Blackstar officers providing a professional welcome at a building entrance" width="1734" height="710" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="ba-case__body">
+                            <p class="ba-case__label">Residential and concierge</p>
+                            <h3 class="ba-case__title">Residential security</h3>
+                            <p class="ba-case__text">Discreet protection with a professional welcome for residents, visitors and property managers.</p>
+                            <a class="bs-link" href="residential-security.html">Residential security<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Client Expectations (in place of unverified testimonials) ==================== -->
+    <section class="ba-standards" aria-labelledby="ba-standards-title">
+        <div class="ba-standards__panel">
+            <div class="ba-wrap">
+                <h2 class="ba-label ba-label--ink" id="ba-standards-title">
+                    <svg class="ba-star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21.1l1.6-7L2 9.3l7.1-.7Z"/></svg>
+                    What clients can expect
+                </h2>
+                <p class="ba-standards__statement" data-reveal>
+                    <span>We are not here to become the night, the event or the business.</span>
+                    We are here to protect it and help everything else work as it should.
+                </p>
+
+                <div class="ba-standards__grid">
+                    <div class="ba-principle ba-principle--lead" data-reveal>
+                        <h3>A professional first impression</h3>
+                        <p>Security starts before anything goes wrong. The right officer gives customers confidence from the moment they arrive.</p>
+                    </div>
+                    <div class="ba-principle" data-reveal style="--d: 1">
+                        <h3>Communication that continues</h3>
+                        <p>Communication should not disappear once the shift begins. We maintain oversight and keep the client informed.</p>
+                    </div>
+                    <div class="ba-principle" data-reveal style="--d: 2">
+                        <h3>Presence that fits</h3>
+                        <p>Visible when it needs to be and in the background when it does not, so the experience your customers came for stays intact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== How We Work ==================== -->
+    <section class="ba-process" aria-labelledby="ba-process-title">
+        <div class="ba-wrap">
+            <div class="ba-process__head">
+                <p class="ba-label"><span>05</span>How we work</p>
+                <h2 class="ba-process__title" id="ba-process-title">A considered process, from first conversation to every shift<span class="bs-hero__stop">.</span></h2>
+                <p class="ba-process__text">We understand what you need, build the right team around it and manage the delivery from start to finish.</p>
+            </div>
+
+            <ol class="ba-steps" data-reveal="steps">
+                <li>
+                    <span class="ba-steps__num" aria-hidden="true">01</span>
+                    <h3>Understand your environment</h3>
+                    <p>We learn how your venue, event or site operates, what matters to you and where the pressure points are.</p>
+                </li>
+                <li>
+                    <span class="ba-steps__num" aria-hidden="true">02</span>
+                    <h3>Select the right people</h3>
+                    <p>We put the right people in the right roles, with the professionalism and approach your environment requires.</p>
+                </li>
+                <li>
+                    <span class="ba-steps__num" aria-hidden="true">03</span>
+                    <h3>Deliver with accountability</h3>
+                    <p>We manage the team, maintain communication and make sure the service continues to work properly.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ==================== Security Advice & Guidance ==================== -->
+    <section class="ba-guides" aria-labelledby="ba-guides-title">
+        <div class="ba-guides__panel">
+            <div class="ba-wrap">
+                <div class="ba-guides__head">
+                    <p class="ba-label"><span>06</span>Security advice &amp; guidance</p>
+                    <h2 class="ba-guides__title" id="ba-guides-title">Straight answers for people making decisions about security<span class="bs-hero__stop">.</span></h2>
+                    <a href="blog.html" class="bs-link">
+                        All guides
+                        <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+
+                <div class="ba-guides__layout">
+                    <article class="ba-guide ba-guide--lead" data-reveal>
+                        <p class="ba-guide__topic">Security costs</p>
+                        <h3 class="ba-guide__title"><a href="security-guard-cost-manchester.html">How much does a security guard cost in Manchester?</a></h3>
+                        <p class="ba-guide__text">Typical hourly rates, what affects security prices, and costs for event security, door supervisors and manned guarding.</p>
+                        <span class="ba-guide__more" aria-hidden="true">Read the guide <svg class="bs-chevron" viewBox="0 0 16 16"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    </article>
+                    <article class="ba-guide" data-reveal style="--d: 1">
+                        <p class="ba-guide__topic">Choosing a provider</p>
+                        <h3 class="ba-guide__title"><a href="choose-security-company-manchester.html">How to choose the best security company in Manchester</a></h3>
+                        <p class="ba-guide__text">How to compare SIA approved security companies, door supervisors, event security and manned guarding providers.</p>
+                        <span class="ba-guide__more" aria-hidden="true">Read the guide <svg class="bs-chevron" viewBox="0 0 16 16"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    </article>
+                    <article class="ba-guide" data-reveal style="--d: 2">
+                        <p class="ba-guide__topic">Venue legislation</p>
+                        <h3 class="ba-guide__title"><a href="martyns-law-manchester-venues.html">What is Martyn’s Law and does it apply to my Manchester venue?</a></h3>
+                        <p class="ba-guide__text">The 200-person threshold, standard and enhanced tiers, venue duties and how to prepare.</p>
+                        <span class="ba-guide__more" aria-hidden="true">Read the guide <svg class="bs-chevron" viewBox="0 0 16 16"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Final Call to Action ==================== -->
+    <section class="ba-cta" aria-labelledby="ba-cta-title">
+        <div class="ba-cta__panel">
+            <img class="ba-cta__image" src="assets/images/new-img/project-3-02.jpg" alt="" width="1734" height="710" loading="lazy" decoding="async">
+            <div class="ba-cta__content">
+                <p class="ba-label"><span>07</span>Request a consultation</p>
+                <h2 class="ba-cta__title" id="ba-cta-title">Let’s make your environment a better place to be<span class="bs-hero__stop">.</span></h2>
+                <p class="ba-cta__text">Tell us about your venue, event or site. We will talk through what you need and recommend the right security team for it.</p>
+                <div class="ba-actions">
+                    <a class="bs-btn bs-btn--solid" href="contact.html">
+                        Request a quote
+                        <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a class="bs-hero__call" href="tel:+441618186787">Call 0161 818 6787</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== Footer Start Here ==================== -->
 <footer class="footer position-relative z-1 bg-img" data-background-image="assets/images/thumbs/footer-bg.jpg">
     <div class="py-120">
@@ -1689,7 +957,7 @@
 
                         <ul class="d-flex flex-column tw-gap-5">
                             <li>
-                                <a href="door-supervision.html" class="text--white hover-text-main-600 hover-underline">
+                                <a href="door-supervisor.html" class="text--white hover-text-main-600 hover-underline">
                                     Door Supervision
                                 </a>
                             </li>
@@ -1701,7 +969,7 @@
                             </li>
 
                             <li>
-                                <a href="safety-stewarding.html" class="text--white hover-text-main-600 hover-underline">
+                                <a href="event-stewarding.html" class="text--white hover-text-main-600 hover-underline">
                                     Safety Stewarding
                                 </a>
                             </li>
@@ -1719,7 +987,7 @@
                             </li>
 
                             <li>
-                                <a href="concierge-residential.html" class="text--white hover-text-main-600 hover-underline">
+                                <a href="residential-security.html" class="text--white hover-text-main-600 hover-underline">
                                     Concierge & Residential
                                 </a>
                             </li>
@@ -1746,7 +1014,7 @@
                             </li>
 
                             <li>
-                                <a href="services.html" class="text--white hover-text-main-600 hover-underline">
+                                <a href="service.html" class="text--white hover-text-main-600 hover-underline">
                                     What We Protect
                                 </a>
                             </li>
@@ -1973,5 +1241,7 @@
 <script src="assets/js/main.js"></script>
 <!-- tw-cursor js -->
 <script src="assets/js/tw-cursor.js"></script>
+<!-- About page interactions -->
+<script src="assets/js/bs-about.js"></script>
     </body>
 </html>

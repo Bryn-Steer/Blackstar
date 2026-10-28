@@ -68,6 +68,9 @@
     <link rel="stylesheet" href="assets/css/dark.css">
     <link rel="stylesheet" href="assets/css/blackstar-home.css">
     <link rel="stylesheet" href="assets/css/bs-editorial.css">
+    <link rel="stylesheet" href="assets/css/bs-home.css">
+    <!-- Enables reveal motion only when JavaScript runs -->
+    <script>document.documentElement.classList.add('hv-js');</script>
 </head>
 
 <body class="tw-magic-cursor new-bg-3 dark-1">
@@ -274,23 +277,30 @@
     <div id="smooth-wrapper">
         <div id="smooth-content">
 
-            <!-- Hero Section Start -->
-            <section class="bs-hero" id="main-content" tabindex="-1" aria-labelledby="bs-hero-title">
-                <div class="bs-hero__media">
-                    <img src="assets/images/new-img/hero-bg.jpg" alt="Blackstar Security professional security services in Manchester" width="1920" height="999" fetchpriority="high">
-                </div>
+            <!-- ==================== 1. The promise ==================== -->
+            <section class="hv-hero" id="main-content" tabindex="-1" aria-labelledby="hv-hero-title">
+                <figure class="hv-hero__frame">
+                    <img src="assets/images/new-img/hero-bg.jpg" alt="Blackstar Security professional security services in Manchester" width="1920" height="999" fetchpriority="high" decoding="async">
+                    <span class="hv-mark hv-mark--tl" aria-hidden="true"></span>
+                    <span class="hv-mark hv-mark--tr" aria-hidden="true"></span>
+                    <span class="hv-mark hv-mark--bl" aria-hidden="true"></span>
+                    <span class="hv-mark hv-mark--br" aria-hidden="true"></span>
+                    <figcaption class="hv-hero__chips">
+                        <span>Established 2013</span>
+                        <span>SIA ACS approved</span>
+                    </figcaption>
+                </figure>
 
-                <div class="bs-hero__copy">
-                    <p class="bs-eyebrow">Professional security services</p>
-                    <h1 class="bs-hero__title" id="bs-hero-title">
-                        <span>Security Should</span>
-                        <span>Improve the</span>
-                        <span class="bs-hero__title-fade">Place It Protects<span class="bs-hero__stop">.</span></span>
+                <div class="hv-hero__copy">
+                    <p class="hv-kicker">Professional security across Greater Manchester</p>
+                    <h1 class="hv-hero__title" id="hv-hero-title">
+                        <span>Security should improve</span>
+                        <span>the place it protects<span class="bs-hero__stop">.</span></span>
                     </h1>
-                    <p class="bs-hero__lede">
-                        Professional, SIA licensed security for venues, events, businesses, schools and residential sites across Greater Manchester. We help people feel safe, welcome and looked after.
+                    <p class="hv-hero__lede">
+                        SIA licensed door supervision, event security, stewarding and guarding for venues, events, businesses, schools and residential sites. <span class="hv-hero__lede-more">Teams who help people feel safe, welcome and looked after.</span>
                     </p>
-                    <div class="bs-hero__actions">
+                    <div class="hv-actions">
                         <a class="bs-btn bs-btn--solid" href="contact.html">
                             Request a quote
                             <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -299,711 +309,353 @@
                     </div>
                 </div>
 
-                <dl class="bs-hero__facts">
-                    <div>
-                        <dt>2013</dt>
-                        <dd>Established</dd>
-                    </div>
-                    <div>
-                        <dt>SIA ACS</dt>
-                        <dd>Approved for Door Supervision and Security Guarding</dd>
-                    </div>
-                    <div>
-                        <dt>Greater Manchester</dt>
-                        <dd>Venues, events, businesses, schools and residential environments</dd>
-                    </div>
-                </dl>
+                <nav class="hv-hero__index" aria-label="Security services">
+                    <ul>
+                        <li><a href="door-supervisor.html">Door supervision</a></li>
+                        <li><a href="event-security.html">Event security</a></li>
+                        <li><a href="event-stewarding.html">Safety stewarding</a></li>
+                        <li><a href="manned-guarding.html">Site guarding</a></li>
+                        <li><a href="school-security.html">School security</a></li>
+                        <li><a href="residential-security.html">Residential &amp; concierge</a></li>
+                    </ul>
+                </nav>
+            </section>
 
-                <div class="bs-hero__foot">
-                    <a class="bs-hero__scroll" href="#about-blackstar">
-                        <svg viewBox="0 0 18 28" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="26.5" rx="8.25" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 7v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-                        Scroll to explore
-                    </a>
+            <!-- ==================== 2. The people (warm paper) ==================== -->
+            <section class="hv-people" id="about-blackstar" aria-labelledby="hv-people-title">
+                <div class="hv-people__panel">
+                    <div class="hv-wrap">
+                        <div class="hv-people__head">
+                            <p class="hv-label hv-label--ink"><span>01</span>The people behind the presence</p>
+                            <h2 class="hv-people__title" id="hv-people-title">The right people change how security feels<span class="bs-hero__stop">.</span></h2>
+                            <div class="hv-people__text">
+                                <p>Good security should never make a great venue feel less welcoming. Blackstar puts the right people in the right roles so customers can relax, staff feel supported and your business keeps moving.</p>
+                                <p>Professional enough to represent your business, approachable enough to support your customers and prepared enough to act when something changes.</p>
+                                <a href="about.html" class="hv-link-ink">
+                                    About Blackstar
+                                    <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="hv-people__media">
+                            <figure class="hv-people__film" data-reveal="image">
+                                <img src="assets/images/new-img/about-briefing.jpg" alt="Blackstar Security team in a planning meeting" width="1274" height="554" loading="lazy" decoding="async">
+                            </figure>
+                            <figure class="hv-people__portrait" data-reveal="image" style="--d: 1">
+                                <img src="assets/images/thumbs/cta-two-thumb4.jpg" alt="Blackstar Security officer smiling beside the Blackstar entrance sign" width="422" height="358" loading="lazy" decoding="async">
+                            </figure>
+                            <div class="hv-people__quote" data-reveal style="--d: 2">
+                                <p>Security starts before anything goes wrong. The right officer gives customers confidence from the moment they arrive and represents your venue professionally.</p>
+                            </div>
+                        </div>
+
+                        <ul class="hv-roles" aria-label="Roles we fill">
+                            <li><a href="door-supervisor.html"><span>First welcome</span>Door supervision</a></li>
+                            <li><a href="event-security.html"><span>Guest experience</span>Event security</a></li>
+                            <li><a href="manned-guarding.html"><span>Visible protection</span>Security guarding</a></li>
+                            <li><a href="event-stewarding.html"><span>Clear guidance</span>Safety stewarding</a></li>
+                            <li><a href="about.html"><span>Accountable delivery</span>Operations</a></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
-            <!-- About Section Start -->
-            <section class="bs-intro" id="about-blackstar" aria-labelledby="bs-intro-title">
-                <div class="bs-intro__inner">
-                    <div class="bs-intro__copy">
-                        <p class="bs-eyebrow">About Blackstar</p>
-                        <h2 class="bs-intro__title" id="bs-intro-title">Built on proven standards, the right people and accountable delivery.</h2>
-                        <p class="bs-intro__text">
-                            Good security should never make a great venue feel less welcoming. Blackstar puts the right people in the right roles so customers can relax, staff feel supported and your business keeps moving. We protect what matters without becoming the thing people remember about their visit.
-                        </p>
-                        <a href="about.html" class="bs-link">
-                            About Blackstar
-                            <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </a>
-                        <dl class="bs-intro__facts">
-                            <div>
-                                <dt>6 core security services</dt>
-                                <dd>Protection for venues, events, businesses, schools and residential environments.</dd>
-                            </div>
-                            <div>
-                                <dt>2026 Business Award Finalist</dt>
-                                <dd>Recognised as a 2026 Oldham Business Awards finalist.</dd>
-                            </div>
-                        </dl>
+            <!-- ==================== 3. The capabilities ==================== -->
+            <!-- Base: a swipeable card track (no JS, tablet, mobile).
+                 bs-home.js adds .is-enhanced at 992px+: a service list drives a large photographic stage. -->
+            <section class="hv-services" aria-labelledby="hv-services-title">
+                <div class="hv-wrap">
+                    <div class="hv-services__head">
+                        <p class="hv-label"><span>02</span>Manchester security services</p>
+                        <h2 class="hv-services__title" id="hv-services-title">Six services. One standard of presence<span class="bs-hero__stop">.</span></h2>
+                        <p class="hv-services__lede">The right security team should fit the environment, protect what matters and represent your business properly.</p>
                     </div>
-                    <figure class="bs-intro__media">
-                        <img src="assets/images/new-img/about-2.jpg" alt="Three Blackstar Security officers in uniform" width="424" height="487" loading="lazy">
+
+                    <div class="hv-showcase">
+                        <div class="hv-stage" aria-hidden="true">
+                            <img class="hv-stage__frame is-active" src="assets/images/new-img/project-3-02.jpg" alt="" width="1734" height="710" loading="lazy" decoding="async" style="--fx: 70%">
+                            <img class="hv-stage__frame" src="assets/images/new-img/project-3-03.jpg" alt="" width="1734" height="710" loading="lazy" decoding="async" style="--fx: 46%">
+                            <img class="hv-stage__frame" src="assets/images/new-img/project-3-04.jpg" alt="" width="1734" height="710" loading="lazy" decoding="async" style="--fx: 58%">
+                            <img class="hv-stage__frame" src="assets/images/new-img/project-3-01.jpg" alt="" width="1734" height="710" loading="lazy" decoding="async" style="--fx: 50%">
+                            <img class="hv-stage__frame" src="assets/images/thumbs/cta-two-thumb1.jpg" alt="" width="932" height="736" loading="lazy" decoding="async" style="--fx: 50%">
+                            <img class="hv-stage__frame" src="assets/images/new-img/hero-bg.jpg" alt="" width="1920" height="999" loading="lazy" decoding="async" style="--fx: 30%">
+                            <span class="hv-stage__count"><b>01</b> / 06</span>
+                        </div>
+
+                        <ol class="hv-svc-list" id="hv-svc-list">
+                            <li class="hv-svc is-active" style="--fx: 70%">
+                                <figure class="hv-svc__media"><img src="assets/images/new-img/project-3-02.jpg" alt="Professional door supervisors at a Manchester venue entrance at night" width="1734" height="710" loading="lazy" decoding="async"></figure>
+                                <div class="hv-svc__body">
+                                    <h3 class="hv-svc__title">Door supervision</h3>
+                                    <div class="hv-svc__detail">
+                                        <p>Professional door supervisors who understand that security is part of the first impression. Firm when needed, welcoming at every other moment and ready to act when the situation demands it.</p>
+                                        <ul class="hv-tags"><li>SIA licensed</li><li>Nightclubs &amp; bars</li><li>Restaurants &amp; hotels</li></ul>
+                                        <a class="bs-link" href="door-supervisor.html">View door supervision<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="hv-svc" style="--fx: 46%">
+                                <figure class="hv-svc__media"><img src="assets/images/new-img/project-3-03.jpg" alt="Blackstar event security officer in high-visibility uniform at an event gate" width="1734" height="710" loading="lazy" decoding="async"></figure>
+                                <div class="hv-svc__body">
+                                    <h3 class="hv-svc__title">Event security</h3>
+                                    <div class="hv-svc__detail">
+                                        <p>Event security that protects the occasion without becoming the occasion. From entry points and restricted areas to crowd management and incident response, the event stays the focus.</p>
+                                        <ul class="hv-tags"><li>Crowd management</li><li>Stadiums &amp; events</li></ul>
+                                        <a class="bs-link" href="event-security.html">View event security<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="hv-svc" style="--fx: 58%">
+                                <figure class="hv-svc__media"><img src="assets/images/new-img/project-3-04.jpg" alt="Blackstar steward and officer guiding guests at an entrance at night" width="1734" height="710" loading="lazy" decoding="async"></figure>
+                                <div class="hv-svc__body">
+                                    <h3 class="hv-svc__title">Safety stewarding</h3>
+                                    <div class="hv-svc__detail">
+                                        <p>Clear, approachable stewarding that helps people move safely and confidently through venues and events while supporting organisers and the wider security operation.</p>
+                                        <ul class="hv-tags"><li>Guest guidance</li><li>Crowd flow</li></ul>
+                                        <a class="bs-link" href="event-stewarding.html">View safety stewarding<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="hv-svc" style="--fx: 50%">
+                                <figure class="hv-svc__media"><img src="assets/images/new-img/project-3-01.jpg" alt="Two Blackstar security guards in uniform at a commercial site" width="1734" height="710" loading="lazy" decoding="async"></figure>
+                                <div class="hv-svc__body">
+                                    <h3 class="hv-svc__title">Site guarding</h3>
+                                    <div class="hv-svc__detail">
+                                        <p>Manned guarding for businesses, commercial premises and sites that benefit from a visible, accountable security presence and an immediate human response.</p>
+                                        <ul class="hv-tags"><li>Commercial security</li><li>Retail &amp; shopping centres</li></ul>
+                                        <a class="bs-link" href="manned-guarding.html">View manned guarding<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="hv-svc" style="--fx: 50%">
+                                <figure class="hv-svc__media"><img src="assets/images/thumbs/cta-two-thumb1.jpg" alt="Four Blackstar Security officers in uniform standing together" width="932" height="736" loading="lazy" decoding="async"></figure>
+                                <div class="hv-svc__body">
+                                    <h3 class="hv-svc__title">School security</h3>
+                                    <div class="hv-svc__detail">
+                                        <p>Safeguarding-focused security that helps create a safer environment without making pupils, staff or visitors feel intimidated. A reassuring presence that supports the people responsible for the school.</p>
+                                        <ul class="hv-tags"><li>Education</li><li>Safeguarding</li></ul>
+                                        <a class="bs-link" href="school-security.html">View school security<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="hv-svc" style="--fx: 30%">
+                                <figure class="hv-svc__media"><img src="assets/images/new-img/hero-bg.jpg" alt="Blackstar officer in formal attire providing a discreet presence at an entrance" width="1920" height="999" loading="lazy" decoding="async"></figure>
+                                <div class="hv-svc__body">
+                                    <h3 class="hv-svc__title">Residential &amp; concierge</h3>
+                                    <div class="hv-svc__detail">
+                                        <p>Discreet protection with a professional welcome. Concierge and residential teams help residents, visitors and property managers feel looked after while maintaining the security of the environment.</p>
+                                        <ul class="hv-tags"><li>Residential</li><li>Concierge</li></ul>
+                                        <a class="bs-link" href="residential-security.html">View residential security<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+
+                        <div class="hv-track" hidden>
+                            <button type="button" class="hv-track__btn hv-track__prev" aria-controls="hv-svc-list" aria-label="Previous service">
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5 5.5 8 10 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                            <p class="hv-track__count" aria-live="polite"><b>1</b> of 6</p>
+                            <button type="button" class="hv-track__btn hv-track__next" aria-controls="hv-svc-list" aria-label="Next service">
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== 4. The evidence ==================== -->
+            <section class="hv-proof" aria-labelledby="hv-proof-title">
+                <div class="hv-wrap">
+                    <div class="hv-proof__head">
+                        <p class="hv-label"><span>03</span>Proven standards</p>
+                        <h2 class="hv-proof__title" id="hv-proof-title">Built on proven standards, the right people and accountable delivery<span class="bs-hero__stop">.</span></h2>
+                    </div>
+
+                    <div class="hv-bento">
+                        <article class="hv-tile hv-tile--lead" data-reveal>
+                            <p class="hv-tile__label">SIA Approved Contractor Scheme</p>
+                            <p class="hv-tile__words">Door Supervision <span>&amp;</span> Security Guarding</p>
+                            <p class="hv-tile__text">Approved for both activities under the Security Industry Authority’s quality standard for private security companies.</p>
+                        </article>
+
+                        <blockquote class="hv-tile hv-tile--paper" data-reveal style="--d: 1">
+                            <p>We are not here to become the night, the event or the business. We are here to protect it and help everything else work as it should.</p>
+                            <footer>Security in the background, ready when it matters</footer>
+                        </blockquote>
+
+                        <article class="hv-tile hv-tile--num hv-tile--est" data-reveal style="--d: 1">
+                            <p class="hv-tile__figure">2013</p>
+                            <p class="hv-tile__label">Established</p>
+                            <p class="hv-tile__text">Over a decade protecting people, venues and businesses.</p>
+                        </article>
+
+                        <article class="hv-tile hv-tile--num hv-tile--award" data-reveal style="--d: 2">
+                            <p class="hv-tile__figure">2026</p>
+                            <p class="hv-tile__label">Business Award Finalist</p>
+                            <p class="hv-tile__text">Recognised as a 2026 Oldham Business Awards finalist.</p>
+                        </article>
+
+                        <figure class="hv-tile hv-tile--photo" data-reveal>
+                            <img src="assets/images/new-img/about-hivis-detail.jpg" alt="Blackstar Security branded high-visibility jacket" width="498" height="294" loading="lazy" decoding="async">
+                        </figure>
+
+                        <article class="hv-tile hv-tile--num hv-tile--six" data-reveal style="--d: 1">
+                            <p class="hv-tile__figure">6</p>
+                            <p class="hv-tile__label">Core security services</p>
+                            <p class="hv-tile__text">Protection for venues, events, businesses, schools and residential environments.</p>
+                        </article>
+
+                        <article class="hv-tile hv-tile--area" data-reveal style="--d: 2">
+                            <p class="hv-tile__label">Coverage</p>
+                            <p class="hv-tile__place">Manchester &amp; Greater Manchester</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== 5. The process ==================== -->
+            <section class="hv-process" aria-labelledby="hv-process-title">
+                <div class="hv-wrap">
+                    <div class="hv-process__head">
+                        <p class="hv-label"><span>04</span>How we work</p>
+                        <h2 class="hv-process__title" id="hv-process-title">From first conversation to every shift<span class="bs-hero__stop">.</span></h2>
+                    </div>
+
+                    <ol class="hv-steps">
+                        <li class="hv-step" data-reveal>
+                            <span class="hv-step__num" aria-hidden="true">01</span>
+                            <h3>Environment-led planning</h3>
+                            <p>Every environment works differently. We understand the venue, event or site before deciding what the security team needs to look like.</p>
+                        </li>
+                        <li class="hv-step" data-reveal style="--d: 1">
+                            <span class="hv-step__num" aria-hidden="true">02</span>
+                            <h3>Right people, right roles</h3>
+                            <p>Security only works when the person matches the assignment. We focus on putting the right people in the right roles for the environment.</p>
+                        </li>
+                        <li class="hv-step" data-reveal style="--d: 2">
+                            <span class="hv-step__num" aria-hidden="true">03</span>
+                            <h3>Accountable delivery</h3>
+                            <p>Communication should not disappear once the shift begins. Blackstar manages delivery, maintains oversight and keeps the client informed.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- ==================== 6. Insights ==================== -->
+            <section class="hv-insights" aria-labelledby="hv-insights-title">
+                <div class="hv-wrap">
+                    <div class="hv-insights__head">
+                        <p class="hv-label"><span>05</span>Security advice &amp; guidance</p>
+                        <h2 class="hv-insights__title" id="hv-insights-title">Straight answers for Manchester venues, businesses and event organisers making decisions about security<span class="bs-hero__stop">.</span></h2>
+                        <a href="blog.html" class="bs-link">All guides<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    </div>
+
+                    <div class="hv-insights__grid">
+                        <article class="hv-article hv-article--feature" data-reveal>
+                            <figure class="hv-article__media">
+                                <img src="assets/images/thumbs/cta-two-thumb2.jpg" alt="Door supervisors at a venue entrance at night" width="868" height="358" loading="lazy" decoding="async">
+                            </figure>
+                            <div class="hv-article__body">
+                                <p class="hv-article__topic">Venue legislation</p>
+                                <h3 class="hv-article__title"><a href="martyns-law-manchester-venues.html">What is Martyn’s Law and does it apply to my Manchester venue?</a></h3>
+                                <p class="hv-article__text">The 200-person threshold, standard and enhanced tiers, venue duties and how to prepare.</p>
+                                <span class="hv-article__more" aria-hidden="true">Read the guide<svg class="bs-chevron" viewBox="0 0 16 16"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                        </article>
+
+                        <div class="hv-insights__list">
+                            <article class="hv-article" data-reveal style="--d: 1">
+                                <p class="hv-article__topic">Security costs</p>
+                                <h3 class="hv-article__title"><a href="security-guard-cost-manchester.html">How much does a security guard cost in Manchester?</a></h3>
+                                <p class="hv-article__text">What affects the cost of security guards, door supervisors, event security and manned guarding.</p>
+                            </article>
+                            <article class="hv-article" data-reveal style="--d: 2">
+                                <p class="hv-article__topic">Choosing a provider</p>
+                                <h3 class="hv-article__title"><a href="choose-security-company-manchester.html">How to choose the best security company in Manchester</a></h3>
+                                <p class="hv-article__text">How to compare SIA approved security companies and what to ask before you appoint one.</p>
+                            </article>
+                            <article class="hv-article" data-reveal style="--d: 3">
+                                <p class="hv-article__topic">SIA licensing</p>
+                                <h3 class="hv-article__title"><a href="door-supervisor-vs-security-guard.html">Door supervisor vs security guard: what’s the difference?</a></h3>
+                                <p class="hv-article__text">Where each licence applies and which one your business or venue may need.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== 7. The invitation ==================== -->
+            <section class="hv-cta" aria-labelledby="hv-cta-title">
+                <div class="hv-cta__panel">
+                    <div class="hv-cta__content">
+                        <p class="hv-label hv-label--ink"><span>06</span>Request a quote</p>
+                        <h2 class="hv-cta__title" id="hv-cta-title">Need security in place<span class="bs-hero__stop">?</span></h2>
+                        <p class="hv-cta__text">Tell us about your venue, event or site. We will talk through what you need and recommend the right security team for it.</p>
+                        <div class="hv-actions">
+                            <a class="bs-btn hv-btn-ink" href="contact.html">
+                                Request a quote
+                                <svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                            <div class="hv-cta__direct">
+                                <a href="tel:+441618186787">0161 818 6787</a>
+                                <a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="hv-cta__media" data-reveal="image">
+                        <img src="assets/images/new-img/project-3-01.jpg" alt="Two Blackstar Security officers in uniform" width="1734" height="710" loading="lazy" decoding="async">
                     </figure>
                 </div>
             </section>
 
-            <!-- Services Section Start -->
-            <section class="bs-services" aria-labelledby="bs-services-title">
-                <div class="bs-services__inner">
-                    <div class="bs-services__intro">
-                        <p class="bs-eyebrow">Manchester security services</p>
-                        <h2 class="bs-services__title" id="bs-services-title">
-                            The right security team should fit the environment, protect what matters and represent your business properly.
-                        </h2>
+            <!-- ==================== Footer ==================== -->
+            <footer class="hv-footer">
+                <div class="hv-wrap hv-footer__grid">
+                    <div class="hv-footer__brand">
+                        <a href="index.html" class="hv-footer__logo"><img src="assets/images/logo/logo-1.png" alt="Blackstar Security" width="146" height="40" loading="lazy"></a>
+                        <p>Professional security in Manchester that helps people feel safe, welcome and looked after.</p>
                     </div>
 
-                    <!-- .service-box-style-4 / .accordion / .service-acc-btn / .service-acc-content are main.js accordion hooks -->
-                    <div class="service-box-style-4 bs-services__list">
+                    <nav class="hv-footer__col" aria-label="Footer">
+                        <p class="hv-footer__heading">Blackstar</p>
+                        <ul>
+                            <li><a href="about.html">About Blackstar</a></li>
+                            <li><a href="service.html">Security services</a></li>
+                            <li><a href="portfolio.html">Proud to protect</a></li>
+                            <li><a href="blog.html">Security advice</a></li>
+                            <li><a href="faq.html">Security FAQs</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                        </ul>
+                    </nav>
 
-                        <div class="accordion block bs-service active-block">
-                            <div class="service-acc-btn bs-service__head active">
-                                <h3 class="bs-service__title">
-                                    <button type="button" class="bs-service__toggle" aria-expanded="true" aria-controls="bs-service-door">Door Staff</button>
-                                </h3>
-                                <ul class="bs-service__tags">
-                                    <li>SIA Licensed</li>
-                                    <li>Venue Security</li>
-                                </ul>
-                                <span class="bs-service__icon" aria-hidden="true"></span>
-                            </div>
-                            <div class="service-acc-content bs-service__body current" id="bs-service-door">
-                                <p>Professional door supervisors in Manchester who understand that security is part of the first impression. Firm when needed, welcoming at every other moment and ready to act when the situation demands it.</p>
-                                <a class="bs-link" href="door-supervisor.html">View service<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                            </div>
-                        </div>
-
-                        <div class="accordion block bs-service">
-                            <div class="service-acc-btn bs-service__head">
-                                <h3 class="bs-service__title">
-                                    <button type="button" class="bs-service__toggle" aria-expanded="false" aria-controls="bs-service-event">Event Security</button>
-                                </h3>
-                                <ul class="bs-service__tags">
-                                    <li>Events</li>
-                                    <li>Crowd Management</li>
-                                </ul>
-                                <span class="bs-service__icon" aria-hidden="true"></span>
-                            </div>
-                            <div class="service-acc-content bs-service__body" id="bs-service-event">
-                                <p>Event security in Manchester that protects the occasion without becoming the occasion. From entry points and restricted areas to crowd management and incident response, the event stays the focus.</p>
-                                <a class="bs-link" href="event-security.html">View service<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                            </div>
-                        </div>
-
-                        <div class="accordion block bs-service">
-                            <div class="service-acc-btn bs-service__head">
-                                <h3 class="bs-service__title">
-                                    <button type="button" class="bs-service__toggle" aria-expanded="false" aria-controls="bs-service-stewards">Safety Stewards</button>
-                                </h3>
-                                <ul class="bs-service__tags">
-                                    <li>Guest Guidance</li>
-                                    <li>Crowd Flow</li>
-                                </ul>
-                                <span class="bs-service__icon" aria-hidden="true"></span>
-                            </div>
-                            <div class="service-acc-content bs-service__body" id="bs-service-stewards">
-                                <p>Clear, approachable stewarding that helps people move safely and confidently through venues and events while supporting organisers and the wider security operation.</p>
-                                <a class="bs-link" href="event-stewarding.html">View service<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                            </div>
-                        </div>
-
-                        <div class="accordion block bs-service">
-                            <div class="service-acc-btn bs-service__head">
-                                <h3 class="bs-service__title">
-                                    <button type="button" class="bs-service__toggle" aria-expanded="false" aria-controls="bs-service-guards">Site Guards</button>
-                                </h3>
-                                <ul class="bs-service__tags">
-                                    <li>Commercial Security</li>
-                                    <li>Site Protection</li>
-                                </ul>
-                                <span class="bs-service__icon" aria-hidden="true"></span>
-                            </div>
-                            <div class="service-acc-content bs-service__body" id="bs-service-guards">
-                                <p>Professional manned guarding in Manchester for businesses, commercial premises and sites that benefit from a visible, accountable security presence and an immediate human response.</p>
-                                <a class="bs-link" href="manned-guarding.html">View service<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                            </div>
-                        </div>
-
-                        <div class="accordion block bs-service">
-                            <div class="service-acc-btn bs-service__head">
-                                <h3 class="bs-service__title">
-                                    <button type="button" class="bs-service__toggle" aria-expanded="false" aria-controls="bs-service-school">School Security</button>
-                                </h3>
-                                <ul class="bs-service__tags">
-                                    <li>Education</li>
-                                    <li>Safeguarding</li>
-                                </ul>
-                                <span class="bs-service__icon" aria-hidden="true"></span>
-                            </div>
-                            <div class="service-acc-content bs-service__body" id="bs-service-school">
-                                <p>Professional school security that helps create a safer environment without making pupils, staff or visitors feel intimidated. A reassuring presence that supports the people responsible for the school.</p>
-                                <a class="bs-link" href="school-security.html">View service<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                            </div>
-                        </div>
-
-                        <div class="accordion block bs-service">
-                            <div class="service-acc-btn bs-service__head">
-                                <h3 class="bs-service__title">
-                                    <button type="button" class="bs-service__toggle" aria-expanded="false" aria-controls="bs-service-residential">Residential &amp; Concierge</button>
-                                </h3>
-                                <ul class="bs-service__tags">
-                                    <li>Residential</li>
-                                    <li>Concierge</li>
-                                </ul>
-                                <span class="bs-service__icon" aria-hidden="true"></span>
-                            </div>
-                            <div class="service-acc-content bs-service__body" id="bs-service-residential">
-                                <p>Discreet protection with a professional welcome. Our concierge and residential security teams help residents, visitors and property managers feel looked after while maintaining the security of the environment.</p>
-                                <a class="bs-link" href="residential-security.html">View service<svg class="bs-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- Project-Section Start -->
-            <section class="project-section-new new-section-padding portfolio__area fix">
-                <div class="container">
-                    <h2 class="text portfolio__text">Venues</h2>
-                    <div class="row justify-content-between justify-content-center">
-                        <div class="col-xl-7 col-md-6 col-lg-6">
-                            <div class="project-card-item-new">
-                                <div class="project-thumb style-1 reveal">
-                                    <img data-speed=".8" src="assets/images/new-img/project-1.png" alt="Security for Manchester nightclubs and bars">
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="title">
-                                        <a href="door-supervision.html">Nightclubs & Bars</a>
-                                    </h3>
-                                    <p>
-                                        Security that protects the venue while helping the first welcome feel professional, confident and right for the night.
-                                    </p>
-                                    <div class="tag-item">
-                                        <span>Door Supervision</span>
-                                        <span>Venue Security</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6 col-lg-6">
-                            <div class="project-card-item-new">
-                                <div class="project-thumb reveal">
-                                    <img data-speed=".8" src="assets/images/new-img/project-2.png" alt="Security for Manchester restaurants and hotels">
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="title">
-                                        <a href="service.html">Restaurants & Hotels</a>
-                                    </h3>
-                                    <p>
-                                        Protection that sits naturally within a premium guest experience and represents the business properly.
-                                    </p>
-                                    <div class="tag-item">
-                                        <span>Guest Experience</span>
-                                        <span>Professional Presence</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-md-12 col-lg-12">
-                            <div class="project-card-item-new style-left">
-                                <div class="project-thumb reveal">
-                                    <img data-speed=".8" src="assets/images/new-img/project-3.png" alt="Manchester stadium and event security">
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="title">
-                                        <a href="event-security.html">Stadiums & Events</a>
-                                    </h3>
-                                    <p>
-                                        Security and stewarding that keeps guests moving, supports organisers and allows the event itself to remain the focus.
-                                    </p>
-                                    <div class="tag-item">
-                                        <span>Event Security</span>
-                                        <span>Stewarding</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-md-6 col-lg-6">
-                            <div class="project-card-item-new">
-                                <div class="project-thumb style-1 reveal">
-                                    <img data-speed=".8" src="assets/images/new-img/project-4.png" alt="Retail and shopping centre security in Manchester">
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="title">
-                                        <a href="manned-guarding.html">Retail & Shopping Centres</a>
-                                    </h3>
-                                    <p>
-                                        Visible, approachable security that supports customers, staff and the wider environment without creating unnecessary friction.
-                                    </p>
-                                    <div class="tag-item">
-                                        <span>Security Guarding</span>
-                                        <span>Customer Safety</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6 col-lg-6">
-                            <div class="project-card-item-new">
-                                <div class="project-thumb reveal">
-                                    <img data-speed=".8" src="assets/images/new-img/project-5.png" alt="School and education security">
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="title">
-                                        <a href="school-security.html">Schools & Education</a>
-                                    </h3>
-                                    <p>
-                                        Safeguarding-focused security that supports staff and pupils while remaining approachable and proportionate to the environment.
-                                    </p>
-                                    <div class="tag-item">
-                                        <span>School Security</span>
-                                        <span>Safeguarding</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Cta Image Section Start -->
-            <div class="cta-thumb fix xb-clip-animation">
-                <img src="assets/images/new-img/cta-01.png" alt="Blackstar Security professional protection in Manchester">
-            </div>
-
-            <!-- Team Section Start -->
-            <section class="team-section new-section-padding fix">
-                <div class="container">
-                    <span class="sub-title dm-sans-main"><img src="assets/images/new-img/sub-title.png" alt="">
-                        the people behind the presence
-                    </span>
-                    <div class="team-wrapper-new">
-                        <div class="row g-4 align-items-center">
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                <div class="team-thumb-items xb-clip-animation">
-                                    <img src="assets/images/new-img/team-01.png" alt="Blackstar door supervision team">
-                                    <div class="team-content-items">
-                                        <p class="team-text dm-sans-main">
-                                            First Welcome
-                                        </p>
-                                        <h3 class="title mona-sans-main"><a href="door-supervision.html">Door Supervision</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                                <div class="team-thumb-items xb-clip-animation">
-                                    <img src="assets/images/new-img/team-02.png" alt="Blackstar event security team">
-                                    <div class="team-content-items">
-                                        <p class="team-text dm-sans-main">
-                                            Guest Experience
-                                        </p>
-                                        <h3 class="title mona-sans-main"><a href="event-security.html">Event Security</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                                <div class="teams-content">
-                                    <h2 class="title mona-sans-main wa_title_spilt_1">The right people change how security feels.</h2>
-                                    <p class="dm-sans-main">Professional enough to represent your business, approachable enough to support your customers and prepared enough to act when something changes.</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                <div class="team-thumb-items xb-clip-animation">
-                                    <img src="assets/images/new-img/team-03.png" alt="Blackstar manned guarding team">
-                                    <div class="team-content-items">
-                                        <p class="team-text dm-sans-main">
-                                            Visible Protection
-                                        </p>
-                                        <h3 class="title mona-sans-main"><a href="manned-guarding.html">Security Guarding</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                                <div class="team-thumb-items xb-clip-animation">
-                                    <img src="assets/images/new-img/team-04.png" alt="Blackstar safety stewarding team">
-                                    <div class="team-content-items">
-                                        <p class="team-text dm-sans-main">
-                                            Clear Guidance
-                                        </p>
-                                        <h3 class="title mona-sans-main"><a href="safety-stewarding.html">Safety Stewarding</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                                <div class="team-thumb-items xb-clip-animation">
-                                    <img src="assets/images/new-img/team-05.png" alt="Blackstar security operations">
-                                    <div class="team-content-items">
-                                        <p class="team-text dm-sans-main">
-                                            Accountable Delivery
-                                        </p>
-                                        <h3 class="title mona-sans-main"><a href="about.html">Operations</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Testimonial-Section Start -->
-            <section class="testimonial-section-new new-section-padding portfolio__area2 pb-0 bg-cover fix" style="background-image: url(assets/images/new-img/testi-bg.png);">
-                <div class="container">
-                    <h2 class="text portfolio__text2">The Offer</h2>
-                    <div class="row g-4">
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                            <div class="testimonial-card-style style-1">
-                                <div class="icon">
-                                    <img src="assets/images/new-img/icon/01.svg" alt="">
-                                </div>
-                                <p>
-                                    Security starts before anything goes wrong. The right officer gives customers confidence from the moment they arrive and represents your venue professionally.
-                                </p>
-                                <div class="info-item">
-                                    <div class="info">
-                                        <div class="cont">
-                                            <h3>Professional First Impression</h3>
-                                            <span>From the first arrival</span>
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <img src="assets/images/new-img/icon/star-1.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                            
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                            <div class="testimonial-card-style style-3">
-                                <div class="icon">
-                                    <img src="assets/images/new-img/icon/01.svg" alt="">
-                                </div>
-                                <p>
-                                    Every environment works differently. We understand the venue, event or site before deciding what the security team needs to look like.
-                                </p>
-                                <div class="info-item">
-                                    <div class="info">
-                                        <div class="cont">
-                                            <h3>Environment-Led Planning</h3>
-                                            <span>Built around the place</span>
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <img src="assets/images/new-img/icon/star-1.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                            <div class="testimonial-card-style style-4">
-                                <div class="icon">
-                                    <img src="assets/images/new-img/icon/01.svg" alt="">
-                                </div>
-                                <p>
-                                    Communication should not disappear once the shift begins. Blackstar manages delivery, maintains oversight and keeps the client informed.
-                                </p>
-                                <div class="info-item">
-                                    <div class="info">
-                                        <div class="cont">
-                                            <h3>Accountable Delivery</h3>
-                                            <span>Managed from start to finish</span>
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <img src="assets/images/new-img/icon/star-1.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                            <div class="testimonial-card-style style-5">
-                                <div class="icon">
-                                    <img src="assets/images/new-img/icon/01.svg" alt="">
-                                </div>
-                                <p>
-                                    Security only works when the person matches the assignment. We focus on putting the right people in the right roles for the environment.
-                                </p>
-                                <div class="info-item">
-                                    <div class="info">
-                                        <div class="cont">
-                                            <h3>Right People. Right Roles.</h3>
-                                            <span>Teams selected with purpose</span>
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <img src="assets/images/new-img/icon/star-1.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                            <div class="testimonial-card-style style-6">
-                                <div class="icon">
-                                    <img src="assets/images/new-img/icon/01.svg" alt="">
-                                </div>
-                                <p>
-                                    We are not here to become the night, the event or the business. We are here to protect it and help everything else work as it should.
-                                </p>
-                                <div class="info-item">
-                                    <div class="info">
-                                        <div class="cont">
-                                            <h3>Security in the Background</h3>
-                                            <span>Ready when it matters</span>
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <img src="assets/images/new-img/icon/star-1.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- News-Section Start -->
-            <section class="news-section-new new-section-padding fix">
-                <div class="container">
-                    <span class="sub-title dm-sans-main"><img src="assets/images/new-img/sub-title.png" alt="">
-                        Security Advice & Guidance
-                    </span>
-                    <h2 class="title mona-sans-main wa_title_spilt_1">
-                        Straight answers for Manchester venues, businesses and event organisers making decisions about security.
-                    </h2>
-                    <div class="news-wrapper-style">
-                        <div class="row g-4">
-                            <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                <div class="news-left-item">
-                                    <div class="news-image">
-                                        <img src="assets/images/new-img/news-1.png" alt="Security guard cost Manchester">
-                                        <img src="assets/images/new-img/news-1.png" alt="">
-                                    </div>
-                                    <div class="news-content">
-                                        <div class="news-tag">
-                                            <span>Security Costs</span>
-                                            <span class="style-2">Manchester</span>
-                                        </div>
-                                        <h3 class="title">
-                                            <a href="security-guard-cost-manchester.html">
-                                                How Much Does a Security Guard <br> Cost in Manchester?
-                                            </a>
-                                        </h3>
-                                        <p>
-                                            Understand what affects the cost of professional security guards, door supervisors, event security and manned guarding in Manchester.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="row g-4">
-                                    <div class="col-lg-6 col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                                        <div class="news-card-box">
-                                            <div class="news-image">
-                                                <img src="assets/images/new-img/news-2.png" alt="Choosing a security company in Manchester">
-                                                <img src="assets/images/new-img/news-2.png" alt="">
-                                            </div>
-                                            <div class="news-content">
-                                                <h3 class="title">
-                                                    <a href="choose-security-company-manchester.html">
-                                                        How to Choose the Best Security <br> Company in Manchester
-                                                    </a>
-                                                </h3>
-                                                <a href="choose-security-company-manchester.html" class="read-btn">
-                                                    READ GUIDE
-                                                    <img src="assets/images/new-img/icon/06.svg" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                                        <div class="news-card-box style-top">
-                                            <div class="news-image">
-                                                <img src="assets/images/new-img/news-2.png" alt="Martyns Law Manchester venue guidance">
-                                                <img src="assets/images/new-img/news-2.png" alt="">
-                                            </div>
-                                            <div class="news-content">
-                                                <h3 class="title">
-                                                    <a href="martyns-law-manchester-venues.html">
-                                                        What Is Martyn’s Law and Does It <br> Apply to My Manchester Venue?
-                                                    </a>
-                                                </h3>
-                                                <a href="martyns-law-manchester-venues.html" class="read-btn">
-                                                    READ GUIDE
-                                                    <img src="assets/images/new-img/icon/06.svg" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-right-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                                    <div class="news-image">
-                                        <img src="assets/images/new-img/news-4.png" alt="Door supervisor versus security guard">
-                                        <img src="assets/images/new-img/news-4.png" alt="">
-                                    </div>
-                                    <div class="news-content">
-                                        <div class="news-tag">
-                                            <span>SIA Licensing</span>
-                                            <span class="style-2">Security Guidance</span>
-                                        </div>
-                                        <h3 class="title">
-                                            <a href="door-supervisor-vs-security-guard.html">
-                                                Door Supervisor vs Security Guard: <br> What’s the Difference?
-                                            </a>
-                                        </h3>
-                                        <p>
-                                            Understand the difference between the two security roles, where each licence applies and which one your business or venue may need.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Footer-Section Start -->
-            <footer class="footer-section-new fix bg-cover" style="background-image: url(assets/images/new-img/footer-bg.jpg);">
-                <div class="marquee">
-                    <div class="marquee-group">
-                        <div class="text">
-                            
-                        </div>
-                        <div class="text">
-                            PROTECT
-                        </div>
-                        <div class="text">
-                            
-                        </div>
-                        <div class="text">
-                            WELCOME
-                        </div>
-                    </div>
-                    <div class="marquee-group">
-                        <div class="text">
-                            
-                        </div>
-                        <div class="text">
-                            PROTECT
-                        </div>
-                        <div class="text">
-                            
-                        </div>
-                        <div class="text">
-                            WELCOME
-                        </div>
-                    </div>
-                    <div class="marquee-group">
-                        <div class="text">
-                            
-                        </div>
-                        <div class="text">
-                            PROTECT
-                        </div>
-                        <div class="text">
-                            
-                        </div>
-                        <div class="text">
-                            WELCOME
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="footer-new-widget-wrapper">
-                        <div class="row">
-                            <div class="col-xl-6 col-md-5 col-lg-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                <div class="single-widget-item">
-                                    <div class="content">
-                                        <h2>Need Security In Place?</h2>
-                                        <span>
-                                            <a href="tel:+441618186787">0161 818 6787</a>
-                                        </span> <br>
-                                        <span class="mb-0">
-                                            <a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-4 col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                                <div class="single-widget-item">
-                                    <ul class="list-area">
-                                        <li>
-                                            <a href="about.html">
-                                                ABOUT BLACKSTAR
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="service.html">
-                                                SECURITY SERVICES
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="portfolio.html">
-                                                PROUD TO PROTECT
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="blog.html">
-                                                SECURITY ADVICE
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="faq.html">
-                                                SECURITY FAQS
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="careers.html">
-                                                CAREERS
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-2 ps-lg-5 col-md-3 col-lg-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                                <div class="single-widget-item">
-                                    <div class="social-icon">
-                                        <a href="https://www.facebook.com/BlackstarSec" target="_blank" rel="noopener noreferrer">
-                                            <img src="assets/images/new-img/icon/02.svg" alt="">
-                                            Facebook
-                                        </a>
-                                        <a href="https://www.linkedin.com/company/blackstar-security-ltd/" target="_blank" rel="noopener noreferrer">
-                                            <img src="assets/images/new-img/icon/03.svg" alt="">
-                                            LinkedIn
-                                        </a>
-                                        <a href="https://www.instagram.com/blackstar_security/" target="_blank" rel="noopener noreferrer">
-                                            <img src="assets/images/new-img/icon/04.svg" alt="">
-                                            Instagram
-                                        </a>
-                                        <a href="contact.html">
-                                            <img src="assets/images/new-img/icon/05.svg" alt="">
-                                            Contact
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-bootom-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <p>© 2026 Blackstar Security. All Rights Reserved.</p>
-                        <ul class="tags">
-                            <li>
-                                <a href="privacy-policy.html">Privacy policy</a>
-                            </li>
-                            <li>
-                                <a href="terms.html">Terms and conditions</a>
-                            </li>
+                    <div class="hv-footer__col">
+                        <p class="hv-footer__heading">Contact</p>
+                        <ul>
+                            <li><a href="tel:+441618186787">0161 818 6787</a></li>
+                            <li><a href="mailto:info@blackstarsecurity.co.uk">info@blackstarsecurity.co.uk</a></li>
+                            <li><a href="contact.html">Contact form</a></li>
+                            <li>Manchester, United Kingdom</li>
                         </ul>
                     </div>
+
+                    <div class="hv-footer__col">
+                        <p class="hv-footer__heading">Follow</p>
+                        <ul>
+                            <li><a href="https://www.facebook.com/BlackstarSec" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                            <li><a href="https://www.linkedin.com/company/blackstar-security-ltd/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://www.instagram.com/blackstar_security/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hv-wrap hv-footer__base">
+                    <p>© 2026 Blackstar Security. All Rights Reserved.</p>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy policy</a></li>
+                        <li><a href="terms.html">Terms and conditions</a></li>
+                    </ul>
                 </div>
             </footer>
             <span class="mb-bottom"></span>
@@ -1020,14 +672,10 @@
     <script src="assets/js/waypoints.js"></script>
     <!-- swiper bundle Js -->
     <script src="assets/js/swiper-bundle.js"></script>
-    <!-- three js -->
-    <script src="assets/js/three.min.js"></script>
     <!-- odometer counter js -->
     <script src="assets/js/odometer.min.js"></script>
     <!-- magnific popup js -->
     <script src="assets/js/magnific-popup.min.js"></script>
-    <!-- jquery-knob js -->
-    <script src="assets/js/jquery-knob.js"></script>
     <!-- aos -->
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/ripple-2.js"></script>
